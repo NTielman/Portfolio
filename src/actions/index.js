@@ -1,5 +1,5 @@
 // toggles site view from des to dev
-export const toggleView = () => {
+export const toggleMode = () => {
     return {
         type: 'TOGGLE-DARK-MODE'
     }

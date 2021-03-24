@@ -6,7 +6,7 @@ const Projects = () => {
     const projectArray = ['proj1', 'proj2', 'proj3']
 
     return (
-        <div>
+        <div className='projects page'>
             <h1>Projects</h1>
             <FilterMenu />
             {projectArray.map(project => {

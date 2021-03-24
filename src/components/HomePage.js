@@ -6,7 +6,7 @@ const HomePage = () => {
     // const getChartData = useSelector(state => state.chartData);
 
     return (
-        <div>
+        <div className='home page'>
             Home page
         </div>
     );
