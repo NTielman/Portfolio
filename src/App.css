@@ -7,14 +7,22 @@
 
 html {
 height: 100vh;
+scroll-behavior: smooth;
 }
 
 .App,
-.page,
+#root,
 body {
 width: 100%;
 height: 100%;
-overflow: scroll;
+}
+
+.App {
+    overflow: scroll;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 body {
@@ -29,6 +37,13 @@ body.lightMode {
 }
 
 /* toggle-bar  */
+.toggle-bar {
+    position: fixed;
+    bottom: 2.5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .label {
     width: 50px;
     height: 26px;  
@@ -53,6 +68,7 @@ body.lightMode {
     transition: 0.2s linear;
 }
 
+#menu-checkbox,
 .toggle-checkbox {
     opacity: 0;
     position: absolute;
@@ -64,4 +80,167 @@ body.lightMode {
 
 .toggle-checkbox:checked + .label .ball {
     transform: translateX(24px);
+}
+
+/* menu */
+.menu {
+    position: fixed;
+    width: 70px;
+    left: 50%;
+    top: 2.5%;
+    transform: translateX(-50%);
+}
+
+.btn {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(220, 20, 60, 0.267);
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn::before {
+    --scale: 0;
+    
+    content: attr(data-tooltip);
+    color: white;
+    background-color: rgba(90, 20, 220, 0.507);
+    padding: .5rem;
+    border-radius: 50%;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%) scale(var(--scale));
+    transition: 150ms transform;
+}
+
+.btn .fas {
+    font-size: 36px;
+}
+
+.btn:hover .fas {
+    color: aqua;
+    /* color change on darkmode? */
+}
+
+.btn:hover::before {
+    --scale: 1;
+}
+
+.menuBtn,
+.closeBtn {
+    position: absolute;
+    transition: 0.3s ease;
+}
+
+.closeBtn {
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.btn:not(:first-child) {
+    opacity: 0;
+    z-index: -2;
+    transition: 0.3s cubic-bezier(0.87, -0.41, 0.19, 1.44);
+}
+
+.btn:nth-child(2) {
+    left: 0;
+    transition-delay: 0s;
+}
+
+.btn:nth-child(3) {
+    left: 0;
+    top: 0;
+    transition-delay: 0.1s;
+}
+
+.btn:nth-child(4) {
+    top: 0;
+    transition-delay: 0.2s;
+}
+
+.btn:nth-child(5) {
+    left: 0;
+    top: 0;
+    transition-delay: 0.3s;
+}
+
+.btn:nth-child(6) {
+    left: 0;
+    transition-delay: 0.4s;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn .menuBtn {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn .closeBtn {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(2) {
+    left: -100px;
+    opacity: 1;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(3) {
+    left: -75px;
+    top: 72.5px;
+    opacity: 1;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(4) {
+    top: 100px;
+    opacity: 1;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(5) {
+    left: 75px;
+    top: 72.5px;
+    opacity: 1;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(6) {
+    left: 100px;
+    opacity: 1;
+}
+
+/* overall page styling */
+.page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home {
+    background-color: cadetblue;
+}
+
+.about {
+    background-color: chartreuse;
+}
+
+.projects {
+    background-color: crimson;
+}
+
+.contact {
+    background-color: chocolate;
 }
