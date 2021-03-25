@@ -1,8 +1,8 @@
-const darkMode = (state = true, action) => {
+const devMode = (state = true, action) => {
 
     switch (action.type) {
 
-        case 'TOGGLE-DARK-MODE':
+        case 'TOGGLE-DEV-MODE':
 
             const newState = !state;
             return newState;
@@ -13,4 +13,4 @@ const darkMode = (state = true, action) => {
 
 }
 
-export default darkMode;
+export default devMode;

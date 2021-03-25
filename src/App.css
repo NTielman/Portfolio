@@ -39,33 +39,35 @@ body.lightMode {
 /* toggle-bar  */
 .toggle-bar {
     position: fixed;
-    bottom: 2.5%;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 5%;
+    width: 100%;
+    z-index: 100;
 }
 
 .label {
-    width: 50px;
-    height: 26px;  
+    width: 15%;
+    height: 30px;  
     background-color: blue;
     display: flex;
     border-radius: 50px;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    left: 50%;
     position: relative;
-    /* transform: scale(1.5); */
+    transform: translateX(-50%) scale(2);
 }
 
 .ball {
     background-color: white;
-    width: 22px;
-    height: 22px;
+    width: 25px;
+    height: 25px;
     position: absolute;
-    top: 2px;
-    left: 2px;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%) translateX(2px);
     border-radius: 50%;
-    transition: 0.2s linear;
+    transition: 0.5s linear;
 }
 
 #menu-checkbox,
@@ -79,7 +81,12 @@ body.lightMode {
 }
 
 .toggle-checkbox:checked + .label .ball {
-    transform: translateX(24px);
+    transform: translateY(-50%) translateX(-27px);
+    left: 100%;
+}
+
+.fa-pencil-alt {
+    margin-left: 5px;
 }
 
 /* menu */
@@ -89,6 +96,7 @@ body.lightMode {
     left: 50%;
     top: 2.5%;
     transform: translateX(-50%);
+    z-index: 100;
 }
 
 .btn {
@@ -223,14 +231,35 @@ body.lightMode {
 /* overall page styling */
 .page {
     width: 100%;
-    min-height: 100vh;
-    display: flex;
+    height: max-content;
+    /* min-height: 100vh; */
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
+/* home page styling */
 .home {
     background-color: cadetblue;
+}
+
+/* dev home page */
+.flesh-bg {
+    /* position: relative; */
+    margin: 0;
+    height: auto;
+    width: 100%;
+    background: url(./images/dev-home-images/flesh.png) no-repeat;
+    background-size: 100% auto;
+}
+
+img.bone-bg {
+    width: 100%;
+    margin: 0;
+    mask-image: url(./images/dev-home-images/xray-cursor.png);
+    mask-repeat: no-repeat;
+    mask-size: 150px;
+    /* cursor: none; */
 }
 
 .about {

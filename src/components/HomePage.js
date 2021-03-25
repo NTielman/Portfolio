@@ -1,13 +1,15 @@
 import React from 'react';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
+import DevHomePage from './DevHomePage';
+import DesignHomePage from './DesignHomePage';
 
 const HomePage = () => {
 
-    // const getChartData = useSelector(state => state.chartData);
+    const getMode = useSelector(state => state.devMode);
 
     return (
         <div className='home page' id='home'>
-            Home page
+            {getMode ? <DevHomePage /> : <DesignHomePage />}
         </div>
     );
 }

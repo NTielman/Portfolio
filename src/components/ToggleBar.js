@@ -4,7 +4,7 @@ import { toggleMode } from '../actions';
 
 const ToggleBar = () => {
     const dispatch = useDispatch();
-    const isChecked = useSelector(state => state.darkMode);
+    const isChecked = useSelector(state => state.devMode);
 
     return (
         <div className='toggle-bar'>

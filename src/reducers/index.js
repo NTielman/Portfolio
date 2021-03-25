@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import darkMode from './darkMode';
+import devMode from './devMode';
 import projects from './projects';
 
 const rootReducer = combineReducers({
-    darkMode,
+    devMode,
     projects
 });
 
