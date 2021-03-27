@@ -10,7 +10,7 @@ const psike = {
     title: 'Psiké',
     description: 'Bussiness card and logo design for child psychologist "Sue-Tayna"',
     typeOfWork: 'Business Card',
-    galleryUrl: '',
+    galleryUrl: 'https://flic.kr/s/aHsmUEPSgt',
     image: 'des-project_images/psike.jpg'
 }
 
@@ -26,7 +26,7 @@ const chamili = {
     title: 'Chamili',
     description: "Mascot design for client's clothing line",
     typeOfWork: 'Mascot',
-    galleryUrl: '',
+    galleryUrl: 'https://flic.kr/s/aHsmV4KQwd',
     image: 'des-project_images/chamili.jpg'
 }
 
@@ -34,7 +34,7 @@ const cowlick = {
     title: 'Cowlick',
     description: "Illustrations for client's story about a boy with peculiar hair",
     typeOfWork: 'Book Illustration',
-    galleryUrl: '',
+    galleryUrl: 'https://flic.kr/s/aHsmV4vZKY',
     image: 'des-project_images/cowlick.jpg'
 }
 
@@ -42,7 +42,7 @@ const doge = {
     title: 'Where i belong',
     description: "Illustrations for client's story about a dog searching for where he belongs",
     typeOfWork: 'Book Illustration',
-    galleryUrl: '',
+    galleryUrl: 'https://flic.kr/s/aHsmV4M48U',
     image: 'des-project_images/doge.jpg'
 }
 
@@ -58,7 +58,7 @@ const gekeerah = {
     title: 'Gekeerah',
     description: "Illustrations for client's inclusive rewriting of Cinderella",
     typeOfWork: 'Book Illustration',
-    galleryUrl: '',
+    galleryUrl: 'https://flic.kr/s/aHsmV4LveZ',
     image: 'des-project_images/gekeerah.jpg'
 }
 
@@ -90,7 +90,7 @@ const miranda = {
     title: 'Miranda The Marshmallow',
     description: "Illustrations for client's story about a marshmallow trying to escape her fate of being eaten",
     typeOfWork: 'Book Illustration',
-    galleryUrl: '',
+    galleryUrl: 'https://flic.kr/s/aHsmV4keYH',
     image: 'des-project_images/miranda.jpg'
 }
 
@@ -114,7 +114,7 @@ const unsuprvsd = {
     title: "Unsuprvsd",
     description: "Instagram Promo illustration for Unsuprvsd (personal clothing brand)",
     typeOfWork: 'Personal Project',
-    galleryUrl: '',
+    galleryUrl: 'https://flic.kr/s/aHsmV4MYRk',
     image: 'des-project_images/unsuprvsd.jpg'
 }
 
@@ -122,7 +122,7 @@ const triads = {
     title: "Triads",
     description: "Exploring different culture and subculture beauty standards 3 girls at a time",
     typeOfWork: 'Personal Project',
-    galleryUrl: '',
+    galleryUrl: 'https://flic.kr/s/aHsmUEMurF',
     image: 'des-project_images/triads.jpg'
 }
 
@@ -130,7 +130,7 @@ const turtleWarriors = {
     title: "Turtle Warriors",
     description: "Board Game assets illustrations for client",
     typeOfWork: 'Game',
-    galleryUrl: '',
+    galleryUrl: 'https://flic.kr/s/aHsmUESzHn',
     image: 'des-project_images/turtleWarriors.jpg'
 }
 
@@ -138,7 +138,7 @@ const urbanAmir = {
     title: "Urban Amir",
     description: "Designs for client's clothingline dedicated to raising autism awareness",
     typeOfWork: 'Clothing',
-    galleryUrl: '',
+    galleryUrl: 'https://flic.kr/s/aHsmV4ibgX',
     image: 'des-project_images/urbanAmir.jpg'
 }
 
