@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FilterMenu = () => {
+const FilterMenu = (props) => {
 
     // const handleClick = (metric) => {
     //     // if (currentPage === 'AssignmentPage') {
@@ -9,6 +9,8 @@ const FilterMenu = () => {
     //     //     dispatch(sortChart(metric))
     //     // }
     // };
+
+    // props.filters
 
     return (
         <div>
