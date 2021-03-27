@@ -55,7 +55,6 @@ const DevHomePage = () => {
                 eyeRef2.current.style.top = (eyesPos.y / 2) + '%';
                 eyeRef2.current.style.transform = `translateY(${eyesPos.y}%) translateX(${eyesPos.x}%)`;
             }}>
-            <img ref={imageRef} src={bone} alt='background x-ray vision' className='bone-bg' />
             <div className='eyes'>
                 <div className='eye'>
                     <div ref={eyeRef1} className='pupil'></div>
@@ -64,6 +63,7 @@ const DevHomePage = () => {
                     <div ref={eyeRef2} className='pupil'></div>
                 </div>
             </div>
+            <img ref={imageRef} src={bone} alt='background x-ray vision' className='bone-bg' />
         </div>
     );
 }
