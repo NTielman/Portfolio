@@ -1,21 +1,28 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleFilters } from '../actions';
 
 const FilterMenu = (props) => {
-
-    // const handleClick = (metric) => {
-    //     // if (currentPage === 'AssignmentPage') {
-    //     //     dispatch(sortAssignmentChart(metric))
-    //     // } else {
-    //     //     dispatch(sortChart(metric))
-    //     // }
-    // };
-
-    // props.filters
+    const dispatch = useDispatch();
+    const activeFilters = useSelector(state => state.activeFilters);
 
     return (
-        <div>
-            Filter menu
-        </div>
+        <ul className="filter-menu">
+            {props.filters.map(filter => {
+                return (
+                    <li key={filter}>
+                        <input
+                            type="checkbox"
+                            name="filter"
+                            className="filter-checkbox"
+                            checked={activeFilters.includes(filter)}
+                            onChange={(event) => dispatch(toggleFilters(event.target))}
+                            id={filter}
+                            value={filter}></input>
+                        <label htmlFor={filter}>{filter}</label>
+                    </li>);
+            })}
+        </ul>
     );
 }
 

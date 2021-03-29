@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import devMode from './devMode';
-import projects from './projects';
+import activeFilters from './activeFilters';
 
 const rootReducer = combineReducers({
     devMode,
-    projects
+    activeFilters
 });
 
 export default rootReducer;

@@ -4,3 +4,16 @@ export const toggleMode = () => {
         type: 'TOGGLE-DEV-MODE'
     }
 }
+
+export const toggleFilters = (filter) => {
+    return {
+        type: 'TOGGLE-FILTERS',
+        payload: filter,
+    }
+}
+
+export const resetFilters = () => {
+    return {
+        type: 'RESET-FILTERS'
+    }
+}

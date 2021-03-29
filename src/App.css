@@ -359,6 +359,47 @@ img.bone-bg {
     text-align: center;
 }
 
+/* styling filter menu */
+.filter-checkbox {
+  display: none;
+}
+
+.filter-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    width: 100%;
+}
+
+.filter-menu li {
+    list-style: none;
+    width: 10%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(13, 10, 17);
+}
+  
+  .filter-menu li label {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+    text-align: center;
+    transition: background-color 300ms ease-in;
+    background-color:rgb(30, 177, 245);
+}
+  
+  /* highlight multiple selected genres */
+  .filter-menu li input:checked ~ label,
+  .filter-menu li label:hover {
+    background-color:rgb(224, 39, 121);
+}
+
 /* projects page */
 .projects {
     background-color: crimson;
@@ -371,7 +412,8 @@ img.bone-bg {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
-    flex-wrap: wrap-reverse;
+    /* flex-wrap: wrap-reverse; */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 1%;

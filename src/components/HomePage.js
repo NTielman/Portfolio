@@ -9,6 +9,7 @@ const HomePage = () => {
 
     return (
         <div className='home page' id='home'>
+            {/* ipv de een of andere , place tur dos on page i toggle e visibility or opacity */}
             {getMode ? <DevHomePage /> : <DesignHomePage />}
         </div>
     );

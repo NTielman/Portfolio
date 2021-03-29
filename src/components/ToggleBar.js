@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleMode } from '../actions';
+import { toggleMode, resetFilters } from '../actions';
 
 const ToggleBar = () => {
     const dispatch = useDispatch();
@@ -15,8 +15,9 @@ const ToggleBar = () => {
                 name="toggle-theme"
                 value={isChecked}
                 onChange={() => {
-                    dispatch(toggleMode())
                     document.body.classList.toggle('lightMode')
+                    dispatch(resetFilters())
+                    dispatch(toggleMode())
                 }} />
             <label htmlFor='toggle-checkbox' className='label'>
                 <i className="fas fa-pencil-alt"></i>
