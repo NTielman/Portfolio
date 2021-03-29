@@ -24,11 +24,11 @@ const DevProject = (props) => {
                     </ul>
 
                     <div className='card-links'>
-                        {props.project.demoUrl ? <a className='demo-link' href={props.project.demoUrl} target='_blank' rel="noreferrer noopener"><i className="fas fa-play"></i><p>View live demo</p></a> : null}
+                        {props.project.demoUrl ? <a className='demo-link' href={props.project.demoUrl} target='_blank' rel="noreferrer noopener"><i className="fas fa-play"></i><p className='btn-text'>View live demo</p></a> : null}
 
                         <a className='github-link' href={props.project.githubUrl} target='_blank' rel="noreferrer noopener">
                             <i className="fab fa-github"></i>
-                            <p>View on Github</p></a>
+                            <p className='btn-text'>View on Github</p></a>
                     </div>
                 </div>
             </div>
