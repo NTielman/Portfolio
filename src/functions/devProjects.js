@@ -1,7 +1,7 @@
 const grocery_helper = {
     title: 'Grocery Helper',
     githubUrl: 'https://github.com/NTielman/Grocery_helper',
-    demoUrl: 'hungry-jennings-92ae10.netlify.app',
+    demoUrl: 'https://hungry-jennings-92ae10.netlify.app',
     shortDescription: 'A web app that keeps track of your groceries list and cart items',
     longDescription: 'A web application that keeps track of your groceries list and the items already in your cart.',
     tools: [
@@ -9,13 +9,14 @@ const grocery_helper = {
         'JavaScript',
         'CSS',
         'HTML'],
-    image: 'project_images/grocery_helper_preview.jpg'
+    image: '/images/dev-project-images/grocery_helper_preview.jpg',
+    key: 0
 }
 
 const lil_playlist = {
     title: 'Lil Playlist',
     githubUrl: 'https://github.com/NTielman/Lil_Playlist',
-    demoUrl: 'hardcore-thompson-95495f.netlify.app',
+    demoUrl: 'https://hardcore-thompson-95495f.netlify.app',
     shortDescription: 'A web app to organize your music',
     longDescription: 'An SPA that allows you to add, sort, filter and organise your music.',
     tools: [
@@ -24,13 +25,14 @@ const lil_playlist = {
         'JavaScript',
         'CSS',
         'HTML'],
-    image: 'project_images/lil_playlist_preview.jpg'
+    image: '/images/dev-project-images/lil_playlist_preview.jpg',
+    key: 1
 }
 
 const student_dashboard = {
     title: 'Student Dashboard',
     githubUrl: 'https://github.com/NTielman/Student_Dashboard',
-    demoUrl: 'eloquent-darwin-440c3c.netlify.app',
+    demoUrl: 'https://eloquent-darwin-440c3c.netlify.app',
     shortDescription: 'A dashboard that displays student satisfaction numbers',
     longDescription: 'Built a dashboard that displays how satisfied students are with the assignments they received from their university/ academy, using charts and tables to visualize the data.',
     tools: [
@@ -40,7 +42,8 @@ const student_dashboard = {
         'CSS',
         'HTML',
         'Chart.js'],
-    image: 'project_images/dashboard_preview.jpg'
+    image: '/images/dev-project-images/dashboard_preview.jpg',
+    key: 2
 }
 
 const superpy = {
@@ -51,7 +54,8 @@ const superpy = {
     longDescription: "Developed a CLI Tool, using argparse, that keeps track of a (supermarket's) inventory, and is able to produce various reports (expiration report, sales report, purchases, low stock, best selling items etc.) for that inventory.",
     tools: [
         'Python'],
-    image: 'project_images/superpy_preview.jpg'
+    image: '/images/dev-project-images/superpy_preview.jpg',
+    key: 3
 }
 
 const betsy = {
@@ -68,7 +72,8 @@ const betsy = {
         'HTML',
         'SQLite',
         'Peewee'],
-    image: 'project_images/betsy_preview.jpg'
+    image: '/images/dev-project-images/betsy_preview.jpg',
+    key: 4
 }
 
 const wincHackathon = {
@@ -81,7 +86,8 @@ const wincHackathon = {
         'CSS',
         'HTML',
         'JavaScript'],
-    image: 'project_images/best_button_preview.jpg'
+    image: '/images/dev-project-images/best_button_preview.jpg',
+    key: 5
 }
 
 export const featured_projects = [grocery_helper, lil_playlist, student_dashboard, superpy, betsy, wincHackathon]

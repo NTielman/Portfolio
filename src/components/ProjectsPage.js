@@ -11,8 +11,8 @@ const Projects = () => {
     const getMode = useSelector(state => state.devMode);
 
     const getDevProjects = devProjects.map(project => {
-        return (<DevProject project={project} />);
-    })
+        return (<DevProject project={project} key={project.key} />);
+    });
     const getDevFilters = () => {
         const filters = [];
         devProjects.forEach(project => {
@@ -27,8 +27,8 @@ const Projects = () => {
     };
 
     const getDesignProjects = desProjects.map(project => {
-        return (<DesProject project={project} />);
-    })
+        return (<DesProject project={project} key={project.key} />);
+    });
     const getDesFilters = () => {
         const filters = [];
         desProjects.forEach(project => {
@@ -44,7 +44,9 @@ const Projects = () => {
         <div className='projects page' id='projects'>
             <h1>Projects</h1>
             <FilterMenu filters={getMode ? getDevFilters() : getDesFilters()} />
-            { getMode ? getDevProjects : getDesignProjects}
+            <div className='projects-container'>
+                {getMode ? getDevProjects : getDesignProjects}
+            </div>
         </div>
     );
 }

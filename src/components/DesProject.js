@@ -4,7 +4,7 @@ const DesProject = (props) => {
 
     return (
         <div>
-            {props.title}
+            {props.project.title}
         </div>
     );
 }
