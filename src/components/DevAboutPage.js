@@ -10,7 +10,7 @@ const DevAbout = () => {
                 <figcaption className='about-caption'>Depiction of "Nika Sanchez" cooking up a masterplan</figcaption>
             </figure>
             <article className='about-text'>
-                <h1>Part Mastermind</h1>
+                <h3>Part Mastermind</h3>
                 <p>lorem ipsum</p>
             </article>
         </div>

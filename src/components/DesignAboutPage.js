@@ -6,7 +6,7 @@ const DesignAbout = () => {
     return (
         <div className='about-container'>
             <article className='about-text'>
-                <h1>Part Unicorn</h1>
+                <h3>Part Unicorn</h3>
                 <p>lorem ipsum</p>
             </article>
             <figure className='about-image'>
