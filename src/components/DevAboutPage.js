@@ -7,7 +7,7 @@ const DevAbout = () => {
 
     // className='dev-about-container'
     return (
-        <div className={getMode ? 'dev-about-container' : 'hide'}>
+        <div className={getMode ? 'about-container dev' : 'hide'}>
             <h1>About Me</h1>
             <div className='about-content'>
                 <figure className='about-image'>

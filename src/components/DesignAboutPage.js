@@ -7,7 +7,7 @@ const DesignAbout = () => {
     const getMode = useSelector(state => state.devMode);
     // className='des-about-container'
     return (
-        <div className={getMode ? 'hide' : 'des-about-container'}>
+        <div className={getMode ? 'hide' : 'about-container des'}>
             <h1>About Me</h1>
             <div className='about-content'>
                 <article className='about-text'>

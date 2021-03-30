@@ -14,12 +14,12 @@ const DesProject = (props) => {
             }}
             onMouseEnter={() => {
                 cardRef.current.style.transition = 'none';
-                titleBoxRef.current.style.transform = 'translateY(-50%) translateZ(6rem)';
+                titleBoxRef.current.style.transform = 'translateZ(6rem)';
             }}
             onMouseLeave={() => {
                 cardRef.current.style.transition = '0.5s ease';
                 cardRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
-                titleBoxRef.current.style.transform = 'translateY(-50%) translateZ(0px)';
+                titleBoxRef.current.style.transform = 'translateZ(0px)';
             }}>
             <div ref={cardRef} className='des-project-card'>
                 <img src={process.env.PUBLIC_URL + props.project.image} alt='project preview' />
