@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import Parallax from 'parallax-js';
 import tower from '../images/design-home-images/2-tower.png';
 import trees from '../images/design-home-images/3-midground.png';
@@ -11,6 +12,7 @@ import fgTrees from '../images/design-home-images/7-foreground.png'
 
 
 const DesignHomePage = () => {
+    const getMode = useSelector(state => state.devMode);
 
     const sceneRef = useRef();
 
@@ -27,8 +29,10 @@ const DesignHomePage = () => {
 
     }, [])
 
+    // className='container'
     return (
-        <div className='container' onClick={() => { console.log('opening minigame') }}>
+        <div className={getMode ? 'hide' : 'container'}
+            onClick={() => { console.log('opening minigame') }}>
             <ul ref={sceneRef} id='scene'>
                 <li className='layer tower' data-depth='0.2'>
                     <img src={tower} alt='background tower' />

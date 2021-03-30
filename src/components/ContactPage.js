@@ -14,14 +14,15 @@ const Contact = () => {
                     <p>linkedin.com/in/nneka-tielman/</p>
                 </a>
 
-                {getMode ? <a className='social-item' href='https://github.com/NTielman' target='_blank' rel="noreferrer noopener">
+                <a className={getMode ? 'social-item' : 'hide'} href='https://github.com/NTielman' target='_blank' rel="noreferrer noopener">
                     <i className="fab fa-github-square"></i>
                     <p>github.com/NTielman</p>
-                </a> :
-                    <a className='social-item' href='https://www.instagram.com/unsuprvsd/?hl=en' target='_blank' rel="noreferrer noopener">
-                        <i className="fab fa-instagram"></i>
-                        <p>@unsuprvsd</p>
-                    </a>}
+                </a>
+
+                <a className={getMode ? 'hide' : 'social-item'} href='https://www.instagram.com/unsuprvsd/?hl=en' target='_blank' rel="noreferrer noopener">
+                    <i className="fab fa-instagram"></i>
+                    <p>@unsuprvsd</p>
+                </a>
 
                 <div className="social-item">
                     <i className="fab fa-whatsapp-square"></i>

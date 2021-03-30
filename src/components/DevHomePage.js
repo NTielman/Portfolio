@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
 import bone from '../images/dev-home-images/bone.png';
+import { useSelector } from 'react-redux';
 
 const DevHomePage = () => {
+    const getMode = useSelector(state => state.devMode);
 
     // set initial cursor position
     const currentMousePos = {
@@ -24,9 +26,10 @@ const DevHomePage = () => {
     const imageRef = useRef();
     const eyeRef1 = useRef();
     const eyeRef2 = useRef();
+    // className='flesh-bg'
 
     return (
-        <div className='flesh-bg'
+        <div className={getMode ? 'flesh-bg' : 'hide'}
             onMouseMove={(event) => {
                 // on page scroll get amount scrolled
                 windowScroll = imageRef.current.getBoundingClientRect();

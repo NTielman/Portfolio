@@ -1,10 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import devIcon from '../images/about-images/dev_icon.png';
 
 const DevAbout = () => {
+    const getMode = useSelector(state => state.devMode);
 
+    // className='dev-about-container'
     return (
-        <div className='dev-about-container'>
+        <div className={getMode ? 'dev-about-container' : 'hide'}>
             <h1>About Me</h1>
             <div className='about-content'>
                 <figure className='about-image'>

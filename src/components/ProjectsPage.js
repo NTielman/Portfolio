@@ -9,6 +9,7 @@ import DesProject from './DesProject';
 
 const Projects = () => {
 
+    // i picked to show these two series not only are they relatively known by a lot of ppl, but they also both do a good job of rteflecting my love for weird unknown solving mysteries, challenging the way you see the world. one a bit more rroted in magicand the other a bit more logical. decoding mysteries
     const getMode = useSelector(state => state.devMode);
     const activeFilters = useSelector(state => state.activeFilters);
 
@@ -63,8 +64,12 @@ const Projects = () => {
         <div className='projects page' id='projects'>
             <h1>Projects</h1>
             <FilterMenu filters={getMode ? getDevFilters() : getDesFilters()} />
-            <div className='projects-container'>
-                {getMode ? getDevProjects() : getDesignProjects()}
+            <div className={getMode ? 'projects-container' : 'hide'}>
+                {/* {getMode ? getDevProjects() : getDesignProjects()} */}
+                {getDevProjects()}
+            </div>
+            <div className={getMode ? 'hide' : 'projects-container'}>
+                {getDesignProjects()}
             </div>
         </div>
     );

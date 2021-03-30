@@ -14,7 +14,7 @@ const FilterMenu = (props) => {
                         <input
                             type="checkbox"
                             name="filter"
-                            className="filter-checkbox"
+                            className="hide"
                             checked={activeFilters.includes(filter)}
                             onChange={(event) => dispatch(toggleFilters(event.target))}
                             id={filter}
