@@ -10,6 +10,10 @@ height: 100vh;
 scroll-behavior: smooth;
 }
 
+::selection {
+background-color: #2c1b4f;
+}
+
 .App,
 #root,
 body {
@@ -26,14 +30,21 @@ height: 100%;
 }
 
 body {
-    background-color: darkslateblue;
+    background-color: #2c1641;
     color: white;
     transition: 0.2s linear;
+    font-family: 'Lexend', sans-serif;
 }
 
 body.lightMode {
-    background-color: rgb(80, 23, 80);
-    color: black;
+    background-color: #2c1b4f;
+    /* color: black; */
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Paytone One', sans-serif;
 }
 
 /* toggle-bar  */
@@ -47,7 +58,8 @@ body.lightMode {
 .label {
     width: 15%;
     height: 30px;  
-    background-color: blue;
+    background: rgb(189,118,189);
+    background: linear-gradient(90deg, rgba(189,118,189,1) 0%, rgba(0,128,249,1) 50%, rgba(44,22,65,1) 100%);
     display: flex;
     border-radius: 50px;
     justify-content: space-between;
@@ -56,6 +68,8 @@ body.lightMode {
     left: 50%;
     position: relative;
     transform: translateX(-50%) scale(2);
+    transition: all 1s linear;
+    /* fix transition the background color */
 }
 
 .ball {
@@ -75,9 +89,10 @@ body.lightMode {
     opacity: 0;
     position: absolute;
 }
-    
+
 .toggle-checkbox:checked + .label {
-    background-color: purple;
+    background: rgb(44,27,79);
+    background: linear-gradient(90deg, rgba(44,27,79,1) 0%, rgba(253,81,118,1) 50%, rgba(0,128,249,1) 100%);
 }
 
 .toggle-checkbox:checked + .label .ball {
@@ -102,7 +117,7 @@ body.lightMode {
 .btn {
     width: 70px;
     height: 70px;
-    background-color: rgba(220, 20, 60, 0.267);
+    background-color: #2c1b4f;
     border-radius: 50%;
     position: absolute;
     overflow: hidden; 
@@ -118,8 +133,8 @@ body.lightMode {
     --scale: 0;
     
     content: attr(data-tooltip);
-    color: white;
-    background-color: rgba(90, 20, 220, 0.507);
+    /* color: white; */
+    background-color: #2c164183;
     padding: .5rem;
     border-radius: 50%;
     text-align: center;
@@ -136,11 +151,6 @@ body.lightMode {
 
 .btn .fas {
     font-size: 36px;
-}
-
-.btn:hover .fas {
-    color: aqua;
-    /* color change on darkmode? */
 }
 
 .btn:hover::before {
@@ -239,23 +249,44 @@ body.lightMode {
 }
 
 /* home page styling */
-.home {
+/* .home {
     background-color: cadetblue;
+} */
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.flesh-bg::after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,128,249,0) 100%);
+    background-blend-mode: overlay;
+    pointer-events: none;
 }
 
 /* dev home page */
 .flesh-bg {
     position: relative;
-    margin: 0;
+    /* margin: 0; */
     height: auto;
     width: 100%;
     background: url(./images/dev-home-images/flesh.png) no-repeat;
+    /* background-size: cover; */
     background-size: 100% auto;
 }
 
 img.bone-bg {
     width: 100%;
-    margin: 0;
+    height: 100%;
+    /* margin: 0; */
+    object-fit: cover;
     mask-image: url(./images/dev-home-images/xray-cursor.png);
     mask-repeat: no-repeat;
     mask-size: 150px;
@@ -321,19 +352,40 @@ img.bone-bg {
 
 /* about page */
 .about {
-    background-color: chartreuse;
+    position: relative;
 }
 
-.about-container {
+.des-about-container,
+.dev-about-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.about-content {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
+.dev-about-container {
+    background: rgb(74,58,158);
+    background: linear-gradient(0deg, rgba(74,58,158,1) 5%, rgba(0,0,0,1) 100%);
+}
+
 .about-text {
     width: 65%;
     padding: 5%;
-    background-color: chocolate;
+    background-color: #0080f9;
+}
+
+.des-about-container {
+    background-color:#fd5176;
+}
+
+.des-about-container .about-text{
+    background-color: #ffd74b;
 }
 
 .about-image {
@@ -343,16 +395,23 @@ img.bone-bg {
     align-items: center;
     width: 35%;
     padding: 5%;
-    background-color: darkblue;
 }
 
 .about-avatar-image {
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: solid 10px darkred;
-    background-color: chocolate;
     margin-bottom: 10%;
+}
+
+.about-avatar-image.des {
+    border: solid 10px #ffd74b;
+    background-color: #0080f9;
+}
+
+.about-avatar-image.dev {
+    border: solid 10px #0080f9;
+    background-color: #bd76bd;
 }
 
 .about-caption {
@@ -379,7 +438,8 @@ img.bone-bg {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(13, 10, 17);
+    cursor: pointer;
+    /* color: rgb(13, 10, 17); */
 }
   
   .filter-menu li label {
@@ -391,18 +451,20 @@ img.bone-bg {
     margin: 2%;
     text-align: center;
     transition: background-color 300ms ease-in;
-    background-color:rgb(30, 177, 245);
+    /* border-radius: 20px; */
+    cursor: pointer;
+    background-color:#0080f9;
 }
   
   /* highlight multiple selected genres */
   .filter-menu li input:checked ~ label,
   .filter-menu li label:hover {
-    background-color:rgb(224, 39, 121);
+    background-color:#bd76bd;
 }
 
 /* projects page */
 .projects {
-    background-color: crimson;
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -471,7 +533,7 @@ img.bone-bg {
     position: absolute;
     width: 100%;
     padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #2c16419d;
     top: 50%;
     transform: translateY(-50%) translateZ(6rem);
 }
@@ -483,17 +545,17 @@ img.bone-bg {
 
 .card-subtitle {
     font-size: .75rem;
-    transform: translateZ(6rem);
+    /* transform: translateZ(6rem); */
     font-weight: 700;
     opacity: .7;
 }
 
 .card-description {
-    transform: translateZ(6rem);
+    /* transform: translateZ(6rem); */
     height: 55%;
     overflow: scroll;
     padding: 5%;
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; */
     display: flex;
     justify-content: center;
     /* font-weight: 400;
@@ -501,7 +563,7 @@ img.bone-bg {
 }
 
 .card-tools {
-    transform: translateZ(3rem);
+    /* transform: translateZ(3rem); */
     opacity: .7;
     display: inline-flex;
     height: 25%;
@@ -526,9 +588,10 @@ img.bone-bg {
     bottom: 0;
     width: 100%;
     height: 20%;
-    transform: translateZ(6rem);
+    /* transform: translateZ(6rem); */
     border-radius: 0px 0px 20px 20px;
-    background-color: deeppink;
+    background-color: #0080f9;
+    
 }
 
 .demo-link,
@@ -543,13 +606,14 @@ img.bone-bg {
 }
 
 .demo-link {
-    background-color: darkgreen;
+    background-color: #4fe0d9d3;
+    /* background-color: #bd76bd; */
     border-radius: 0px 0px 0px 20px;
 }
 
 .card-back {
     transform: rotateY(.5turn);
-    background-color: slateblue;
+    background-color: #4a3a9e;
 }
 
 /* design project cards  */
@@ -593,10 +657,25 @@ img.bone-bg {
     justify-content: center;
     width: 100%;
     transition: 0.5s ease-out;
-    background-color: rgba(255, 255, 255, 0.671);
+    background-color: #2c1b4fbd;
     /* z-index: 5; */
 }
 
+/* 
+design colors
+pink: #fd5176 
+purple: #863aa8
+orange: #fa9624
+yellow: #ffd74b
+darkpurple: #2c1b4f
+
+dev colors
+aqua: #4fe0d8
+lightpink: #bd76bd
+blue: #0080f9
+purple: #4a3a9e
+darkpurple: #2c1641
+*/
 .des-card-title {
     font-size: 3vw;
     width: 100%;
@@ -637,9 +716,10 @@ img.bone-bg {
     margin-left: 5px;
 }
 
+
 /* contact page styling */
 .contact {
-    background-color: chocolate;
+    /* background-color: chocolate; */
     height: 100vh;
 }
 
@@ -650,7 +730,7 @@ h1 {
 }
 
 .social-links {
-    background-color: rgb(17, 233, 89);
+    /* background-color: rgb(17, 233, 89); */
     /* padding: 5%; */
     display: flex;
     /* flex-direction: column; */
@@ -668,10 +748,19 @@ h1 {
     justify-content: flex-start;
     flex-wrap: wrap;
     width: 20%;
-    height: 20vh;
-    background-color: chocolate;
+    height: 25vh;
+    /* background-color: chocolate; */
+    color: currentColor;
     margin: 2%;
+    padding: 2% 1%;
+    text-align: center;
     text-decoration: none;
+    border: 2px solid white;
+    transition: .5s ease;
+}
+
+.social-item:hover {
+    background-color: #0080f9;
 }
 
 .social-item .fas,

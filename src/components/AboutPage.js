@@ -9,7 +9,6 @@ const About = () => {
 
     return (
         <div className='about page' id='about'>
-            <h1>About Me</h1>
             {getMode ? <DevAbout /> : <DesignAbout />}
         </div>
     );

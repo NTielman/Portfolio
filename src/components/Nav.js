@@ -2,12 +2,11 @@ import React from 'react';
 
 const Nav = () => {
 
-    // use state to find out mode. style menu hover colors or add classlist
     return (
         <div className='menu'>
             <input type='checkbox' id='menu-checkbox' />
             <label htmlFor='menu-checkbox' className='toggle-menu'>
-                <div className='btn'>
+                <div className='btn' >
                     <i className="fas fa-bars menuBtn"></i>
                     <i className="fas fa-times closeBtn"></i>
                 </div>
