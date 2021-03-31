@@ -1,0 +1,130 @@
+.menu {
+    position: fixed;
+    width: 70px;
+    left: 50%;
+    top: 2.5%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+#menu-checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.menu-icon {
+    font-size: 36px;
+}
+
+.btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn::before {    
+    content: attr(data-tooltip);
+    border-radius: 50%;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: 150ms transform;
+}
+
+.btn:hover::before {
+    transform: scale(1);
+}
+
+.menuBtn,
+.closeBtn {
+    position: absolute;
+    transition: 0.3s ease;
+}
+
+.closeBtn {
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.btn:not(:first-child) {
+    opacity: 0;
+    transition: 0.3s cubic-bezier(0.87, -0.41, 0.19, 1.44);
+}
+
+.btn:nth-child(2) {
+    left: 0;
+    transition-delay: 0s;
+}
+
+.btn:nth-child(3) {
+    left: 0;
+    top: 0;
+    transition-delay: 0.1s;
+}
+
+.btn:nth-child(4) {
+    top: 0;
+    transition-delay: 0.2s;
+}
+
+.btn:nth-child(5) {
+    left: 0;
+    top: 0;
+    transition-delay: 0.3s;
+}
+
+.btn:nth-child(6) {
+    left: 0;
+    transition-delay: 0.4s;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn .menuBtn {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn .closeBtn {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(2) {
+    left: -100px;
+    opacity: 1;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(3) {
+    left: -75px;
+    top: 72.5px;
+    opacity: 1;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(4) {
+    top: 100px;
+    opacity: 1;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(5) {
+    left: 75px;
+    top: 72.5px;
+    opacity: 1;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(6) {
+    left: 100px;
+    opacity: 1;
+}

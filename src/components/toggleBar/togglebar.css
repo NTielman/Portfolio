@@ -1,0 +1,59 @@
+.toggle-bar-container {
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+    z-index: 100;
+}
+
+#toggle-checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.toggle-bar {
+    width: 15%;
+    height: 30px;  
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) scale(2);
+    padding: 5px;
+    background: rgb(44,27,79);
+    background: linear-gradient(90deg, rgba(44,27,79,1) 0%, rgba(253,81,118,1) 25%, rgba(0,128,249,1) 75%, rgba(44,22,65,1) 100%);
+    background-size: 200%;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    transition: background-position 1.5s linear;
+}
+
+.ball {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%) translateX(2px);
+    border-radius: 50%;
+    transition: left 0.6s linear, transform 0.5s ease;
+}
+
+.fa-pencil-alt {
+    margin-left: 5px;
+}
+
+#toggle-checkbox:checked + .toggle-bar:hover,
+.toggle-bar:hover {
+    background-position: center;
+}
+
+#toggle-checkbox:checked + .toggle-bar {
+    background-position: left;
+}
+
+#toggle-checkbox:checked + .toggle-bar .ball {
+    transform: translateY(-50%) translateX(-27px);
+    left: 100%;
+}

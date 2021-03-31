@@ -7,19 +7,17 @@ const ToggleBar = () => {
     const isChecked = useSelector(state => state.devMode);
 
     return (
-        <div className='toggle-bar'>
+        <div className='toggle-bar-container'>
             <input
                 type='checkbox'
-                className='toggle-checkbox'
                 id='toggle-checkbox'
-                name="toggle-theme"
                 value={isChecked}
                 onChange={() => {
-                    document.body.classList.toggle('lightMode')
+                    document.body.classList.toggle('designMode')
                     dispatch(resetFilters())
                     dispatch(toggleMode())
                 }} />
-            <label htmlFor='toggle-checkbox' className='label'>
+            <label htmlFor='toggle-checkbox' className='toggle-bar'>
                 <i className="fas fa-pencil-alt"></i>
                 <i className="fas fa-code"></i>
                 <div className='ball'></div>
