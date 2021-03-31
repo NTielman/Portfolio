@@ -1,5 +1,9 @@
  /* Component Stylesheets */
 
+ /* Home Page */
+@import 'components/homePage/devHome.css';
+@import 'components/homePage/designHome.css';
+
  /* About Page */
 @import 'components/aboutPage/about.css';
 @import 'components/aboutPage/designAbout.css';
@@ -287,117 +291,6 @@ h3 {
     /* display: flex;
     justify-content: center;
     align-items: center; */
-}
-
-.home {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-}
-
-.flesh-bg::after {
-    content: ' ';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 50%;
-    width: 100%;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,128,249,0) 100%);
-    background-blend-mode: overlay;
-    pointer-events: none;
-}
-
-/* dev home page */
-.flesh-bg {
-    position: relative;
-    /* margin: 0; */
-    height: auto;
-    width: 100%;
-    background: url(./images/dev-home-images/flesh.png) no-repeat;
-    /* background-size: cover; */
-    background-size: 100% auto;
-}
-
-img.bone-bg {
-    width: 100%;
-    height: 100%;
-    /* margin: 0; */
-    object-fit: cover;
-    mask-image: url(./images/dev-home-images/xray-cursor.png);
-    mask-repeat: no-repeat;
-    mask-size: 150px;
-}
-
-.eyes {
-    /* background-color: red; */
-    height: 4.5%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 55%;
-    /* left: 50%; */
-    /* transform: translateY(-50%); */
-}
-
-.eye {
-    width: 4.5%;
-    height: 100%;
-    margin: 1%;
-    /* background-color: seagreen; */
-    display: inline-block;
-    border-radius: 20% 20% 20% 40%;
-    position: relative;
-    overflow: hidden;
-}
-
-.pupil {
-    width: 20%;
-    height: 30%;
-    background: url(./images/dev-home-images/pupil.png) no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-}
-
-/* designer home page */
-.container {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    /* background: url(./images/design-home-images/1-background.png);
-    background-attachment: fixed;
-    background-size: cover; */
-}
-
-.container::after {
-    content: ' ';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 50%;
-    width: 100%;
-    background: rgb(250,150,36);
-    background: linear-gradient(0deg, rgba(250,150,36,1) 0%, rgba(253,81,118,0) 40%);
-    background-blend-mode: overlay;
-    pointer-events: none;
-}
-
-#scene,
-.layer {
-    width: 100%;
-    height: 100%;
-}
-
-.container #scene .layer img {
-    /* width: 100%; */
-    height: 100%;
-    object-fit: cover;
 }
 
 /* styling filter menu */
