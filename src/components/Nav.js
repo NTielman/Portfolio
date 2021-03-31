@@ -31,7 +31,7 @@ const Nav = () => {
                 <div className={getMode ? "btn dev" : "btn des"}
                     onClick={() => {
                         const tempLink = document.createElement('a');
-                        tempLink.setAttribute('href', process.env.PUBLIC_URL + '/NTielman.pdf');
+                        tempLink.setAttribute('href', process.env.PUBLIC_URL + '/assets/resume/NTielman.pdf');
                         tempLink.setAttribute('download', 'NTielman-resume.pdf');
                         tempLink.click()
                     }}

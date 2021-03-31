@@ -9,7 +9,7 @@ const grocery_helper = {
         'JavaScript',
         'CSS',
         'HTML'],
-    image: '/images/dev-project-images/grocery_helper_preview.jpg',
+    image: '/assets/images/projects/devProjects/groceryHelper.jpg',
     key: 0
 }
 
@@ -25,7 +25,7 @@ const lil_playlist = {
         'JavaScript',
         'CSS',
         'HTML'],
-    image: '/images/dev-project-images/lil_playlist_preview.jpg',
+    image: '/assets/images/projects/devProjects/lilPlaylist.jpg',
     key: 1
 }
 
@@ -42,7 +42,7 @@ const student_dashboard = {
         'CSS',
         'HTML',
         'Chart.js'],
-    image: '/images/dev-project-images/dashboard_preview.jpg',
+    image: '/assets/images/projects/devProjects/dashboard.jpg',
     key: 2
 }
 
@@ -54,7 +54,7 @@ const superpy = {
     longDescription: "Developed a CLI Tool, using argparse, that keeps track of a (supermarket's) inventory, and is able to produce various reports (expiration report, sales report, purchases, low stock, best selling items etc.) for that inventory.",
     tools: [
         'Python'],
-    image: '/images/dev-project-images/superpy_preview.jpg',
+    image: '/assets/images/projects/devProjects/superpy.jpg',
     key: 3
 }
 
@@ -72,7 +72,7 @@ const betsy = {
         'HTML',
         'SQLite',
         'Peewee'],
-    image: '/images/dev-project-images/betsy_preview.jpg',
+    image: '/assets/images/projects/devProjects/betsy.jpg',
     key: 4
 }
 
@@ -86,7 +86,7 @@ const wincHackathon = {
         'CSS',
         'HTML',
         'JavaScript'],
-    image: '/images/dev-project-images/best_button_preview.jpg',
+    image: '/assets/images/projects/devProjects/bestButton.jpg',
     key: 5
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import desIcon from '../images/about-images/des_icon.png';
+// import desIcon from '../images/about-images/des_icon.png';
 
 const DesignAbout = () => {
 
@@ -15,7 +15,7 @@ const DesignAbout = () => {
                     <p>lorem ipsum</p>
                 </article>
                 <figure className='about-image'>
-                    <img className='about-avatar-image des' src={desIcon} alt='Avatar of Nneka' />
+                    <img className='about-avatar-image des' src={process.env.PUBLIC_URL + '/assets/images/about/designAvatar.png'} alt='Avatar of Nneka' />
                     <figcaption className='about-caption'>Accurate depiction of Nika when in the vicinity of sushi</figcaption>
                 </figure>
             </div>

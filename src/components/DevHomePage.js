@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import bone from '../images/dev-home-images/bone.png';
+// import bone from '../images/dev-home-images/bone.png';
 import { useSelector } from 'react-redux';
 
 const DevHomePage = () => {
@@ -66,7 +66,7 @@ const DevHomePage = () => {
                     <div ref={eyeRef2} className='pupil'></div>
                 </div>
             </div>
-            <img ref={imageRef} src={bone} alt='background x-ray vision' className='bone-bg' />
+            <img ref={imageRef} src={process.env.PUBLIC_URL + '/assets/images/home/dev/bone.png'} alt='background x-ray vision' className='bone-bg' />
         </div>
     );
 }
