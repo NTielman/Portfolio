@@ -1,3 +1,10 @@
+ /* Component Stylesheets */
+
+ /* About Page */
+ @import 'components/aboutPage/about.css';
+ @import 'components/aboutPage/designAbout.css';
+ @import 'components/aboutPage/devAbout.css';
+
 /* ------- universal styling ------- */
 * {
     padding: 0px;
@@ -386,83 +393,6 @@ img.bone-bg {
     /* width: 100%; */
     height: 100%;
     object-fit: cover;
-}
-
-/* about page */
-.about {
-    position: relative;
-}
-
-.about-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.about-container.dev {
-    background: rgb(74,58,158);
-    background: linear-gradient(0deg, rgba(74,58,158,1) 5%, rgba(0,0,0,1) 100%);
-}
-
-.about-text {
-    width: 65%;
-    padding: 5%;
-    background-color: #0080f9;
-}
-
-.about-container.dev .about-text {
-    border-radius: 20px 0px 0px 20px;
-}
-
-.about-container.des .about-text {
-    border-radius: 0px 20px 20px 0px;
-}
-
-.about-container.des {
-    background: rgb(250,150,36);
-    background: linear-gradient(180deg, rgba(250,150,36,1) 0%, rgba(253,81,118,1) 40%);
-}
-
-.des-about-container .about-text{
-    background-color: #ffd74b;
-}
-
-.about-image {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 35%;
-    padding: 5%;
-}
-
-.about-avatar-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 10%;
-}
-
-.about-avatar-image.des {
-    border: solid 10px #ffd74b;
-    background-color: #0080f9;
-}
-
-.about-avatar-image.dev {
-    border: solid 10px #0080f9;
-    background-color: #bd76bd;
-}
-
-.about-caption {
-    text-align: center;
 }
 
 /* styling filter menu */

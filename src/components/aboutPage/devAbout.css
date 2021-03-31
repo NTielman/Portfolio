@@ -1,0 +1,14 @@
+.about-container.dev {
+    background: rgb(74,58,158);
+    background: linear-gradient(0deg, rgba(74,58,158,1) 5%, rgba(0,0,0,1) 100%);
+}
+
+.about-container.dev .about-text {
+    border-radius: 20px 0px 0px 20px;
+    background-color: #0080f9;
+}
+
+.avatar.dev {
+    border: solid 10px #0080f9;
+    background-color: #bd76bd;
+}

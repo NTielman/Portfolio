@@ -1,17 +1,19 @@
-// toggles site view from des to dev
+// toggles site view from designer to dev
 export const toggleMode = () => {
     return {
         type: 'TOGGLE-DEV-MODE'
     }
 }
 
-export const toggleFilters = (filter) => {
+// toggle active filters (filters selected by user)
+export const toggleProjectFilter = (filter) => {
     return {
-        type: 'TOGGLE-FILTERS',
+        type: 'TOGGLE-FILTER',
         payload: filter,
     }
 }
 
+// removes all active filters
 export const resetFilters = () => {
     return {
         type: 'RESET-FILTERS'

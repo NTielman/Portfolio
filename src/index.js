@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import { createStore } from 'redux';
 import rootReducer from './reducers';
 import { Provider } from 'react-redux';
+
+import App from './App';
 
 //Devtools for viewing state changes in browser
 const store = createStore(rootReducer,

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleMode, resetFilters } from '../actions';
+import { toggleMode, resetFilters } from '../../actions';
 
 const ToggleBar = () => {
     const dispatch = useDispatch();

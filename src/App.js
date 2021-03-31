@@ -1,16 +1,16 @@
 import './App.css';
-import AboutPage from './components/AboutPage';
-import ContactPage from './components/ContactPage';
-import HomePage from './components/HomePage';
-import Nav from './components/Nav';
-import ProjectsPage from './components/ProjectsPage';
-import ToggleBar from './components/ToggleBar';
+import Nav from './components/navMenu/Nav';
+import ToggleBar from './components/toggleBar/ToggleBar';
+import HomePage from './components/homePage/HomePage';
+import AboutPage from './components/aboutPage/AboutPage';
+import ProjectsPage from './components/projectsPage/ProjectsPage';
+import ContactPage from './components/contactPage/ContactPage';
 
 function App() {
   return (
     <div className="App">
-      <ToggleBar />
       <Nav />
+      <ToggleBar />
       <HomePage />
       <AboutPage />
       <ProjectsPage />

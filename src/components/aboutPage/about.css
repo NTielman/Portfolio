@@ -1,0 +1,30 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-text {
+    width: 65%;
+    padding: 5%;
+}
+
+.about-image-container {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    padding: 5%;
+}
+
+.avatar {
+    border-radius: 20px;
+    margin-bottom: 5%;
+}
+
+.about-caption {
+    text-align: center;
+}

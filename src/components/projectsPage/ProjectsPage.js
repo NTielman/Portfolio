@@ -1,9 +1,9 @@
 import React from 'react';
 import FilterMenu from './FilterMenu';
 import { useSelector } from 'react-redux';
-import { featured_projects as devProjects } from '../functions/devProjects';
-import { featured_projects as desProjects } from '../functions/desProjects';
-import filterProjects from '../functions/filterProjects';
+import { featured_projects as devProjects } from '../../functions/devProjects';
+import { featured_projects as desProjects } from '../../functions/desProjects';
+import filterProjects from '../../functions/filterProjects';
 import DevProject from './DevProject';
 import DesProject from './DesProject';
 

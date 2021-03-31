@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleFilters } from '../actions';
+import { toggleProjectFilter } from '../../actions';
 
 const FilterMenu = (props) => {
     const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const FilterMenu = (props) => {
                             name="filter"
                             className="hide"
                             checked={activeFilters.includes(filter)}
-                            onChange={(event) => dispatch(toggleFilters(event.target))}
+                            onChange={(event) => dispatch(toggleProjectFilter(event.target))}
                             id={filter}
                             value={filter}></input>
                         <label htmlFor={filter} id={index}

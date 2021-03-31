@@ -4,7 +4,7 @@ const activeFilters = (state = defaultFilters, action) => {
 
     switch (action.type) {
 
-        case 'TOGGLE-FILTERS':
+        case 'TOGGLE-FILTER':
             let filters = [...state];
 
             const { value, checked } = action.payload;
