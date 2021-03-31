@@ -1,0 +1,27 @@
+.contact.dev {
+    background-color: #4b3a9e;
+}
+
+.dev .social-links-container .social-item {
+    background-color: #2c1641a2;
+}
+
+.dev .social-links-container .social-item.linkedin:hover {
+    background-color: #0081f9d3;
+}
+
+.dev .social-links-container .social-item.github:hover {
+    background-color: #bd76bdd3;
+}
+
+.dev .social-links-container .social-item.whatsapp:hover {
+    background-color: #4fe0d9d3;
+}
+
+.dev .social-links-container .social-item.gmail:hover {
+    background-color: #4a3a9ed3;
+}
+
+.dev .social-links-container .social-item.address:hover {
+    background-color: #cf8572d3;
+}

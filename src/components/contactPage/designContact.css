@@ -1,0 +1,27 @@
+.contact.des {
+    background-color: #fd5176;
+}
+
+.des .social-links-container .social-item {
+    background-color: #2c1b4fa2;
+}
+
+.des .social-links-container .social-item.linkedin:hover {
+    background-color: #0081f9d3;
+}
+
+.des .social-links-container .social-item.instagram:hover {
+    background-color: #fa9624d3;
+}
+
+.des .social-links-container .social-item.whatsapp:hover {
+    background-color: #ffd74bd3;
+}
+
+.des .social-links-container .social-item.gmail:hover {
+    background-color: #863aa8d3;
+}
+
+.des .social-links-container .social-item.address:hover {
+    background-color: #c48d4ed3;
+}

@@ -1,0 +1,53 @@
+.contact {
+    background-image: url(../../images/contact/netherlandsMap.png);
+    background-blend-mode: soft-light;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    text-align: center;
+    padding: 5% 0%;
+}
+
+.contact h3 {
+    margin-bottom: 2%;
+    font-size: 2.5vw;
+}
+
+.contact h3 ~ p {
+    opacity: 0.8;
+    font-size: 1.5vw;
+    margin-bottom: 2%;
+}
+
+.social-links-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 15%;
+    height: 25vh;
+    overflow: scroll;
+    margin: 2%;
+    padding: 2%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    color: currentColor;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    transition: background-color .5s ease-in-out;
+}
+
+.social-item p {
+    font-size: 1vw;
+}
+
+.social-icon {
+font-size: 4vw;
+margin: 2%;
+}
