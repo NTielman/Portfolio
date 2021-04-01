@@ -1,6 +1,6 @@
 const bowsette = {
     title: 'Bowsette',
-    description: 'Expanding on the Bowsette meme, except now everyone is a Peach',
+    description: 'Expanding on the "Bowsette" meme, except now everyone is a Peach',
     typeOfWork: 'Personal Project',
     galleryUrl: 'https://flic.kr/p/2kQfyJH',
     image: '/assets/images/projects/designProjects/bowsette.jpg',
@@ -9,7 +9,7 @@ const bowsette = {
 
 const psike = {
     title: 'Psiké',
-    description: 'Bussiness card and logo design for child psychologist "Sue-Tayna"',
+    description: 'Business card and logo design for child psychologist "Sue-Tayna"',
     typeOfWork: 'Business Card',
     galleryUrl: 'https://flic.kr/s/aHsmUEPSgt',
     image: '/assets/images/projects/designProjects/psike.jpg',
@@ -108,7 +108,7 @@ const miranda = {
 
 const stanLee = {
     title: 'Stan Lee',
-    description: "Tribute illustration to the late Stan Lee",
+    description: "Tribute illustration for the late Stan Lee",
     typeOfWork: 'Personal Project',
     galleryUrl: 'https://flic.kr/p/2kQfyJc',
     image: '/assets/images/projects/designProjects/stanLee.jpg',
@@ -117,7 +117,7 @@ const stanLee = {
 
 const stephenHawking = {
     title: 'Stephen Hawking',
-    description: "Tribute illustration to the late Stephen Hawking",
+    description: "Tribute illustration for the late Stephen Hawking",
     typeOfWork: 'Personal Project',
     galleryUrl: 'https://flic.kr/p/2kGJNZA',
     image: '/assets/images/projects/designProjects/stephenHawking.jpg',
@@ -153,7 +153,7 @@ const turtleWarriors = {
 
 const urbanAmir = {
     title: "Urban Amir",
-    description: "Designs for client's clothingline dedicated to raising autism awareness",
+    description: "Designs for client's clothing line dedicated to raising autism awareness",
     typeOfWork: 'Clothing',
     galleryUrl: 'https://flic.kr/s/aHsmV4ibgX',
     image: '/assets/images/projects/designProjects/urbanAmir.jpg',
@@ -169,4 +169,4 @@ const yakuza = {
     key: 18
 }
 
-export const featured_projects = [urbanAmir, psike, gitemtaylor, iTwar, marchHare, miranda, caneCorso, chamili, cowlick, doge, gekeerah, stanLee, stephenHawking, turtleWarriors, yakuza, triads, emojis, unsuprvsd, bowsette,]
+export const featured_projects = [urbanAmir, psike, gitemtaylor, iTwar, marchHare, miranda, caneCorso, chamili, cowlick, doge, gekeerah, stanLee, stephenHawking, turtleWarriors, yakuza, triads, emojis, unsuprvsd, bowsette]

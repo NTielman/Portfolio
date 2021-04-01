@@ -16,7 +16,6 @@
 }
 
 .card-title {
-    font-size: 3vmin;
     text-align: center;
     text-transform: uppercase;
     padding: 5%;
@@ -24,7 +23,6 @@
 
 .card-subtitle {
     padding: 5%;
-    font-size: 2.25vmin;
     text-align: center;
     font-weight: 700;
     opacity: .7;
@@ -41,6 +39,5 @@
 }
 
 .btn-text {
-    font-size: 2.25vmin;
     margin-left: 5px;
 }

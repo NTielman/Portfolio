@@ -10,12 +10,10 @@
 
 .contact h3 {
     margin-bottom: 2%;
-    font-size: 2.5vw;
 }
 
 .contact h3 ~ p {
     opacity: 0.8;
-    font-size: 1.5vw;
     margin-bottom: 2%;
 }
 

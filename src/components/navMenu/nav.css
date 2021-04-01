@@ -27,6 +27,8 @@
 
 .btn::before {    
     content: attr(data-tooltip);
+    font-weight: 700;
+    font-size: 14px;
     border-radius: 50%;
     text-align: center;
     height: 100%;
@@ -80,12 +82,12 @@
 .btn:nth-child(5) {
     left: 0;
     top: 0;
-    transition-delay: 0.3s;
+    transition-delay: 0.1s;
 }
 
 .btn:nth-child(6) {
     left: 0;
-    transition-delay: 0.4s;
+    transition-delay: 0s;
 }
 
 #menu-checkbox:checked ~ .toggle-menu .btn .menuBtn {

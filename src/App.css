@@ -33,8 +33,9 @@ body {
     background: rgb(44,22,65);
     background: radial-gradient(circle, rgba(44,22,65,1) 20%, rgba(74,58,158,1) 100%);
     color: white;
-    transition: 0.2s linear;
+    transition: 0.5s linear;
     font-family: 'Lexend', sans-serif;
+    font-size: 2.25vmin;
 }
 
 body.designMode {
@@ -48,20 +49,19 @@ h3 {
     font-family: 'Paytone One', sans-serif;
 }
 
-.page {
-    width: 100%;
-    /* height: max-content; */
-    /* min-height: 100vh; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-}
-
 h1 {
     text-align: center;
     margin: 2%;
     text-transform: uppercase;
-    font-size: 5vw;
+    font-size: 5.5vmin;
+}
+
+h3 {
+    font-size: 3vmin;
+}
+
+.page {
+    width: 100%;
 }
 
 .hide {

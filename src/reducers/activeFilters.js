@@ -19,6 +19,7 @@ const activeFilters = (state = defaultFilters, action) => {
 
             return defaultFilters;
         default:
+
             return state;
     }
 

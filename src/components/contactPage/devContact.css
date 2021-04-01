@@ -4,9 +4,27 @@
 
 .dev .social-links-container .social-item {
     background-color: #2c1641a2;
+    position: relative;
+}
+
+.dev .social-links-container .social-item::before {
+    content: ' ';
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    border: 2px solid rgb(171, 171, 241);
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .dev .social-links-container .social-item:hover {
     background: #000000;
     color: rgb(171, 171, 241);
+}
+
+.dev .social-links-container .social-item:hover::before {
+    opacity: 1;
 }

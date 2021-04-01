@@ -1,6 +1,6 @@
 .flesh-bg {
     position: relative;
-    background: url(../../images/dev-home-images/flesh.png) no-repeat;
+    background: url(../../images/devHome/flesh.png) no-repeat;
     background-size: 100%;
 }
 
@@ -16,7 +16,7 @@
 
 img.bone-bg {
     width: 100%;
-    mask-image: url(../../images/dev-home-images/xray-cursor.png);
+    mask-image: url(../../images/devHome/xrayCursor.png);
     mask-repeat: no-repeat;
     mask-size: 150px;
 }
@@ -43,7 +43,7 @@ img.bone-bg {
 .pupil {
     width: 20%;
     height: 30%;
-    background: url(../../images/dev-home-images/pupil.png) no-repeat;
+    background: url(../../images/devHome/pupil.png) no-repeat;
     background-size: cover;
     position: absolute;
     top: 50%;

@@ -3,7 +3,7 @@ const grocery_helper = {
     githubUrl: 'https://github.com/NTielman/Grocery_helper',
     demoUrl: 'https://hungry-jennings-92ae10.netlify.app',
     shortDescription: 'A web app that keeps track of your groceries list and cart items',
-    longDescription: 'A web application that keeps track of your groceries list and the items already in your cart.',
+    longDescription: 'A web application that keeps track of your grocery list and the items already in your cart.',
     tools: [
         'React',
         'JavaScript',
@@ -18,7 +18,7 @@ const lil_playlist = {
     githubUrl: 'https://github.com/NTielman/Lil_Playlist',
     demoUrl: 'https://hardcore-thompson-95495f.netlify.app',
     shortDescription: 'A web app to organize your music',
-    longDescription: 'An SPA that allows you to add, sort, filter and organise your music.',
+    longDescription: 'A single-page application (SPA) that allows you to add, sort, filter, and organize your music.',
     tools: [
         'React',
         'Redux',
@@ -50,8 +50,8 @@ const superpy = {
     title: 'SuperPy',
     githubUrl: 'https://github.com/NTielman/superPy',
     demoUrl: '',
-    shortDescription: 'A CLI Tool for creating and tracking an inventory',
-    longDescription: "Developed a CLI Tool, using argparse, that keeps track of a (supermarket's) inventory, and is able to produce various reports (expiration report, sales report, purchases, low stock, best selling items etc.) for that inventory.",
+    shortDescription: 'A CLI tool for creating and tracking an inventory',
+    longDescription: "Developed a command-line interface tool, using argparse, that keeps track of a (supermarket's) inventory, and is able to produce various reports (expiration report, sales report, purchases, low stock, best-selling items, etc.) for that inventory.",
     tools: [
         'Python'],
     image: '/assets/images/projects/devProjects/superpy.jpg',
@@ -63,7 +63,7 @@ const betsy = {
     githubUrl: 'https://github.com/NTielman/Betsy',
     demoUrl: '',
     shortDescription: 'A multi-vendor marketplace modeled after Etsy',
-    longDescription: "Created a multi-vendor marketplace modeled after Etsy. Using SQLite, modeled a database that stores a user's information, the products they sell, the tags and images associated with each product, and a user's transactions on the site. Implemented Peewee ORM to query and retreive data from the database. Built a front-end for the application using Flask, and attempted to create a near identical clone to the original Etsy site by using Bulma (CSS framework).",
+    longDescription: "Created a multi-vendor marketplace modeled after Etsy. Using SQLite, modeled a database that stores a user's information, the products they sell, the tags and images associated with each product, and a user's transactions on the site. Implemented Peewee ORM to query and retrieve data from the database. Built a front-end for the application using Flask, and attempted to create a near-identical clone to the original Etsy site by using Bulma (CSS framework).",
     tools: [
         'Python',
         'Flask',
@@ -80,8 +80,8 @@ const wincHackathon = {
     title: 'Boss Button',
     githubUrl: 'https://github.com/WincAcademy/hackathon-0-hongerige-huismuizen',
     demoUrl: 'https://unruffled-lichterman-d3e059.netlify.app/',
-    shortDescription: 'Entry project for the winc "best button" hackathon',
-    longDescription: "Participated in Winc Academy's 'best button' hackathon. Collaborated with team-members by making use of VsCode's Live Share extension, which allowed us to share a live server and code simultaneuously in the same files. Our team came up with the combined idea of making a button that multiplies onClick, and whose 'child-buttons' all have differing effects. My tasks: Wrote the user story as guideline for how the final site experience should look and feel like. Developed the 'water' and 'cat' buttons. Responsible for the site's design and fixing animations",
+    shortDescription: 'Team entry project for the "Winc - best button" hackathon',
+    longDescription: "Participated in Winc Academy's 'best button' hackathon. Collaborated with team members by making use of VsCode's Live Share extension, which allowed us to share a live server and code simultaneously in the same files. Our team came up with the combined idea of making a button that multiplies on click, and whose 'child buttons' all have differing effects. My tasks: Wrote the user story as a guideline for how the final site experience should look and feel. Developed the 'water' and 'cat' buttons. Responsible for the site's design and fixing animations.",
     tools: [
         'CSS',
         'HTML',
