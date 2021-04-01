@@ -10,8 +10,32 @@
 
 .about-text {
     width: 65%;
-    padding: 5%;
+    padding: 3.5%;
+    height: 35vmin;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    overflow: scroll;
+    position: relative;
+}
+
+.helper-arrow {
+    position: absolute;
+    top: 75%;
+    right: 2.5%;
+    animation: pointDown 1s linear infinite;
+}
+
+@keyframes pointDown {
+    from {transform: translateY(0%); opacity: 0;}
+    to {transform: translateY(500%); opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.about-text h3 {
+    margin-bottom: 2%;
 }
 
 .about-image-container {

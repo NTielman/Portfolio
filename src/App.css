@@ -60,6 +60,11 @@ h3 {
     font-size: 3vmin;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .page {
     width: 100%;
 }
