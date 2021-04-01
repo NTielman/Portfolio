@@ -40,35 +40,14 @@
     border-radius: 20px 20px 0px 0px;
 }
 
-.des.card-title {
-    font-size: 3vmin;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 5%;
-}
-
-.des.card-subtitle {
-    padding: 5%;
-    font-size: 2.25vmin;
-    text-align: center;
-    opacity: .7;
-}
-
 .flickr-link {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: currentColor;
     background-color: darkorange;
     justify-self: flex-end;
-    width: 100%;
     height: 20%;
     border-radius: 0px 0px 20px 20px;
 }
 
-.btn-text {
-    font-size: 2.25vmin;
-    margin-left: 5px;
+.flickr-link:hover {
+    background-color:#fd5176 ;
+    color: #ffd74b;
 }

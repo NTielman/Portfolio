@@ -1,27 +1,12 @@
 .contact.des {
-    background-color: #fd5176;
+    background-color: rgba(250,150,36,1);
 }
 
 .des .social-links-container .social-item {
     background-color: #2c1b4fa2;
 }
 
-.des .social-links-container .social-item.linkedin:hover {
-    background-color: #0081f9d3;
-}
-
-.des .social-links-container .social-item.instagram:hover {
-    background-color: #fa9624d3;
-}
-
-.des .social-links-container .social-item.whatsapp:hover {
-    background-color: #ffd74bd3;
-}
-
-.des .social-links-container .social-item.gmail:hover {
-    background-color: #863aa8d3;
-}
-
-.des .social-links-container .social-item.address:hover {
-    background-color: #c48d4ed3;
+.des .social-links-container .social-item:hover {
+    background-color:#fd5176 ;
+    color: #ffd74b;
 }

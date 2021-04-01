@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 const DevHomePage = () => {
 
-    const getMode = useSelector(state => state.devMode);
+    const devMode = useSelector(state => state.devMode);
     const mousePos = {
         x: -1,
         y: -1
@@ -26,7 +26,7 @@ const DevHomePage = () => {
     const rightPupilRef = useRef();
 
     return (
-        <div className={getMode ? 'flesh-bg' : 'hide'}
+        <div className={devMode ? 'flesh-bg' : 'hide'}
             onMouseMove={(event) => {
                 // on page scroll get amount scrolled
                 windowScroll = imageRef.current.getBoundingClientRect();

@@ -7,11 +7,6 @@
     z-index: 100;
 }
 
-#menu-checkbox {
-    opacity: 0;
-    position: absolute;
-}
-
 .menu-icon {
     font-size: 36px;
 }
@@ -63,6 +58,7 @@
 .btn:not(:first-child) {
     opacity: 0;
     transition: 0.3s cubic-bezier(0.87, -0.41, 0.19, 1.44);
+    z-index: -2;
 }
 
 .btn:nth-child(2) {

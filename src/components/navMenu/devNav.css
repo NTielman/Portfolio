@@ -3,10 +3,12 @@
 }
 
 .toggle-menu.dev .btn:hover {
-    color:  #4fe0d8;
+    background: #4b3a9e00;
+    color: rgb(171, 171, 241);
+    border: 1px solid rgb(171, 171, 241);
 }
 
 .toggle-menu.dev .btn::before {
-    background-color: #4a3a9e;
-    color: #4fe0d8;
+    background: #000000a2;
+    color: rgb(171, 171, 241);
 }

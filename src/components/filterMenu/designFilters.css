@@ -1,0 +1,35 @@
+.filter-menu.des li input:checked ~ label {
+    background-color:#fd5176 ;
+    color: #ffd74b;
+}
+
+.filter-menu.des li label::before {
+    content: ' ';
+    position: absolute;
+    top: -1%;
+    left: -1%;
+    right: -1%;
+    bottom: -1%;
+    z-index: -1;
+    background: rgb(134,58,168);
+    background: linear-gradient(90deg, rgba(134,58,168,1) 0%, rgba(253,81,118,1) 20%, rgba(250,150,36,1) 50%, rgba(255,215,75,1) 80%, rgba(134,58,168,1) 100%);
+    background-size: 200%;
+    border-radius: 20px;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.filter-menu.des li:hover label::before,
+.filter-menu.des li label:hover::before {
+    opacity: 1;
+    animation: glow 2s linear infinite;
+}
+
+@keyframes glow {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}

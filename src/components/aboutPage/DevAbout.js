@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux';
 
 const DevAbout = () => {
 
-    const getMode = useSelector(state => state.devMode);
+    const devMode = useSelector(state => state.devMode);
 
     return (
-        <div className={getMode ? 'about-container dev' : 'hide'}>
+        <div className={devMode ? 'about-container dev' : 'hide'}>
             <h1>About Me</h1>
             <div className='about-content'>
                 <figure className='about-image-container'>

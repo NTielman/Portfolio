@@ -14,3 +14,33 @@
     justify-content: center;
     align-content: flex-end;
 }
+
+.card-title {
+    font-size: 3vmin;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5%;
+}
+
+.card-subtitle {
+    padding: 5%;
+    font-size: 2.25vmin;
+    text-align: center;
+    font-weight: 700;
+    opacity: .7;
+}
+
+.social-btn {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: currentColor;
+    width: 100%;
+}
+
+.btn-text {
+    font-size: 2.25vmin;
+    margin-left: 5px;
+}

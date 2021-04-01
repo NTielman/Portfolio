@@ -11,7 +11,7 @@ import filterProjects from '../../functions/filterProjects';
 
 const Projects = () => {
 
-    const getMode = useSelector(state => state.devMode);
+    const devMode = useSelector(state => state.devMode);
     const activeFilters = useSelector(state => state.activeFilters);
 
     const getDevProjects = () => {
@@ -67,12 +67,12 @@ const Projects = () => {
 
             <h1>Projects</h1>
 
-            <FilterMenu filters={getMode ? getDevFilters() : getDesignFilters()} />
+            <FilterMenu filters={devMode ? getDevFilters() : getDesignFilters()} />
 
-            <div className={getMode ? 'projects-container' : 'hide'}>
+            <div className={devMode ? 'projects-container' : 'hide'}>
                 {getDevProjects()}
             </div>
-            <div className={getMode ? 'hide' : 'projects-container'}>
+            <div className={devMode ? 'hide' : 'projects-container'}>
                 {getDesignProjects()}
             </div>
         </section>

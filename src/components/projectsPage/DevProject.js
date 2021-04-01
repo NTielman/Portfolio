@@ -3,13 +3,13 @@ import React from 'react';
 const DevProject = (props) => {
 
     return (
-        <div className='project-card'>
-            <div className='card-content'>
+        <div className='project-card dev'>
+            <div className='card-content dev'>
                 <div className='card-front'>
                     <img src={process.env.PUBLIC_URL + props.project.image} alt='project preview' />
                     <div className='front-titles'>
-                        <h3 className='card-title'>{props.project.title}</h3>
-                        <p className='card-subtitle'>{props.project.shortDescription}</p>
+                        <h3 className='card-title dev'>{props.project.title}</h3>
+                        <p className='card-subtitle dev'>{props.project.shortDescription}</p>
                     </div>
                 </div>
 
@@ -24,9 +24,9 @@ const DevProject = (props) => {
                     </ul>
 
                     <div className='card-links'>
-                        {props.project.demoUrl ? <a className='demo-link' href={props.project.demoUrl} target='_blank' rel="noreferrer noopener"><i className="fas fa-play"></i><p className='btn-text'>View live demo</p></a> : null}
+                        {props.project.demoUrl ? <a className='demo-link social-btn' href={props.project.demoUrl} target='_blank' rel="noreferrer noopener"><i className="fas fa-play"></i><p className='btn-text'>View live demo</p></a> : null}
 
-                        <a className='github-link' href={props.project.githubUrl} target='_blank' rel="noreferrer noopener">
+                        <a className='github-link social-btn' href={props.project.githubUrl} target='_blank' rel="noreferrer noopener">
                             <i className="fab fa-github"></i>
                             <p className='btn-text'>View on Github</p></a>
                     </div>

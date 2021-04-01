@@ -2,12 +2,12 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Nav = () => {
-    const getMode = useSelector(state => state.devMode);
+    const devMode = useSelector(state => state.devMode);
 
     return (
         <div className='menu'>
-            <input type='checkbox' id='menu-checkbox' />
-            <label htmlFor='menu-checkbox' className={getMode ? 'toggle-menu dev' : 'toggle-menu des'}>
+            <input type='checkbox' id='menu-checkbox' className='hide' />
+            <label htmlFor='menu-checkbox' className={devMode ? 'toggle-menu dev' : 'toggle-menu des'}>
                 <div className='btn' >
                     <i className="menu-icon fas fa-bars menuBtn"></i>
                     <i className="menu-icon fas fa-times closeBtn"></i>

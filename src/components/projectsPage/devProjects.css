@@ -1,12 +1,10 @@
-
-/* dev project cards  */
-.project-card {
+.project-card.dev {
     width: 45%;
-    height: 45vh;
+    height: 45vmin;
     margin: 1%;
 }
 
-.card-content {
+.card-content.dev {
     width: 100%;
     height: 100%;
     text-align: center;
@@ -16,7 +14,7 @@
     border-radius: 20px;
 }
 
-.project-card:hover .card-content {
+.project-card.dev:hover .card-content {
     transform: rotateY(.5turn);
 }
 
@@ -53,33 +51,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 5%;
     background-color: #2c16419d;
     border-radius: 20px;
-    /* top: 50%; */
-    top: 0%;
-    /* transform: translateY(-50%) translateZ(6rem); */
+    top: 0;
     transform: translateZ(6rem);
 }
 
-.card-title {
-    font-size: 3vw;
-    text-transform: uppercase;
-}
-
-.card-subtitle {
-    font-size: .75rem;
-    font-weight: 700;
-    opacity: .7;
+.card-back {
+    transform: rotateY(.5turn);
+    background-color: #4a3a9e;
 }
 
 .card-description {
     height: 55%;
     overflow: scroll;
     padding: 5%;
+    font-size: 2.25vmin;
+    text-align: center;
     /* backface-visibility: hidden; */
-    display: flex;
-    justify-content: center;
 }
 
 .card-tools {
@@ -91,7 +81,7 @@
     padding: 0% 5%;
     align-items: center;
     justify-content: center;
-    font-size: .75rem;
+    font-size: 2.25vmin;
 }
 
 .card-tool{ 
@@ -103,34 +93,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    bottom: 0;
     width: 100%;
     height: 20%;
-    /* transform: translateZ(6rem); */
+    justify-self: flex-end;
     border-radius: 0px 0px 20px 20px;
-    background-color: #0080f9;
-    
-}
-
-.demo-link,
-.github-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: currentColor;
-    width: 100%;
-    height: 100%;
 }
 
 .demo-link {
+    height: 100%;
     background-color: #4fe0d9d3;
-    /* background-color: #bd76bd; */
     border-radius: 0px 0px 0px 20px;
 }
 
-.card-back {
-    transform: rotateY(.5turn);
-    background-color: #4a3a9e;
+.github-link {
+    height: 100%;
+    background-color: #0080f9;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.demo-link ~ .github-link {
+    height: 100%;
+    background-color: #0080f9;
+    border-radius: 0px 0px 20px 0px;
+}
+
+.demo-link:hover,
+.github-link:hover {
+    background: #000000;
+    color: rgb(171, 171, 241);
+}
+
+.demo-link:active,
+.github-link:active,
+.demo-link:focus,
+.github-link:focus {
+    border: 1px solid rgb(171, 171, 241);
 }

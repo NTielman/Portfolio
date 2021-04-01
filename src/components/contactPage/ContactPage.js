@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux';
 
 const Contact = () => {
 
-    const getMode = useSelector(state => state.devMode);
+    const devMode = useSelector(state => state.devMode);
 
     return (
-        <section className={getMode ? 'contact page dev' : 'contact page des'} id='contact'>
+        <section className={devMode ? 'contact page dev' : 'contact page des'} id='contact'>
             <h1>Contact Me</h1>
             <h3>Don't be a stranger!</h3>
 
@@ -18,12 +18,12 @@ const Contact = () => {
                     <p>linkedin.com/in/nneka-tielman/</p>
                 </a>
 
-                <a className={getMode ? 'social-item github' : 'hide'} href='https://github.com/NTielman' target='_blank' rel="noreferrer noopener">
+                <a className={devMode ? 'social-item github' : 'hide'} href='https://github.com/NTielman' target='_blank' rel="noreferrer noopener">
                     <i className="fab fa-github-square social-icon"></i>
                     <p>github.com/NTielman</p>
                 </a>
 
-                <a className={getMode ? 'hide' : 'social-item instagram'} href='https://www.instagram.com/unsuprvsd/?hl=en' target='_blank' rel="noreferrer noopener">
+                <a className={devMode ? 'hide' : 'social-item instagram'} href='https://www.instagram.com/unsuprvsd/?hl=en' target='_blank' rel="noreferrer noopener">
                     <i className="fab fa-instagram social-icon"></i>
                     <p>@unsuprvsd</p>
                 </a>

@@ -11,6 +11,7 @@ const ToggleBar = () => {
             <input
                 type='checkbox'
                 id='toggle-checkbox'
+                className='hide'
                 value={isChecked}
                 onChange={() => {
                     document.body.classList.toggle('designMode')

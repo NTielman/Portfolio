@@ -4,7 +4,7 @@ import Parallax from 'parallax-js';
 
 const DesignHomePage = () => {
 
-    const getMode = useSelector(state => state.devMode);
+    const devMode = useSelector(state => state.devMode);
     const sceneRef = useRef();
     const backgroundStyle = {
         background: `url(${process.env.PUBLIC_URL}/assets/images/home/design/1skyBackground.png) no-repeat`,
@@ -24,7 +24,7 @@ const DesignHomePage = () => {
     }, [])
 
     return (
-        <div className={getMode ? 'hide' : 'parallax-container'}
+        <div className={devMode ? 'hide' : 'parallax-container'}
             style={backgroundStyle}>
             <ul ref={sceneRef} id='scene'>
                 <li className='layer tower' data-depth='0.2'>
