@@ -6,7 +6,7 @@ const Contact = () => {
     const getMode = useSelector(state => state.devMode);
 
     return (
-        <div className={getMode ? 'contact page dev' : 'contact page des'} id='contact'>
+        <section className={getMode ? 'contact page dev' : 'contact page des'} id='contact'>
             <h1>Contact Me</h1>
             <h3>Don't be a stranger!</h3>
 
@@ -48,7 +48,7 @@ const Contact = () => {
                     </p>
                 </span>
             </div>
-        </div >
+        </section >
     );
 }
 

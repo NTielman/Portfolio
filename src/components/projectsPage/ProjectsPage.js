@@ -1,15 +1,16 @@
 import React from 'react';
-import FilterMenu from './FilterMenu';
 import { useSelector } from 'react-redux';
-import { featured_projects as devProjects } from '../../functions/devProjects';
-import { featured_projects as desProjects } from '../../functions/desProjects';
-import filterProjects from '../../functions/filterProjects';
+
+import FilterMenu from '../filterMenu/FilterMenu';
 import DevProject from './DevProject';
 import DesProject from './DesProject';
 
+import { featured_projects as devProjects } from '../../functions/devProjects';
+import { featured_projects as desProjects } from '../../functions/desProjects';
+import filterProjects from '../../functions/filterProjects';
+
 const Projects = () => {
 
-    // i picked to show these two series not only are they relatively known by a lot of ppl, but they also both do a good job of rteflecting my love for weird unknown solving mysteries, challenging the way you see the world. one a bit more rroted in magicand the other a bit more logical. decoding mysteries
     const getMode = useSelector(state => state.devMode);
     const activeFilters = useSelector(state => state.activeFilters);
 
@@ -24,6 +25,7 @@ const Projects = () => {
             return (<DevProject project={project} key={project.key} />);
         });
     }
+
     const getDevFilters = () => {
         const filters = [];
         devProjects.forEach(project => {
@@ -49,7 +51,7 @@ const Projects = () => {
         });
     }
 
-    const getDesFilters = () => {
+    const getDesignFilters = () => {
         const filters = [];
         desProjects.forEach(project => {
             const typeOfWork = project.typeOfWork;
@@ -61,17 +63,19 @@ const Projects = () => {
     };
 
     return (
-        <div className='projects page' id='projects'>
+        <section className='projects page' id='projects'>
+
             <h1>Projects</h1>
-            <FilterMenu filters={getMode ? getDevFilters() : getDesFilters()} />
+
+            <FilterMenu filters={getMode ? getDevFilters() : getDesignFilters()} />
+
             <div className={getMode ? 'projects-container' : 'hide'}>
-                {/* {getMode ? getDevProjects() : getDesignProjects()} */}
                 {getDevProjects()}
             </div>
             <div className={getMode ? 'hide' : 'projects-container'}>
                 {getDesignProjects()}
             </div>
-        </div>
+        </section>
     );
 }
 
