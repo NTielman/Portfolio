@@ -90,4 +90,20 @@ const wincHackathon = {
     key: 5
 }
 
-export const featured_projects = [grocery_helper, lil_playlist, student_dashboard, superpy, betsy, wincHackathon]
+const portfolio = {
+    title: 'Portfolio',
+    githubUrl: 'https://github.com/NTielman/Portfolio',
+    shortDescription: 'A portfolio website showcasing personal projects',
+    longDescription: 'This is the website you are viewing right now. This website was built to showcase past and current projects that i am proud to put my name on, as well as provide some general info about myself.',
+    tools: [
+        'React',
+        'Redux',
+        'JavaScript',
+        'CSS',
+        'HTML',
+        'parallax.js'],
+    image: '/assets/images/projects/devProjects/portfolio.png',
+    key: 6
+}
+
+export const featured_projects = [grocery_helper, lil_playlist, student_dashboard, superpy, betsy, wincHackathon, portfolio]
