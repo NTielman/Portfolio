@@ -1,6 +1,6 @@
 .filter-menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     overflow: scroll;
     padding: 2% 0%;
@@ -30,6 +30,6 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
-    font-size: 2vmin;
+    font-size: 1.5vmin;
     margin: 5%;
 }
