@@ -3,12 +3,7 @@
     background: linear-gradient(180deg, rgba(250,150,36,1) 0%, rgba(253,81,118,1) 40%);
 }
 
-.about-container.des .about-text {
-    border-radius: 0px 20px 20px 0px;
-    background-color: #ffd74b;
-}
-
 .avatar.des {
-    border: solid 10px #ffd74b;
-    background-color: #0080f9;
+    border: solid 10px #863aa8;
+    background: rgb(250,150,36);
 }

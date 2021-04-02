@@ -13,40 +13,25 @@ const Contact = () => {
             <p>If you have any questions or just want to say hi,<br /> shoot me an email. <br /> I'd love to hear from you!</p>
 
             <div className='social-links-container'>
-                <a className='social-item linkedin' href='https://www.linkedin.com/in/nneka-tielman/' target='_blank' rel="noreferrer noopener">
-                    <i className="fab fa-linkedin social-icon"></i>
-                    <p>linkedin.com/in/nneka-tielman/</p>
+                <a className='social-item linkedin' href='https://www.linkedin.com/in/nneka-tielman/' target='_blank' rel="noreferrer noopener" onMouseOver={() => { console.log('link getting hovered') }}>
+                    <i onMouseOver={() => { console.log('icon getting hovered') }} className="fab fa-linkedin social-icon"></i>
                 </a>
 
                 <a className={devMode ? 'social-item github' : 'hide'} href='https://github.com/NTielman' target='_blank' rel="noreferrer noopener">
                     <i className="fab fa-github-square social-icon"></i>
-                    <p>github.com/NTielman</p>
                 </a>
 
                 <a className={devMode ? 'hide' : 'social-item instagram'} href='https://www.instagram.com/unsuprvsd/?hl=en' target='_blank' rel="noreferrer noopener">
                     <i className="fab fa-instagram social-icon"></i>
-                    <p>@unsuprvsd</p>
                 </a>
 
-                <span className="social-item whatsapp">
+                <a href='https://wa.me/31619168997' target='_blank' rel="noreferrer noopener" className="social-item whatsapp">
                     <i className="fab fa-whatsapp-square social-icon"></i>
-                    <p>+31 619 168 997</p>
-                    <p>+0 619 168 997</p>
-                </span>
-
+                </a>
 
                 <a href='mailto:khalienne@gmail.com' className='social-item gmail'>
                     <i className="fas fa-envelope-square social-icon"></i>
-                    <p>khalienne@gmail.com</p>
                 </a>
-
-                <span className='social-item address'>
-                    <i className="fas fa-map-marker-alt social-icon"></i>
-                    <p>Van der Hoopstraat 57
-                        <br />2523 HE, The Hague
-                        <br /> Netherlands
-                    </p>
-                </span>
             </div>
         </section >
     );

@@ -1,37 +1,19 @@
 .about-container {
     display: flex;
     flex-direction: column;
-}
-
-.about-content {
-    display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    padding: 3.5%;
 }
 
 .about-text {
-    width: 65%;
-    padding: 3.5%;
-    height: 35vmin;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-    overflow: scroll;
-    position: relative;
+    width: 95%;
+    text-align: center;
+    margin-bottom: 2%;
 }
 
-.helper-arrow {
-    position: absolute;
-    top: 75%;
-    right: 2.5%;
-    animation: pointDown 1s linear infinite;
-}
-
-@keyframes pointDown {
-    from {transform: translateY(0%); opacity: 0;}
-    to {transform: translateY(500%); opacity: 1;}
-}
-
-@keyframes fadeOut {
-    from {opacity: 1;}
-    to {opacity: 0;}
+.about-text ul {
+    list-style: none;
 }
 
 .about-text h3 {
@@ -53,4 +35,5 @@
 
 .about-caption {
     text-align: center;
+    opacity: .7;
 }
