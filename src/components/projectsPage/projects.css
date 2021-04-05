@@ -2,12 +2,12 @@
     background: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
+    padding: 85px 3.5%;
 }
 
 .projects-container {
     /* height: 100vh; */
     /* overflow: scroll; */
-    padding: 1%;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;

@@ -42,6 +42,10 @@
     transition: 150ms transform;
 }
 
+.btn.resume::before {
+    font-size: 12px;
+}
+
 .btn:hover::before {
     transform: scale(1);
 }

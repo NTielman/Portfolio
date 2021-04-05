@@ -2,8 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    overflow: scroll;
-    padding: 2% 0%;
+    padding: 2.5%;
     height: 15vmin;
 }
 

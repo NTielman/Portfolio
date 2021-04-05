@@ -7,10 +7,12 @@ const Contact = () => {
 
     return (
         <section className={devMode ? 'contact page dev' : 'contact page des'} id='contact'>
-            <h1>Contact Me</h1>
-            <h3>Don't be a stranger!</h3>
+            <div className='social-text-container'>
+                <h1>Contact Me</h1>
+                <h3>Don't be a stranger!</h3>
 
-            <p>If you have any questions or just want to say hi,<br /> shoot me an email. <br /> I'd love to hear from you!</p>
+                <p>If you have any questions or just want to say hi,<br /> shoot me an email. <br /> I'd love to hear from you!</p>
+            </div>
 
             <div className='social-links-container'>
                 <a className='social-item linkedin' href='https://www.linkedin.com/in/nneka-tielman/' target='_blank' rel="noreferrer noopener" onMouseOver={() => { console.log('link getting hovered') }}>

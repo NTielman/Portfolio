@@ -28,14 +28,14 @@ const Nav = () => {
                     data-tooltip='Projects'>
                     <i className="menu-icon fas fa-pen"></i>
                 </div>
-                <div className='btn'
+                <div className='btn resume'
                     onClick={() => {
                         const tempLink = document.createElement('a');
                         tempLink.setAttribute('href', process.env.PUBLIC_URL + '/assets/resume/NTielman.pdf');
                         tempLink.setAttribute('download', 'NTielman-resume.pdf');
                         tempLink.click()
                     }}
-                    data-tooltip='Resume'>
+                    data-tooltip='Download Resume'>
                     <i className="menu-icon fas fa-file"></i>
                 </div>
                 <div className='btn'
