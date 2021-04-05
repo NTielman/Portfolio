@@ -1,20 +1,19 @@
 .card-hover-area {
     perspective: 1000px;
-    width: 22.5%;
-    height: 45vmin;
-    margin: 1%;
+    width: 35vw;
+    /* height: 45vmin; */
+    margin: 2.5% 5%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
 }
 
 .project-card.des {
     transform-style: preserve-3d;
-    height: 90%;
-    width: 90%;
+    height: 75%;
+    width: 100%;
     position: relative;
-    display: flex;
-    flex-direction: column;
     transition: 0.5s ease;
 }
 
@@ -33,7 +32,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     transition: 0.5s ease-out;
     background-color: #863aa8bd;
     border-radius: 20px;
@@ -43,8 +42,8 @@
 .flickr-link {
     background-color: darkorange;
     justify-self: flex-end;
-    height: 20%;
-    border-radius: 0px 0px 20px 20px;
+    height: 15%;
+    border-radius: 20px;
 }
 
 .flickr-link:hover {

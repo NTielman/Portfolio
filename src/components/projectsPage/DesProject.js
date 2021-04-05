@@ -29,15 +29,15 @@ const DesProject = (props) => {
 
             <div ref={cardRef} className='project-card des'>
                 <img src={process.env.PUBLIC_URL + props.project.image} alt='project preview' />
+                <div ref={titleBoxRef} className='card-content des'>
+                    <h3 className='card-title des'>{props.project.title}</h3>
+                    <p className='card-subtitle des'>{props.project.description}</p>
+                </div>
             </div>
-            <div ref={titleBoxRef} className='card-content des'>
-                <h3 className='card-title des'>{props.project.title}</h3>
-                <p className='card-subtitle des'>{props.project.description}</p>
-                <a className='flickr-link social-btn' href={hasGallery ? props.project.galleryUrl : props.project.galleryImgUrl} target='_blank' rel="noreferrer noopener">
-                    <i className="fab fa-flickr"></i>
-                    <p className='btn-text'>{hasGallery ? 'View Gallery' : 'View Image'}</p>
-                </a>
-            </div>
+            <a className='flickr-link social-btn' href={hasGallery ? props.project.galleryUrl : props.project.galleryImgUrl} target='_blank' rel="noreferrer noopener">
+                <i className="fab fa-flickr"></i>
+                <p className='btn-text'>{hasGallery ? 'View Gallery' : 'View Image'}</p>
+            </a>
         </div>
     );
 }

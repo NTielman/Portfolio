@@ -32,7 +32,13 @@ https://ntielman.github.io/Portfolio/
 
 
 ## Usage & Details 
-I built this website to showcase past and current projects i'm proud to put my name on, as well as provide some general info about myself.
+A website to showcase past and current projects. 
+
+* To navigate to a specific section in the site, tap on the burgermenu at the top of the screen and then tap on the desired section.
+* To toggle between "designer" and "developer" mode, tap on the togglebar at the bottom of the screen
+* To include or exclude specific types of projects tap on the desired words from the filtermenu above the projects 
+* To view more info on a specific project hover over the project and click on any desired links
+* To connect or contact me on w specific social site, tap on the desired social icon in the contact section
 
 ## Credits
 For the second homepage (Design homepage) i make use of [Matthew Wagerfield's](https://github.com/wagerfield) parallax.js library.

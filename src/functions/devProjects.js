@@ -61,7 +61,7 @@ const superpy = {
 const betsy = {
     title: 'Betsy',
     githubUrl: 'https://github.com/NTielman/Betsy',
-    demoUrl: '',
+    videoDemoUrl: 'https://www.youtube.com/watch?v=gcu0Do8sEho',
     shortDescription: 'A multi-vendor marketplace modeled after Etsy',
     longDescription: "Created a multi-vendor marketplace modeled after Etsy. Using SQLite, modeled a database that stores a user's information, the products they sell, the tags and images associated with each product, and a user's transactions on the site. Implemented Peewee ORM to query and retrieve data from the database. Built a front-end for the application using Flask, and attempted to create a near-identical clone to the original Etsy site by using Bulma (CSS framework).",
     tools: [
@@ -94,7 +94,7 @@ const portfolio = {
     title: 'Portfolio',
     githubUrl: 'https://github.com/NTielman/Portfolio',
     shortDescription: 'A portfolio website showcasing personal projects',
-    longDescription: 'This is the website you are viewing right now. This website was built to showcase past and current projects that i am proud to put my name on, as well as provide some general info about myself.',
+    longDescription: "This is the website you are viewing right now. Using React built a portfolio website that allows users to toggle between designer and developer mode and view past and current projects. Designed 2 interactive homepages and 2 projectcards that react to the user's cursor movements ",
     tools: [
         'React',
         'Redux',

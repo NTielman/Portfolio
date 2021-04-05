@@ -34,8 +34,9 @@
     text-decoration: none;
     color: currentColor;
     width: 100%;
+    padding: 5%;
 }
 
 .btn-text {
-    margin-left: 5px;
+    padding: 5%;
 }
