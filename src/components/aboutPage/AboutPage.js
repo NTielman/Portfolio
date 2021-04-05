@@ -17,6 +17,7 @@ const About = () => {
                 className={devMode ? 'about-container dev' : 'about-container des'}>
 
                 <h1>About Me</h1>
+                <h2>Part {devMode ? 'Developer' : 'Designer'}</h2>
 
                 <figure className='about-image-container'>
                     <img className={devMode ? 'avatar dev' : 'avatar des'} src={devMode ? devImage : designImage} alt='Avatar of Nneka' />

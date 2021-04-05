@@ -11,25 +11,17 @@
     right: -1%;
     bottom: -1%;
     z-index: -1;
-    background: rgb(134,58,168);
-    background: linear-gradient(90deg, rgba(134,58,168,1) 0%, rgba(253,81,118,1) 20%, rgba(250,150,36,1) 50%, rgba(255,215,75,1) 80%, rgba(134,58,168,1) 100%);
-    background-size: 200%;
+    background: rgb(44,27,79);
+    background: linear-gradient(307deg, rgba(44,27,79,0.8230088495575221) 0%, rgba(253,81,118,0.8185840707964602) 50%, rgba(250,150,36,0.8207964601769911) 75%, rgba(255,215,75,0.8163716814159292) 100%);
+    background-size: 250%;
+    background-position: right;
     border-radius: 20px;
     opacity: 0;
-    transition: 1s ease-in-out;
+    transition: 1.5s linear;
 }
 
 .filter-menu.des li:hover label::before,
 .filter-menu.des li label:hover::before {
     opacity: 1;
-    animation: glow 2s linear infinite;
-}
-
-@keyframes glow {
-    0% {
-        background-position: 0%;
-    }
-    100% {
-        background-position: 200%;
-    }
+    background-position: left;
 }
