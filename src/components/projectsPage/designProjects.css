@@ -12,7 +12,6 @@
     transform-style: preserve-3d;
     height: 90%;
     width: 90%;
-    border-radius: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -20,24 +19,25 @@
 }
 
 .project-card.des img {
-    height: 80%;
+    height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px;
 }
 
 .des.card-content {
     position: absolute;
-    height: 80%;
+    height: 100%;
     width: 100%;
     top: 0%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     transition: 0.5s ease-out;
     background-color: #863aa8bd;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px;
+    opacity: 0;
 }
 
 .flickr-link {

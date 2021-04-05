@@ -2,7 +2,7 @@ const bowsette = {
     title: 'Bowsette',
     description: 'Expanding on the "Bowsette" meme, except now everyone is a Peach',
     typeOfWork: 'Personal Project',
-    galleryUrl: 'https://flic.kr/p/2kQfyJH',
+    galleryImgUrl: 'https://flic.kr/p/2kQfyJH',
     image: '/assets/images/projects/designProjects/bowsette.jpg',
     key: 0
 }
@@ -56,7 +56,7 @@ const emojis = {
     title: 'Emojis',
     description: "Project creating alternative emoji designs",
     typeOfWork: 'Personal Project',
-    galleryUrl: 'https://flic.kr/p/2kJ8uVo',
+    galleryImgUrl: 'https://flic.kr/p/2kJ8uVo',
     image: '/assets/images/projects/designProjects/emojis.jpg',
     key: 6
 }
@@ -74,7 +74,7 @@ const gitemtaylor = {
     title: 'Gitem Taylor',
     description: "Album art design for artist 'GitemTaylor'",
     typeOfWork: 'Album Art',
-    galleryUrl: 'https://flic.kr/p/2kQfyJ7',
+    galleryImgUrl: 'https://flic.kr/p/2kQfyJ7',
     image: '/assets/images/projects/designProjects/gitemtaylor.jpg',
     key: 8
 }
@@ -92,7 +92,7 @@ const marchHare = {
     title: 'March Hare',
     description: "Mascot design of 'The March Hare' for client",
     typeOfWork: 'Mascot',
-    galleryUrl: 'https://flic.kr/p/2kGJP1C',
+    galleryImgUrl: 'https://flic.kr/p/2kGJP1C',
     image: '/assets/images/projects/designProjects/marchHare.jpg',
     key: 10
 }
@@ -110,7 +110,7 @@ const stanLee = {
     title: 'Stan Lee',
     description: "Tribute illustration for the late Stan Lee",
     typeOfWork: 'Personal Project',
-    galleryUrl: 'https://flic.kr/p/2kQfyJc',
+    galleryImgUrl: 'https://flic.kr/p/2kQfyJc',
     image: '/assets/images/projects/designProjects/stanLee.jpg',
     key: 12
 }
@@ -119,7 +119,7 @@ const stephenHawking = {
     title: 'Stephen Hawking',
     description: "Tribute illustration for the late Stephen Hawking",
     typeOfWork: 'Personal Project',
-    galleryUrl: 'https://flic.kr/p/2kGJNZA',
+    galleryImgUrl: 'https://flic.kr/p/2kGJNZA',
     image: '/assets/images/projects/designProjects/stephenHawking.jpg',
     key: 13
 }
