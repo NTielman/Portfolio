@@ -20,7 +20,7 @@
     transform: translate(-50%, -50%);
     border-radius: 50%;
     background: #000000;
-    transition: width 0.5s linear, height 0.5s linear;
+    transition: width 500ms linear, height 500ms linear;
     z-index: -1;
 }
 

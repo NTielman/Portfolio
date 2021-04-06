@@ -21,7 +21,7 @@
     align-items: center;
     border-radius: 20px;
     font-size: 16px;
-    transition: background-position 1.5s linear;
+    transition: background-position 500ms linear;
     cursor: pointer;
 }
 
@@ -34,7 +34,7 @@
     left: 0%;
     transform: translateY(-50%) translateX(2px);
     border-radius: 50%;
-    transition: left 0.5s linear, transform 0.5s linear;
+    transition: left 500ms linear, transform 500ms linear;
     cursor: pointer;
 }
 

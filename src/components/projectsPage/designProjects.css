@@ -14,7 +14,7 @@
     height: 75%;
     width: 100%;
     position: relative;
-    transition: 0.5s ease;
+    transition: 300ms linear;
 }
 
 .project-card.des img {
@@ -33,7 +33,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: 0.5s ease-out;
+    transition: 250ms linear;
     background-color: #863aa8bd;
     border-radius: 20px;
     opacity: 0;

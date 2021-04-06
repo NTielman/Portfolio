@@ -33,7 +33,7 @@
     border-radius: 20px;
     color: currentColor;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    transition: background-color .5s ease-in-out;
+    transition: background-color 500ms linear;
 }
 
 .social-item p {

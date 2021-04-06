@@ -17,7 +17,7 @@
     background-position: right;
     border-radius: 20px;
     opacity: 0;
-    transition: 1.5s linear;
+    transition: 500ms linear;
 }
 
 .filter-menu.des li:hover label::before,

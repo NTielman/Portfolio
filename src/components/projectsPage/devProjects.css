@@ -9,7 +9,7 @@
     height: 100%;
     text-align: center;
     position: relative;
-    transition: transform 2s;
+    transition: transform 1s linear;
     transform-style: preserve-3d;
     border-radius: 20px;
 }

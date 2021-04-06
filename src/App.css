@@ -33,7 +33,7 @@ body {
     background: rgb(44,22,65);
     background: radial-gradient(circle, rgba(44,22,65,1) 20%, rgba(74,58,158,1) 100%);
     color: white;
-    transition: 0.5s linear;
+    transition: 300ms linear;
     font-family: 'Lexend', sans-serif;
     font-size: 2.25vmin;
 }

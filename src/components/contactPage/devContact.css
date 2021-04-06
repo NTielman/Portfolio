@@ -17,7 +17,7 @@
     border: 2px solid rgb(171, 171, 241);
     border-radius: 20px;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 500ms linear;
 }
 
 .dev .social-links-container .social-item:hover {

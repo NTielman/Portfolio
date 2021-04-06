@@ -23,7 +23,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    transition: background-color 300ms ease;
+    transition: background-color 500ms linear;
     border-radius: 20px;
     cursor: pointer;
     position: relative;
