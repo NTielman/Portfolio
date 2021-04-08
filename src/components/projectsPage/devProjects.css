@@ -1,7 +1,7 @@
 .project-card.dev {
-    width: 45%;
-    height: 45vmin;
-    margin: 1%;
+    width: 100%;
+    height: 45vw;
+    margin: 1em 0%;
 }
 
 .card-content.dev {
@@ -88,8 +88,11 @@
 .card-description {
     height: 55%;
     overflow: scroll;
-    padding: 5%;
+    padding: 1.5em;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     /* backface-visibility: hidden; */
 }
 
@@ -99,13 +102,14 @@
     height: 25%;
     width: 100%;
     flex-wrap: wrap;
-    padding: 0% 5%;
+    padding: 0% 1em;
     align-items: center;
     justify-content: center;
+    font-size: .8rem;
 }
 
 .card-tool{ 
-    margin: 0% 5%;
+    margin: 0% 1em;
     text-align: center;
 }
 
@@ -148,4 +152,20 @@
 .demo-link:focus,
 .github-link:focus {
     border: 1px solid rgb(171, 171, 241);
+}
+
+/* laptops */
+@media (min-width:801px) {
+    .project-card.dev {
+        width: 45%;
+        height: 35vw;
+        margin: 1em;
+    }
+}
+
+/* desktop */
+@media (min-width:1025px) {
+    .project-card.dev {
+        height: 25vw;
+    }
 }

@@ -7,11 +7,11 @@
 
 .toggle-bar {
     width: 15%;
-    height: 30px;  
+    height: 2rem;  
     position: relative;
     left: 50%;
     transform: translateX(-50%) scale(2);
-    padding: 5px;
+    padding: .3em;
     background: rgb(44,27,79);
     background: linear-gradient(90deg, rgba(44,27,79,1) 0%, rgba(253,81,118,1) 25%, rgba(0,128,249,1) 75%, rgba(44,22,65,1) 100%);
     background-size: 200%;
@@ -20,26 +20,26 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 1rem;
     transition: background-position 500ms linear;
     cursor: pointer;
 }
 
 .ball {
     background-color: white;
-    width: 25px;
-    height: 25px;
+    width: 1.6rem;
+    height: 1.6rem;
     position: absolute;
     top: 50%;
     left: 0%;
-    transform: translateY(-50%) translateX(2px);
+    transform: translateY(-50%) translateX(0.1rem);
     border-radius: 50%;
     transition: left 500ms linear, transform 500ms linear;
     cursor: pointer;
 }
 
 .fa-pencil-alt {
-    margin-left: 5px;
+    margin-left: 0.12rem;
 }
 
 #toggle-checkbox:checked + .toggle-bar:hover,
@@ -52,6 +52,6 @@
 }
 
 #toggle-checkbox:checked + .toggle-bar .ball {
-    transform: translateY(-50%) translateX(-27px);
+    transform: translateY(-50%) translateX(-1.75rem);
     left: 100%;
 }

@@ -1,6 +1,6 @@
 .menu {
     position: fixed;
-    width: 70px;
+    width: 4.4rem;
     left: 50%;
     top: 2.5%;
     transform: translateX(-50%);
@@ -8,12 +8,12 @@
 }
 
 .menu-icon {
-    font-size: 36px;
+    font-size: 2rem;
 }
 
 .btn {
-    width: 70px;
-    height: 70px;
+    width: 4.4rem;
+    height: 4.4rem;
     border-radius: 50%;
     position: absolute;
     overflow: hidden; 
@@ -28,7 +28,7 @@
 .btn::before {    
     content: attr(data-tooltip);
     font-weight: 700;
-    font-size: 14px;
+    font-size: .9rem;
     border-radius: 50%;
     text-align: center;
     height: 100%;
@@ -43,7 +43,7 @@
 }
 
 .btn.resume::before {
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .btn:hover::before {
@@ -57,7 +57,7 @@
 }
 
 .closeBtn {
-    transform: translateY(50px);
+    transform: translateY(3rem);
     opacity: 0;
 }
 
@@ -95,7 +95,7 @@
 }
 
 #menu-checkbox:checked ~ .toggle-menu .btn .menuBtn {
-    transform: translateY(-50px);
+    transform: translateY(-3rem);
     opacity: 0;
 }
 
@@ -105,28 +105,28 @@
 }
 
 #menu-checkbox:checked ~ .toggle-menu .btn:nth-child(2) {
-    left: -100px;
+    left: -6.25rem;
     opacity: 1;
 }
 
 #menu-checkbox:checked ~ .toggle-menu .btn:nth-child(3) {
-    left: -75px;
-    top: 72.5px;
+    left: -4.5rem;
+    top: 4.5rem;
     opacity: 1;
 }
 
 #menu-checkbox:checked ~ .toggle-menu .btn:nth-child(4) {
-    top: 100px;
+    top: 6.25rem;
     opacity: 1;
 }
 
 #menu-checkbox:checked ~ .toggle-menu .btn:nth-child(5) {
-    left: 75px;
-    top: 72.5px;
+    left: 4.5rem;
+    top: 4.5rem;
     opacity: 1;
 }
 
 #menu-checkbox:checked ~ .toggle-menu .btn:nth-child(6) {
-    left: 100px;
+    left: 6.25rem;
     opacity: 1;
 }

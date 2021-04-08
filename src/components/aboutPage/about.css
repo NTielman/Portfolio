@@ -3,38 +3,47 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 85px 3.5%;
+    padding: 5em 1.5em;
 }
 
 .about-text {
-    width: 95%;
+    width: 80%;
     max-width: 700px;
     text-align: center;
-    margin-bottom: 2%;
 }
 
 .about-text ul {
     list-style: none;
 }
 
-.about-text h3 {
-    margin-bottom: 2%;
-}
-
 .about-image-container {
     display: flex;
     flex-direction: column;
-    width: 35%;
-    padding: 5%;
+    width: 55%;
+    padding: 1em;
 }
 
 .avatar {
     border-radius: 20px;
-    margin-bottom: 5%;
+    margin-bottom: 1em;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .about-caption {
     text-align: center;
     opacity: .7;
+}
+
+/* laptops */
+@media (min-width:801px) {
+    .about-image-container {
+        width: 45%;
+    }
+}
+
+/* desktop */
+@media (min-width:1025px) {
+    .about-image-container {
+        width: 25%;
+    }
 }

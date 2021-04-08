@@ -8,6 +8,7 @@
 html {
     height: 100vh;
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 ::selection {
@@ -35,7 +36,6 @@ body {
     color: white;
     transition: 300ms linear;
     font-family: 'Lexend', sans-serif;
-    font-size: 2.25vmin;
 }
 
 body.designMode {
@@ -53,11 +53,11 @@ h1 {
     text-align: center;
     margin: 2%;
     text-transform: uppercase;
-    font-size: 5.5vmin;
+    font-size: 2rem;
 }
 
 h3 {
-    font-size: 3vmin;
+    font-size: 1.2rem;
 }
 
 a {
@@ -105,3 +105,10 @@ a {
 @import 'components/contactPage/contact.css';
 @import 'components/contactPage/devContact.css';
 @import 'components/contactPage/designContact.css';
+
+/* desktop */
+@media (min-width:1025px) {
+    html {
+        font-size: 18px;
+    }
+}

@@ -27,10 +27,6 @@ const Contact = () => {
                     <i className="fab fa-instagram social-icon"></i>
                 </a>
 
-                <a href='https://wa.me/31619168997' target='_blank' rel="noreferrer noopener" className="social-item whatsapp">
-                    <i className="fab fa-whatsapp-square social-icon"></i>
-                </a>
-
                 <a href='mailto:khalienne@gmail.com' className='social-item gmail'>
                     <i className="fas fa-envelope-square social-icon"></i>
                 </a>

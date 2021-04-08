@@ -1,8 +1,8 @@
 .card-hover-area {
     perspective: 1000px;
-    width: 35vw;
-    /* height: 45vmin; */
-    margin: 2.5% 5%;
+    width: 100%;
+    height: 85vw;
+    margin: 1em 0%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -37,6 +37,7 @@
     background-color: #863aa8bd;
     border-radius: 20px;
     opacity: 0;
+    padding: 1em;
 }
 
 .flickr-link {
@@ -49,4 +50,20 @@
 .flickr-link:hover {
     background-color:#fd5176 ;
     color: #ffd74b;
+}
+
+/* tablets */
+@media (min-width:600px) {
+    .card-hover-area {
+        width: 40%;
+        height: 45vw;
+        margin: 2.5% 5%;
+    }
+}
+
+/* desktop */
+@media (min-width:1025px) {
+    .des.card-content {
+        padding: 2em;
+    }
 }
