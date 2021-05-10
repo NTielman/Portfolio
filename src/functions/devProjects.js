@@ -14,7 +14,7 @@ const grocery_helper = {
 }
 
 const lil_playlist = {
-    title: 'Lil Playlist',
+    title: 'Playlist',
     githubUrl: 'https://github.com/NTielman/Lil_Playlist',
     demoUrl: 'https://hardcore-thompson-95495f.netlify.app',
     shortDescription: 'A web app to organize your music',
@@ -80,7 +80,7 @@ const wincHackathon = {
     title: 'Boss Button',
     githubUrl: 'https://github.com/WincAcademy/hackathon-0-hongerige-huismuizen',
     demoUrl: 'https://unruffled-lichterman-d3e059.netlify.app/',
-    shortDescription: 'Team entry project for the "Winc - best button" hackathon',
+    shortDescription: 'Hackathon project - creating a button with surprising effects',
     longDescription: "Participated in Winc Academy's 'best button' hackathon. Collaborated with team members by making use of VsCode's Live Share extension, which allowed us to share a live server and code simultaneously in the same files. Our team came up with the combined idea of making a button that multiplies on click, and whose 'child buttons' all have differing effects. My tasks: Wrote the user story as a guideline for how the final site experience should look and feel. Developed the 'water' and 'cat' buttons. Responsible for the site's design and fixing animations.",
     tools: [
         'CSS',
@@ -94,7 +94,7 @@ const portfolio = {
     title: 'Portfolio',
     githubUrl: 'https://github.com/NTielman/Portfolio',
     shortDescription: 'A portfolio website showcasing personal projects',
-    longDescription: "This is the website you are viewing right now. Using React built a portfolio website that allows users to toggle between designer and developer mode and view past and current projects. Designed 2 interactive homepages and 2 projectcards that react to the user's cursor movements ",
+    longDescription: "This is the website you are viewing right now. Using React built a portfolio website that allows users to toggle between designer and developer mode and view past and current projects. Designed 2 interactive homepages and 2 projectcards that react to the user's cursor movements.",
     tools: [
         'React',
         'Redux',
@@ -106,4 +106,19 @@ const portfolio = {
     key: 6
 }
 
-export const featured_projects = [grocery_helper, lil_playlist, student_dashboard, superpy, betsy, wincHackathon, portfolio]
+const tarot = {
+    title: 'Tarot Api',
+    githubUrl: 'https://github.com/NTielman/Tarot-Reader',
+    demoUrl: 'https://awesome-albattani-455531.netlify.app/',
+    shortDescription: 'Find out what the future holds for you with this Tarot reader',
+    longDescription: "Using a public tarot API in combination with a printable tarot deck found online, I created a web app that provides users with daily tarot readings as well as an image library where users can learn the meanings behind all 78 cards.",
+    tools: [
+        'Vue',
+        'JavaScript',
+        'CSS',
+        'HTML'],
+    image: '/assets/images/projects/devProjects/tarot.jpg',
+    key: 7
+}
+
+export const featured_projects = [grocery_helper, lil_playlist, student_dashboard, superpy, betsy, wincHackathon, portfolio, tarot]

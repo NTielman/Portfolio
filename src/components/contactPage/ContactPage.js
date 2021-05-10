@@ -15,8 +15,8 @@ const Contact = () => {
             </div>
 
             <div className='social-links-container'>
-                <a className='social-item linkedin' href='https://www.linkedin.com/in/nneka-tielman/' target='_blank' rel="noreferrer noopener" onMouseOver={() => { console.log('link getting hovered') }}>
-                    <i onMouseOver={() => { console.log('icon getting hovered') }} className="fab fa-linkedin social-icon"></i>
+                <a className='social-item linkedin' href='https://www.linkedin.com/in/nneka-tielman/' target='_blank' rel="noreferrer noopener">
+                    <i className="fab fa-linkedin social-icon"></i>
                 </a>
 
                 <a className={devMode ? 'social-item github' : 'hide'} href='https://github.com/NTielman' target='_blank' rel="noreferrer noopener">
