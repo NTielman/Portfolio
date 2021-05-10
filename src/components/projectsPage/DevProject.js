@@ -13,7 +13,6 @@ const DevProject = (props) => {
                     </div>
                 </div>
 
-
                 <div className='card-back'>
                     <p className='card-description'>{props.project.longDescription}</p>
 
