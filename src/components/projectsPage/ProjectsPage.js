@@ -66,7 +66,7 @@ const Projects = () => {
         <section className='projects page' id='projects'>
 
             <h1>Projects</h1>
-            <h4>Filter by:</h4>
+            <p>Filter by:</p>
             <FilterMenu filters={devMode ? getDevFilters() : getDesignFilters()} />
 
             <div className={devMode ? 'projects-container' : 'hide'}>

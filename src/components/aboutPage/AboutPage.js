@@ -47,14 +47,12 @@ const About = () => {
 
                     <strong>Some random facts:</strong>
                     <ul>
-                        <em>
-                            <li>🏝 Born in Curaçao</li>
-                            <li>🗣 Speaks 5 languages</li>
-                            <li>📺 Enjoys watching cartoons <br /> <small>(Rick & Morty and Gravity Falls are some of my favorites)</small></li>
-                            <li>🎨 Worked as an illustrator/ visual artist for 7 years</li>
-                            <li>🍣 Addicted to sushi</li>
-                            <li>😎 Has an awesome sense of humor</li>
-                        </em>
+                        <li>🏝 Born in Curaçao</li>
+                        <li>🗣 Speaks 5 languages</li>
+                        <li>📺 Enjoys watching cartoons <br /> <small>(Rick & Morty and Gravity Falls are some of my favorites)</small></li>
+                        <li>🎨 Worked as an illustrator/ visual artist for 7 years</li>
+                        <li>🍣 Addicted to sushi</li>
+                        <li>😎 Has an awesome sense of humor</li>
                     </ul>
 
                     <br />
