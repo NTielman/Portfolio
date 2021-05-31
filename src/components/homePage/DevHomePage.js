@@ -48,11 +48,11 @@ const DevHomePage = () => {
 
                 leftPupilRef.current.style.left = (pupilsPos.x / 2) + '%';
                 leftPupilRef.current.style.top = (pupilsPos.y / 2) + '%';
-                leftPupilRef.current.style.transform = `translateY(${pupilsPos.y}%) translateX(${pupilsPos.x}%)`;
+                leftPupilRef.current.style.transform = `translate(${pupilsPos.x}%, ${pupilsPos.y}%)`;
 
                 rightPupilRef.current.style.left = (pupilsPos.x / 2) + '%';
                 rightPupilRef.current.style.top = (pupilsPos.y / 2) + '%';
-                rightPupilRef.current.style.transform = `translateY(${pupilsPos.y}%) translateX(${pupilsPos.x}%)`;
+                rightPupilRef.current.style.transform = `translate(${pupilsPos.x}%, ${pupilsPos.y}%)`;
             }}>
 
             <div className='eyes'>

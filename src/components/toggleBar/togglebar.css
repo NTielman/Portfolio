@@ -1,57 +1,63 @@
 .toggle-bar-container {
-    position: fixed;
-    bottom: 5%;
-    width: 100%;
-    z-index: 100;
+  position: fixed;
+  bottom: 5%;
+  width: 100%;
+  z-index: 100;
 }
 
 .toggle-bar {
-    width: 15%;
-    height: 2rem;  
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%) scale(2);
-    padding: .3em;
-    background: rgb(44,27,79);
-    background: linear-gradient(90deg, rgba(44,27,79,1) 0%, rgba(253,81,118,1) 25%, rgba(0,128,249,1) 75%, rgba(44,22,65,1) 100%);
-    background-size: 200%;
-    background-position: right;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 20px;
-    font-size: 1rem;
-    transition: background-position 500ms linear;
-    cursor: pointer;
+  width: 15%;
+  height: 2rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) scale(2);
+  padding: 0.3em;
+  background: rgb(44, 27, 79);
+  background: linear-gradient(
+    90deg,
+    rgba(44, 27, 79, 1) 0%,
+    rgba(253, 81, 118, 1) 25%,
+    rgba(0, 128, 249, 1) 75%,
+    rgba(44, 22, 65, 1) 100%
+  );
+  background-size: 200%;
+  background-position: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 1rem;
+  transition: background-position 500ms linear;
+  cursor: pointer;
 }
 
 .ball {
-    background-color: white;
-    width: 1.6rem;
-    height: 1.6rem;
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translateY(-50%) translateX(0.1rem);
-    border-radius: 50%;
-    transition: left 500ms linear, transform 500ms linear;
-    cursor: pointer;
+  background-color: white;
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(0.1rem);
+  border-radius: 50%;
+  transition: left 500ms linear, transform 500ms linear;
+  cursor: pointer;
 }
 
 .fa-pencil-alt {
-    margin-left: 0.12rem;
+  margin-left: 0.12rem;
 }
 
 #toggle-checkbox:checked + .toggle-bar:hover,
 .toggle-bar:hover {
-    background-position: center;
+  background-position: center;
 }
 
 #toggle-checkbox:checked + .toggle-bar {
-    background-position: left;
+  background-position: left;
 }
 
 #toggle-checkbox:checked + .toggle-bar .ball {
-    transform: translateY(-50%) translateX(-1.75rem);
-    left: 100%;
+  transform: translateY(-50%) translateX(-1.7rem);
+  left: 100%;
 }

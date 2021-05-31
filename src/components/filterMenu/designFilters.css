@@ -1,25 +1,31 @@
 .filter-menu.des li input:checked ~ label {
-    background-color:#fd5176 ;
-    color: #ffd74b;
+  background-color: #fd5176;
+  color: #ffd74b;
 }
 
 .filter-menu.des li label::before {
-    content: ' ';
-    position: absolute;
-    top: -1%;
-    left: -1%;
-    right: -1%;
-    bottom: -1%;
-    z-index: -1;
-    background: rgb(44,27,79);
-    background: linear-gradient(307deg, rgb(44, 27, 79) 0%, rgb(253, 81, 118) 50%, rgb(250, 150, 36) 75%, rgb(255, 216, 75) 100%);
-    background-size: 250%;
-    background-position: right;
-    border-radius: 20px;
-    transition: 500ms linear;
+  content: " ";
+  position: absolute;
+  top: -1%;
+  left: -1%;
+  right: -1%;
+  bottom: -1%;
+  z-index: -1;
+  background: rgb(44, 27, 79);
+  background: linear-gradient(
+    307deg,
+    rgb(44, 27, 79) 0%,
+    rgb(253, 81, 118) 50%,
+    rgb(250, 150, 36) 75%,
+    rgb(255, 216, 75) 100%
+  );
+  background-size: 250%;
+  background-position: right;
+  border-radius: 20px;
+  transition: background-position 500ms linear;
 }
 
 .filter-menu.des li:hover label::before,
 .filter-menu.des li label:hover::before {
-    background-position: left;
+  background-position: left;
 }

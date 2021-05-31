@@ -1,9 +1,13 @@
 .about-container.des {
-    background: rgb(250,150,36);
-    background: linear-gradient(180deg, rgba(250,150,36,1) 0%, rgba(253,81,118,1) 40%);
+  background: rgb(250, 150, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(250, 150, 36, 1) 0%,
+    rgba(253, 81, 118, 1) 40%
+  );
 }
 
 .avatar.des {
-    border: solid 10px #863aa8;
-    background: rgb(250,150,36);
+  border: solid 10px #863aa8;
+  background: rgb(250, 150, 36);
 }

@@ -1,12 +1,12 @@
 .toggle-menu.des .btn {
-    background-color: #fd5176a2;
+  background-color: #fd5176a2;
 }
 
 .toggle-menu.des .btn:hover {
-    color:  #ffd74b;
+  color: #ffd74b;
 }
 
 .toggle-menu.des .btn::before {
-    background-color: #fd5176;
-    color: #ffd74b;
+  background-color: #fd5176;
+  color: #ffd74b;
 }

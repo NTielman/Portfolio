@@ -1,30 +1,30 @@
 .filter-menu.dev li label {
-    background: #4a3a9e;
+  background: #4a3a9e;
 }
 
 .filter-menu.dev li input:checked ~ label {
-    background: #4b3a9e00;
-    border: 1px solid rgb(171, 171, 241);
-    color: rgb(171, 171, 241);
+  background: #4b3a9e00;
+  border: 1px solid rgb(171, 171, 241);
+  color: rgb(171, 171, 241);
 }
 
 .filter-menu.dev li label:hover {
-    color: rgb(171, 171, 241);
+  color: rgb(171, 171, 241);
 }
 
 .circle {
-    position: absolute;
-    display: block;
-    width: 0px;
-    height: 0px;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    background: #000000;
-    transition: width 500ms linear, height 500ms linear;
-    z-index: -1;
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #000000;
+  transition: width 500ms linear, height 500ms linear;
+  z-index: -1;
 }
 
 .filter-menu.dev li label:hover span {
-    width: 250px;
-    height: 250px;
+  width: 250px;
+  height: 250px;
 }

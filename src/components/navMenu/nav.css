@@ -39,7 +39,7 @@
     justify-content: center;
     align-items: center;
     transform: scale(0);
-    transition: 150ms transform;
+    transition: transform 150ms;
 }
 
 .btn.resume::before {
@@ -100,7 +100,7 @@
 }
 
 #menu-checkbox:checked ~ .toggle-menu .btn .closeBtn {
-    transform: translateY(0px);
+    transform: translateY(0);
     opacity: 1;
 }
 

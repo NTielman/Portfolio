@@ -1,52 +1,56 @@
 .flesh-bg {
-    position: relative;
-    background: url(../../images/devHome/flesh.png) no-repeat;
-    background-size: 100%;
+  position: relative;
+  background: url(../../images/devHome/flesh.png) no-repeat;
+  background-size: 100%;
 }
 
 .flesh-bg::after {
-    content: ' ';
-    position: absolute;
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,128,249,0) 100%);
-    height: 50%;
-    width: 100%;
-    bottom: 0;
-    left: 0;
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 128, 249, 0) 100%
+  );
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
 
 img.bone-bg {
-    width: 100%;
-    mask-image: url(../../images/devHome/xrayCursor.png);
-    mask-repeat: no-repeat;
-    mask-size: 150px;
+  width: 100%;
+  mask-image: url(../../images/devHome/xrayCursor.png);
+  mask-repeat: no-repeat;
+  mask-size: 150px;
 }
 
 .eyes {
-    height: 4.5%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 55%;
+  height: 4.5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 55%;
 }
 
 .eye {
-    width: 4.5%;
-    height: 100%;
-    margin: 1%;
-    border-radius: 20% 20% 20% 40%;
-    position: relative;
-    overflow: hidden;
+  width: 4.5%;
+  height: 100%;
+  margin: 1%;
+  border-radius: 20% 20% 20% 40%;
+  position: relative;
+  overflow: hidden;
 }
 
 .pupil {
-    width: 20%;
-    height: 30%;
-    background: url(../../images/devHome/pupil.png) no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 20%;
+  height: 30%;
+  background: url(../../images/devHome/pupil.png) no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

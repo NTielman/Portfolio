@@ -1,43 +1,43 @@
 .contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    padding: 5em 1.5em;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding: 5em 1.5em;
+  min-height: 100vh;
 }
 
 .contact h3 {
-    margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .contact h3 ~ p {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .social-links-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 80%;
-    max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  max-width: 900px;
 }
 
 .social-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 15%;
-    margin: 2%;
-    padding: 2%;
-    text-decoration: none;
-    border-radius: 20px;
-    color: currentColor;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    transition: background-color 500ms linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  margin: 2%;
+  padding: 2%;
+  text-decoration: none;
+  border-radius: 20px;
+  color: currentColor;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  transition: background-color 500ms linear;
 }
 
 .social-icon {
-font-size: 1.5rem;
+  font-size: 1.5rem;
 }
