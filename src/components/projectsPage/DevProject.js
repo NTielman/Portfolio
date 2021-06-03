@@ -6,7 +6,7 @@ const DevProject = (props) => {
         <div className='project-card dev'>
             <div className='card-content dev'>
                 <div className='card-front'>
-                    <img src={process.env.PUBLIC_URL + props.project.image} alt='project preview' />
+                    <img loading="lazy" src={process.env.PUBLIC_URL + props.project.image} alt='project preview' />
                     <div className='front-titles'>
                         <h3 className='card-title dev'>{props.project.title}</h3>
                         <p className='card-subtitle dev'>{props.project.shortDescription}</p>

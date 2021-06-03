@@ -6,9 +6,11 @@ const About = () => {
     const devMode = useSelector(state => state.devMode);
     const devCaption = 'Depiction of Nika "C-137" cooking up a master plan';
     const devImage = process.env.PUBLIC_URL + '/assets/images/about/devAvatar.png';
+    const devWebpImage = process.env.PUBLIC_URL + '/assets/images/about/devAvatar.webp';
 
     const designCaption = 'Depiction of Nika when in the vicinity of sushi. (you have been warned)';
     const designImage = process.env.PUBLIC_URL + '/assets/images/about/designAvatar.png';
+    const designWebpImage = process.env.PUBLIC_URL + '/assets/images/about/designAvatar.webp';
 
     return (
         <section className='about page' id='about'>
@@ -20,13 +22,17 @@ const About = () => {
                 <h2>Part {devMode ? 'Developer' : 'Designer'}</h2>
 
                 <figure className='about-image-container'>
-                    <img className={devMode ? 'avatar dev' : 'avatar des'} src={devMode ? devImage : designImage} alt='Avatar of Nneka' />
+                    <picture>
+                        <source type="image/webp" srcSet={devMode ? devWebpImage : designWebpImage} />
+                        <source type="image/jpeg" srcSet={devMode ? devImage : designImage} />
+                        <img loading="lazy" className={devMode ? 'avatar dev' : 'avatar des'} src={devMode ? devImage : designImage} alt='Avatar of Nneka' />
+                    </picture>
                     <figcaption className='about-caption'>{devMode ? devCaption : designCaption}</figcaption>
                 </figure>
 
                 <article className='about-text'>
                     <p>
-                        My name is Nneka Tielman, (<em> feel free to call me Nika, as many people struggle to pronounce the name </em>). I'm a full-stack developer with an art & design background, currently residing in The Hague.
+                        My name is Nneka Tielman, (<em> feel free to call me Nika, as many people struggle to pronounce the name </em>). I'm a full-stack developer with an art &amp; design background, currently residing in The Hague.
                     </p>
 
                     <br />

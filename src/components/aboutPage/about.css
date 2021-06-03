@@ -27,6 +27,8 @@
   border-radius: 20px;
   margin-bottom: 1em;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+  width: 100%;
 }
 
 .about-caption {

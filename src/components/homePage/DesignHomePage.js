@@ -28,25 +28,25 @@ const DesignHomePage = () => {
             style={backgroundStyle}>
             <ul ref={sceneRef} id='scene'>
                 <li className='layer tower' data-depth='0.2'>
-                    <img src={process.env.PUBLIC_URL + '/assets/images/home/design/2waterTower.png'} alt='background tower' />
+                    <img loading="lazy" src={process.env.PUBLIC_URL + '/assets/images/home/design/2waterTower.png'} alt='background tower' />
                 </li>
                 <li className='layer trees' data-depth='0.3'>
-                    <img src={process.env.PUBLIC_URL + '/assets/images/home/design/3treesMidground.png'} alt='background trees' />
+                    <img loading="lazy" src={process.env.PUBLIC_URL + '/assets/images/home/design/3treesMidground.png'} alt='background trees' />
                 </li>
                 <li className='layer shack' data-depth='0.4'>
-                    <img src={process.env.PUBLIC_URL + '/assets/images/home/design/4mysteryShack.png'} alt='mystery shack' />
+                    <img loading="lazy" src={process.env.PUBLIC_URL + '/assets/images/home/design/4mysteryShack.png'} alt='mystery shack' />
                 </li>
                 <li className='layer minigame' data-depth='0.4'>
-                    <img className='minigame-icon' src={process.env.PUBLIC_URL + '/assets/images/home/design/6minigameIcon.png'} alt='minigame icon' />
+                    <img loading="lazy" className='minigame-icon' src={process.env.PUBLIC_URL + '/assets/images/home/design/6minigameIcon.png'} alt='minigame icon' />
                 </li>
                 <li className='layer floating-characters' data-depth='1'>
-                    <img src={process.env.PUBLIC_URL + '/assets/images/home/design/5floatingCharacters.png'} alt='floating characters' />
+                    <img loading="lazy" src={process.env.PUBLIC_URL + '/assets/images/home/design/5floatingCharacters.png'} alt='floating characters' />
                 </li>
                 <li className='layer ground-characters' data-depth='0.5'>
-                    <img src={process.env.PUBLIC_URL + '/assets/images/home/design/5groundCharacters.png'} alt='ground characters' />
+                    <img loading="lazy" src={process.env.PUBLIC_URL + '/assets/images/home/design/5groundCharacters.png'} alt='ground characters' />
                 </li>
                 <li className='layer foreground-trees' data-depth='0'>
-                    <img src={process.env.PUBLIC_URL + '/assets/images/home/design/7treesForeground.png'} alt='foreground trees' />
+                    <img loading="lazy" src={process.env.PUBLIC_URL + '/assets/images/home/design/7treesForeground.png'} alt='foreground trees' />
                 </li>
             </ul>
         </div>
