@@ -10,6 +10,7 @@ const grocery_helper = {
         'CSS',
         'HTML'],
     image: '/assets/images/projects/devProjects/groceryHelper.jpg',
+    webpImage: '/assets/images/projects/devProjects/groceryHelper.webp',
     key: 0
 }
 
@@ -26,6 +27,7 @@ const lil_playlist = {
         'CSS',
         'HTML'],
     image: '/assets/images/projects/devProjects/lilPlaylist.jpg',
+    webpImage: '/assets/images/projects/devProjects/lilPlaylist.webp',
     key: 1
 }
 
@@ -43,6 +45,7 @@ const student_dashboard = {
         'HTML',
         'Chart.js'],
     image: '/assets/images/projects/devProjects/dashboard.jpg',
+    webpImage: '/assets/images/projects/devProjects/dashboard.webp',
     key: 2
 }
 
@@ -55,6 +58,7 @@ const superpy = {
     tools: [
         'Python'],
     image: '/assets/images/projects/devProjects/superpy.jpg',
+    webpImage: '/assets/images/projects/devProjects/superpy.webp',
     key: 3
 }
 
@@ -73,6 +77,7 @@ const betsy = {
         'SQLite',
         'Peewee'],
     image: '/assets/images/projects/devProjects/betsy.jpg',
+    webpImage: '/assets/images/projects/devProjects/betsy.webp',
     key: 4
 }
 
@@ -87,6 +92,7 @@ const wincHackathon = {
         'HTML',
         'JavaScript'],
     image: '/assets/images/projects/devProjects/bestButton.jpg',
+    webpImage: '/assets/images/projects/devProjects/bestButton.webp',
     key: 5
 }
 
@@ -103,6 +109,7 @@ const portfolio = {
         'HTML',
         'parallax.js'],
     image: '/assets/images/projects/devProjects/portfolio.png',
+    webpImage: '/assets/images/projects/devProjects/portfolio.webp',
     key: 6
 }
 
@@ -118,6 +125,7 @@ const tarot = {
         'CSS',
         'HTML'],
     image: '/assets/images/projects/devProjects/tarot.jpg',
+    webpImage: '/assets/images/projects/devProjects/tarot.webp',
     key: 7
 }
 

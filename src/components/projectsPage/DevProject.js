@@ -6,7 +6,12 @@ const DevProject = (props) => {
         <div className='project-card dev'>
             <div className='card-content dev'>
                 <div className='card-front'>
-                    <img loading="lazy" src={process.env.PUBLIC_URL + props.project.image} alt='project preview' />
+                    <picture>
+                        <source type="image/webp" srcSet={process.env.PUBLIC_URL + props.project.webpImage} />
+                        <source type="image/jpeg" srcSet={process.env.PUBLIC_URL + props.project.image} />
+                        <img loading="lazy" src={process.env.PUBLIC_URL + props.project.image} alt='project preview' />
+                    </picture>
+
                     <div className='front-titles'>
                         <h3 className='card-title dev'>{props.project.title}</h3>
                         <p className='card-subtitle dev'>{props.project.shortDescription}</p>

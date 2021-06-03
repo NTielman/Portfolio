@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.dev .social-links-container .social-item::before {
+.dev .social-links-container .social-item::after {
   content: " ";
   position: absolute;
   top: 5%;
@@ -25,6 +25,6 @@
   color: rgb(171, 171, 241);
 }
 
-.dev .social-links-container .social-item:hover::before {
+.dev .social-links-container .social-item:hover::after {
   opacity: 1;
 }

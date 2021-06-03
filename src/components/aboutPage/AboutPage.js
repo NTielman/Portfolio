@@ -24,7 +24,7 @@ const About = () => {
                 <figure className='about-image-container'>
                     <picture>
                         <source type="image/webp" srcSet={devMode ? devWebpImage : designWebpImage} />
-                        <source type="image/jpeg" srcSet={devMode ? devImage : designImage} />
+                        <source type="image/png" srcSet={devMode ? devImage : designImage} />
                         <img loading="lazy" className={devMode ? 'avatar dev' : 'avatar des'} src={devMode ? devImage : designImage} alt='Avatar of Nneka' />
                     </picture>
                     <figcaption className='about-caption'>{devMode ? devCaption : designCaption}</figcaption>

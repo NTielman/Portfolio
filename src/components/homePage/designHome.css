@@ -1,3 +1,13 @@
+.no-webp .parallax-container {
+  background: url(../../images/designHome/1skyBackground.png) no-repeat;
+  background-size: 100%;
+}
+
+.webp .parallax-container {
+  background: url(../../images/designHome/1skyBackground.webp) no-repeat;
+  background-size: 100%;
+}
+
 .parallax-container {
   position: relative;
   overflow: hidden;
@@ -26,15 +36,24 @@
 }
 
 .trees::before {
-  content: " ";
+  content: "";
   width: 100%;
-  height: 10%;
-  background: url(../../images/designHome/3treesMidground.png);
-  background-size: 100%;
+  height: 5%;
   position: absolute;
   top: 0;
-  transform: translateY(-30%);
+  left: 0;
+  transform: translateY(-60%);
   z-index: -1;
+}
+
+.no-webp .trees::before {
+  background: url(../../images/designHome/3treesMidground.png);
+  background-size: 100%;
+}
+
+.webp .trees::before {
+  background: url(../../images/designHome/3treesMidground.webp);
+  background-size: 100%;
 }
 
 .trees::after {

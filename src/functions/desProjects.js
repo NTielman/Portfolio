@@ -4,6 +4,7 @@ const bowsette = {
     typeOfWork: 'Personal Project',
     galleryImgUrl: 'https://flic.kr/p/2kQfyJH',
     image: '/assets/images/projects/designProjects/bowsette.jpg',
+    webpImage: '/assets/images/projects/designProjects/bowsette.webp',
     key: 0
 }
 
@@ -13,6 +14,7 @@ const psike = {
     typeOfWork: 'Business Card',
     galleryUrl: 'https://flic.kr/s/aHsmUEPSgt',
     image: '/assets/images/projects/designProjects/psike.jpg',
+    webpImage: '//assets/images/projects/designProjects/psike.webp',
     key: 1
 }
 
@@ -22,6 +24,7 @@ const caneCorso = {
     typeOfWork: 'Personal Project',
     galleryUrl: 'https://flic.kr/s/aHsmV4Ein4',
     image: '/assets/images/projects/designProjects/caneCorso.jpg',
+    webpImage: '/assets/images/projects/designProjects/caneCorso.webp',
     key: 2
 }
 
@@ -31,6 +34,7 @@ const chamili = {
     typeOfWork: 'Mascot',
     galleryUrl: 'https://flic.kr/s/aHsmV4KQwd',
     image: '/assets/images/projects/designProjects/chamili.jpg',
+    webpImage: '/assets/images/projects/designProjects/chamili.webp',
     key: 3
 }
 
@@ -40,6 +44,7 @@ const cowlick = {
     typeOfWork: 'Book Illustration',
     galleryUrl: 'https://flic.kr/s/aHsmV4vZKY',
     image: '/assets/images/projects/designProjects/cowlick.jpg',
+    webpImage: '/assets/images/projects/designProjects/cowlick.webp',
     key: 4
 }
 
@@ -49,6 +54,7 @@ const doge = {
     typeOfWork: 'Book Illustration',
     galleryUrl: 'https://flic.kr/s/aHsmV4M48U',
     image: '/assets/images/projects/designProjects/doge.jpg',
+    webpImage: '/assets/images/projects/designProjects/doge.webp',
     key: 5
 }
 
@@ -58,6 +64,7 @@ const emojis = {
     typeOfWork: 'Personal Project',
     galleryImgUrl: 'https://flic.kr/p/2kJ8uVo',
     image: '/assets/images/projects/designProjects/emojis.jpg',
+    webpImage: '/assets/images/projects/designProjects/emojis.webp',
     key: 6
 }
 
@@ -67,6 +74,7 @@ const gekeerah = {
     typeOfWork: 'Book Illustration',
     galleryUrl: 'https://flic.kr/s/aHsmV4LveZ',
     image: '/assets/images/projects/designProjects/gekeerah.jpg',
+    webpImage: '/assets/images/projects/designProjects/gekeerah.webp',
     key: 7
 }
 
@@ -76,6 +84,7 @@ const gitemtaylor = {
     typeOfWork: 'Album Art',
     galleryImgUrl: 'https://flic.kr/p/2kQfyJ7',
     image: '/assets/images/projects/designProjects/gitemtaylor.jpg',
+    webpImage: '/assets/images/projects/designProjects/gitemtaylor.webp',
     key: 8
 }
 
@@ -85,6 +94,7 @@ const iTwar = {
     typeOfWork: 'Album Art',
     galleryUrl: 'https://flic.kr/s/aHsmV4FsKW',
     image: '/assets/images/projects/designProjects/iTwar.jpg',
+    webpImage: '/assets/images/projects/designProjects/iTwar.webp',
     key: 9
 }
 
@@ -94,6 +104,7 @@ const marchHare = {
     typeOfWork: 'Mascot',
     galleryImgUrl: 'https://flic.kr/p/2kGJP1C',
     image: '/assets/images/projects/designProjects/marchHare.jpg',
+    webpImage: '/assets/images/projects/designProjects/marchHare.webp',
     key: 10
 }
 
@@ -103,6 +114,7 @@ const miranda = {
     typeOfWork: 'Book Illustration',
     galleryUrl: 'https://flic.kr/s/aHsmV4keYH',
     image: '/assets/images/projects/designProjects/miranda.jpg',
+    webpImage: '/assets/images/projects/designProjects/miranda.webp',
     key: 11
 }
 
@@ -112,6 +124,7 @@ const stanLee = {
     typeOfWork: 'Personal Project',
     galleryImgUrl: 'https://flic.kr/p/2kQfyJc',
     image: '/assets/images/projects/designProjects/stanLee.jpg',
+    webpImage: '/assets/images/projects/designProjects/stanLee.webp',
     key: 12
 }
 
@@ -121,6 +134,7 @@ const stephenHawking = {
     typeOfWork: 'Personal Project',
     galleryImgUrl: 'https://flic.kr/p/2kGJNZA',
     image: '/assets/images/projects/designProjects/stephenHawking.jpg',
+    webpImage: '/assets/images/projects/designProjects/stephenHawking.webp',
     key: 13
 }
 
@@ -130,6 +144,7 @@ const unsuprvsd = {
     typeOfWork: 'Personal Project',
     galleryUrl: 'https://flic.kr/s/aHsmV4MYRk',
     image: '/assets/images/projects/designProjects/unsuprvsd.jpg',
+    webpImage: '/assets/images/projects/designProjects/unsuprvsd.webp',
     key: 14
 }
 
@@ -139,6 +154,7 @@ const triads = {
     typeOfWork: 'Personal Project',
     galleryUrl: 'https://flic.kr/s/aHsmUEMurF',
     image: '/assets/images/projects/designProjects/triads.jpg',
+    webpImage: '/assets/images/projects/designProjects/triads.webp',
     key: 15
 }
 
@@ -148,6 +164,7 @@ const turtleWarriors = {
     typeOfWork: 'Game',
     galleryUrl: 'https://flic.kr/s/aHsmUESzHn',
     image: '/assets/images/projects/designProjects/turtleWarriors.jpg',
+    webpImage: '/assets/images/projects/designProjects/turtleWarriors.webp',
     key: 16
 }
 
@@ -157,6 +174,7 @@ const urbanAmir = {
     typeOfWork: 'Clothing',
     galleryUrl: 'https://flic.kr/s/aHsmV4ibgX',
     image: '/assets/images/projects/designProjects/urbanAmir.jpg',
+    webpImage: '/assets/images/projects/designProjects/urbanAmir.webp',
     key: 17
 }
 
@@ -166,6 +184,7 @@ const yakuza = {
     typeOfWork: 'Personal Project',
     galleryUrl: 'https://flic.kr/s/aHsmV4Einp',
     image: '/assets/images/projects/designProjects/yakuza.jpg',
+    webpImage: '/assets/images/projects/designProjects/yakuza.webp',
     key: 18
 }
 

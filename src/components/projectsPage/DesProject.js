@@ -28,7 +28,11 @@ const DesProject = (props) => {
             }}>
 
             <div ref={cardRef} className='project-card des'>
-                <img loading="lazy" src={process.env.PUBLIC_URL + props.project.image} alt='project preview' />
+                <picture>
+                    <source type="image/webp" srcSet={process.env.PUBLIC_URL + props.project.webpImage} />
+                    <source type="image/jpeg" srcSet={process.env.PUBLIC_URL + props.project.image} />
+                    <img loading="lazy" src={process.env.PUBLIC_URL + props.project.image} alt='project preview' />
+                </picture>
                 <div ref={titleBoxRef} className='card-content des'>
                     <h3 className='card-title des'>{props.project.title}</h3>
                     <p className='card-subtitle des'>{props.project.description}</p>

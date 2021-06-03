@@ -64,7 +64,13 @@ const DevHomePage = () => {
                 </div>
             </div>
 
-            <img ref={imageRef} src={process.env.PUBLIC_URL + '/assets/images/home/dev/bone.png'} alt='x-ray background' className='bone-bg' />
+            <picture>
+                <source type="image/webp" srcSet={process.env.PUBLIC_URL + '/assets/images/home/dev/bone.webp'} />
+                <source type="image/png" srcSet={process.env.PUBLIC_URL + '/assets/images/home/dev/bone.png'} />
+                <img ref={imageRef} src={process.env.PUBLIC_URL + '/assets/images/home/dev/bone.png'} alt='x-ray background' className='bone-bg' />
+            </picture>
+
+            
         </div>
     );
 }

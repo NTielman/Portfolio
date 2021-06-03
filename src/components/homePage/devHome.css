@@ -1,7 +1,15 @@
-.flesh-bg {
-  position: relative;
+.no-webp .flesh-bg {
   background: url(../../images/devHome/flesh.png) no-repeat;
   background-size: 100%;
+}
+
+.webp .flesh-bg {
+  background: url(../../images/devHome/flesh.webp) no-repeat;
+  background-size: 100%;
+}
+
+.flesh-bg {
+  position: relative;
 }
 
 .flesh-bg::after {
@@ -20,9 +28,14 @@
 
 img.bone-bg {
   width: 100%;
-  mask-image: url(../../images/devHome/xrayCursor.png);
-  mask-repeat: no-repeat;
-  mask-size: 150px;
+}
+
+.no-webp img.bone-bg {
+  mask: url(../../images/devHome/xrayCursor.png) no-repeat 150px;
+}
+
+.webp img.bone-bg {
+  mask: url(../../images/devHome/xrayCursor.webp) no-repeat 150px;
 }
 
 .eyes {
@@ -44,11 +57,19 @@ img.bone-bg {
   overflow: hidden;
 }
 
+.no-webp .pupil {
+  background: url(../../images/devHome/pupil.png) no-repeat;
+  background-size: cover;
+}
+
+.webp .pupil {
+  background: url(../../images/devHome/pupil.webp) no-repeat;
+  background-size: cover;
+}
+
 .pupil {
   width: 20%;
   height: 30%;
-  background: url(../../images/devHome/pupil.png) no-repeat;
-  background-size: cover;
   position: absolute;
   top: 50%;
   left: 50%;

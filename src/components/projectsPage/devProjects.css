@@ -36,6 +36,10 @@
   border-radius: 20px;
 }
 
+.card-front picture {
+  height: 100%;
+}
+
 .card-front img {
   height: 100%;
   width: 100%;

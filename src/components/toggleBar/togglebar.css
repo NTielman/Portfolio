@@ -37,8 +37,8 @@
   height: 1.6rem;
   position: absolute;
   top: 50%;
-  left: 0;
-  transform: translateY(-50%) translateX(0.1rem);
+  transform: translateY(-50%) translateX(-1.8rem);
+  left: 100%;
   border-radius: 50%;
   transition: left 500ms linear, transform 500ms linear;
   cursor: pointer;
@@ -58,6 +58,6 @@
 }
 
 #toggle-checkbox:checked + .toggle-bar .ball {
-  transform: translateY(-50%) translateX(-1.7rem);
-  left: 100%;
+  left: 0;
+  transform: translateY(-50%) translateX(0.2rem);
 }
