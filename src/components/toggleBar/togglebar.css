@@ -1,45 +1,51 @@
 .toggle-bar-container {
+  width: 100%;
+
   position: fixed;
   bottom: 5%;
-  width: 100%;
   z-index: 100;
 }
 
 .toggle-bar {
   width: 15%;
   height: 2rem;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%) scale(2);
+  border-radius: 20px;
   padding: 0.3em;
-  background: rgb(44, 27, 79);
+
+  background: var(--mixed-primary-color); /* fallback for older browsers */
   background: linear-gradient(
-    90deg,
-    rgba(44, 27, 79, 1) 0%,
-    rgba(253, 81, 118, 1) 25%,
-    rgba(0, 128, 249, 1) 75%,
-    rgba(44, 22, 65, 1) 100%
-  );
-  background-size: 200%;
-  background-position: right;
+      90deg,
+      var(--mixed-primary-color) 0%,
+      var(--des-primary-color) 25%,
+      var(--dev-accent-color2) 75%,
+      var(--dev-primary-color) 100%
+    )
+    right/200%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 20px;
   font-size: 1rem;
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) scale(2);
+
   transition: background-position 500ms linear;
   cursor: pointer;
 }
 
 .ball {
-  background-color: white;
   width: 1.6rem;
   height: 1.6rem;
+  border-radius: 50%;
+  background-color: white;
+
   position: absolute;
   top: 50%;
-  transform: translateY(-50%) translateX(-1.8rem);
   left: 100%;
-  border-radius: 50%;
+  transform: translate(-1.8rem, -50%);
+
   transition: left 500ms linear, transform 500ms linear;
   cursor: pointer;
 }
@@ -48,16 +54,18 @@
   margin-left: 0.12rem;
 }
 
+/* Togglebar hovered */
 #toggle-checkbox:checked + .toggle-bar:hover,
 .toggle-bar:hover {
   background-position: center;
 }
 
+/* Togglebar checked */
 #toggle-checkbox:checked + .toggle-bar {
   background-position: left;
 }
 
 #toggle-checkbox:checked + .toggle-bar .ball {
   left: 0;
-  transform: translateY(-50%) translateX(0.2rem);
+  transform: translate(0.2rem, -50%);
 }

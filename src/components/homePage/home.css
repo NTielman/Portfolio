@@ -1,0 +1,14 @@
+.home-scene-container {
+    position: relative;
+}
+
+/* Fade effect */
+.home-scene-container::after {
+  width: 100%;
+
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

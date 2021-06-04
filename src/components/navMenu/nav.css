@@ -1,132 +1,134 @@
+/* ------------ Menu styling ------------ */
 .menu {
-    position: fixed;
-    width: 4.4rem;
-    left: 50%;
-    top: 2.5%;
-    transform: translateX(-50%);
-    z-index: 100;
+  width: 4.4rem;
+
+  position: fixed;
+  left: 50%;
+  top: 2.5%;
+  transform: translateX(-50%);
+  z-index: 100;
 }
 
 .menu-icon {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
+/* Individual button styling */
 .btn {
-    width: 4.4rem;
-    height: 4.4rem;
-    border-radius: 50%;
-    position: absolute;
-    overflow: hidden; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+
+  position: absolute;
+
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+
+  cursor: pointer;
 }
 
-.btn::before {    
-    content: attr(data-tooltip);
-    font-weight: 700;
-    font-size: .9rem;
-    border-radius: 50%;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(0);
-    transition: transform 150ms;
+/* Button tooltip */
+.btn::before {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  transform: scale(0);
+
+  content: attr(data-tooltip);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+  display: grid;
+  place-items: center;
+
+  position: absolute;
+  left: 0;
+  transition: transform 150ms;
 }
 
 .btn.resume::before {
-    font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 
+/* Grow tooltip on hover */
 .btn:hover::before {
-    transform: scale(1);
+  transform: scale(1);
 }
 
+/* ------------ Positioning closed menu buttons ------------ */
 .menuBtn,
 .closeBtn {
-    position: absolute;
-    transition: 0.3s linear;
+  position: absolute;
+  transition: 0.3s linear;
 }
 
+/* Hide close button when menu is closed */
 .closeBtn {
-    transform: translateY(3rem);
-    opacity: 0;
+  transform: translateY(3rem);
+  opacity: 0;
 }
 
+/* Place buttons behind burger button */
 .btn:not(:first-child) {
-    opacity: 0;
-    transition: 0.3s cubic-bezier(0.87, -0.41, 0.19, 1.44);
-    z-index: -2;
+  opacity: 0;
+  transition: 0.3s cubic-bezier(0.87, -0.41, 0.19, 1.44);
+  z-index: -2;
 }
 
-.btn:nth-child(2) {
-    left: 0;
-    transition-delay: 0s;
+.btn:nth-child(2),
+.btn:nth-child(6) {
+  left: 0;
+  transition-delay: 0s;
 }
 
-.btn:nth-child(3) {
-    left: 0;
-    top: 0;
-    transition-delay: 0.1s;
+.btn:nth-child(3),
+.btn:nth-child(5) {
+  left: 0;
+  top: 0;
+  transition-delay: 0.1s;
 }
 
 .btn:nth-child(4) {
-    top: 0;
-    transition-delay: 0.2s;
+  top: 0;
+  transition-delay: 0.2s;
 }
 
-.btn:nth-child(5) {
-    left: 0;
-    top: 0;
-    transition-delay: 0.1s;
+/* ------------ Positioning open menu buttons ------------ */
+#menu-checkbox:checked ~ .toggle-menu .menuBtn {
+  transform: translateY(-3rem);
+  opacity: 0;
 }
 
-.btn:nth-child(6) {
-    left: 0;
-    transition-delay: 0s;
-}
-
-#menu-checkbox:checked ~ .toggle-menu .btn .menuBtn {
-    transform: translateY(-3rem);
-    opacity: 0;
-}
-
-#menu-checkbox:checked ~ .toggle-menu .btn .closeBtn {
-    transform: translateY(0);
-    opacity: 1;
+/* Show close button when menu is open */
+#menu-checkbox:checked ~ .toggle-menu .closeBtn {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 #menu-checkbox:checked ~ .toggle-menu .btn:nth-child(2) {
-    left: -6.25rem;
-    opacity: 1;
+  left: -6.25rem;
+  opacity: 1;
 }
 
 #menu-checkbox:checked ~ .toggle-menu .btn:nth-child(3) {
-    left: -4.5rem;
-    top: 4.5rem;
-    opacity: 1;
+  left: -4.5rem;
+  top: 4.5rem;
+  opacity: 1;
 }
 
 #menu-checkbox:checked ~ .toggle-menu .btn:nth-child(4) {
-    top: 6.25rem;
-    opacity: 1;
+  top: 6.25rem;
+  opacity: 1;
 }
 
 #menu-checkbox:checked ~ .toggle-menu .btn:nth-child(5) {
-    left: 4.5rem;
-    top: 4.5rem;
-    opacity: 1;
+  left: 4.5rem;
+  top: 4.5rem;
+  opacity: 1;
 }
 
 #menu-checkbox:checked ~ .toggle-menu .btn:nth-child(6) {
-    left: 6.25rem;
-    opacity: 1;
+  left: 6.25rem;
+  opacity: 1;
 }

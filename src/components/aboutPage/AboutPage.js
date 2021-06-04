@@ -18,8 +18,8 @@ const About = () => {
             <div
                 className={devMode ? 'about-container dev' : 'about-container des'}>
 
-                <h1>About Me</h1>
-                <h2>Part {devMode ? 'Developer' : 'Designer'}</h2>
+                <h2>About Me</h2>
+                <h3>Part {devMode ? 'Developer' : 'Designer'}</h3>
 
                 <figure className='about-image-container'>
                     <picture>

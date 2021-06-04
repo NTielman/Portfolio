@@ -1,14 +1,15 @@
 .toggle-menu.dev .btn {
-  background-color: #2c1641a2;
+  background-color: var(--dev-primary-color-transparent);
 }
 
 .toggle-menu.dev .btn:hover {
-  background: #4b3a9e00;
-  color: rgb(171, 171, 241);
-  border: 1px solid rgb(171, 171, 241);
+  background: transparent;
+  color: var(--dev-accent-color);
+  border: 1px solid var(--dev-accent-color);
 }
 
+/* Button tooltip */
 .toggle-menu.dev .btn::before {
-  background: #000000a2;
-  color: rgb(171, 171, 241);
+  background: rgba(0, 0, 0, 0.635);
+  color: var(--dev-accent-color);
 }

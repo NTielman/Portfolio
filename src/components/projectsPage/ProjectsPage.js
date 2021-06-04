@@ -5,9 +5,9 @@ import FilterMenu from '../filterMenu/FilterMenu';
 import DevProject from './DevProject';
 import DesProject from './DesProject';
 
-import { featured_projects as devProjects } from '../../functions/devProjects';
-import { featured_projects as desProjects } from '../../functions/desProjects';
-import filterProjects from '../../functions/filterProjects';
+import { featured_projects as devProjects } from '../../utils/devProjects';
+import { featured_projects as desProjects } from '../../utils/desProjects';
+import filterProjects from '../../utils/filterProjects';
 
 const Projects = () => {
 
@@ -65,7 +65,7 @@ const Projects = () => {
     return (
         <section className='projects page' id='projects'>
 
-            <h1>Projects</h1>
+            <h2>Projects</h2>
             <p>Filter by:</p>
             <FilterMenu filters={devMode ? getDevFilters() : getDesignFilters()} />
 

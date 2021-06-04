@@ -1,12 +1,13 @@
 .toggle-menu.des .btn {
-  background-color: #fd5176a2;
+  background-color: var(--des-primary-color-transparent);
 }
 
 .toggle-menu.des .btn:hover {
-  color: #ffd74b;
+  color: var(--des-accent-color);
 }
 
+/* Button tooltip */
 .toggle-menu.des .btn::before {
-  background-color: #fd5176;
-  color: #ffd74b;
+  background-color: var(--des-primary-color);
+  color: var(--des-accent-color);
 }

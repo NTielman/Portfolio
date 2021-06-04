@@ -8,7 +8,7 @@ const Contact = () => {
     return (
         <section className={devMode ? 'contact page dev' : 'contact page des'} id='contact'>
             <div className='social-text-container'>
-                <h1>Contact Me</h1>
+                <h2>Contact Me</h2>
                 <h3>Don't be a stranger!</h3>
 
                 <p>If you have any questions or just want to say hi,<br /> shoot me an email. <br /> I'd love to hear from you!</p>

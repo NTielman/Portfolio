@@ -26,7 +26,7 @@ const DevHomePage = () => {
     const rightPupilRef = useRef();
 
     return (
-        <div className={devMode ? 'flesh-bg' : 'hide'}
+        <div className={devMode ? 'flesh-bg home-scene-container' : 'hide'}
             onMouseMove={(event) => {
                 // on page scroll get amount scrolled
                 windowScroll = imageRef.current.getBoundingClientRect();
@@ -34,7 +34,7 @@ const DevHomePage = () => {
                 mousePos.x = event.pageX;
                 mousePos.y = event.pageY;
 
-                //update xray mask positioning
+                // update xray mask positioning
                 maskPos.x = mousePos.x - 75;
                 maskPos.y = mousePos.y - windowScroll.y - 75;
                 imageRef.current.style.MaskPositionX = maskPos.x + 'px';
@@ -57,10 +57,10 @@ const DevHomePage = () => {
 
             <div className='eyes'>
                 <div className='eye left'>
-                    <div ref={leftPupilRef} className='pupil'></div>
+                    <div ref={leftPupilRef} className='pupil left'></div>
                 </div>
                 <div className='eye right'>
-                    <div ref={rightPupilRef} className='pupil'></div>
+                    <div ref={rightPupilRef} className='pupil right'></div>
                 </div>
             </div>
 
@@ -69,8 +69,6 @@ const DevHomePage = () => {
                 <source type="image/png" srcSet={process.env.PUBLIC_URL + '/assets/images/home/dev/bone.png'} />
                 <img ref={imageRef} src={process.env.PUBLIC_URL + '/assets/images/home/dev/bone.png'} alt='x-ray background' className='bone-bg' />
             </picture>
-
-            
         </div>
     );
 }

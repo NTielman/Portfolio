@@ -20,7 +20,7 @@ const DesignHomePage = () => {
     }, [])
 
     return (
-        <div className={devMode ? 'hide' : 'parallax-container'}>
+        <div className={devMode ? 'hide' : 'parallax-container home-scene-container'}>
             <ul ref={sceneRef} id='scene'>
                 <li className='layer tower' data-depth='0.2'>
                     <picture>
@@ -42,6 +42,11 @@ const DesignHomePage = () => {
                         <source type="image/png" srcSet={process.env.PUBLIC_URL + '/assets/images/home/design/4mysteryShack.png'} />
                         <img loading="lazy" src={process.env.PUBLIC_URL + '/assets/images/home/design/4mysteryShack.png'} alt='mystery shack' />
                     </picture>
+                </li>
+                <li className='layer header' data-depth='0.5'>
+                    <div className="home-title">
+                        <h1>Designer</h1>
+                    </div>
                 </li>
                 <li className='layer floating-characters' data-depth='1'>
                 <picture>

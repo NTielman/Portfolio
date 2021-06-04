@@ -5,10 +5,10 @@ import DesignHomePage from './DesignHomePage';
 const HomePage = () => {
 
     return (
-        <section className='home page' id='home'>
+        <header className='home page' id='home'>
             <DevHomePage />
             <DesignHomePage />
-        </section>
+        </header>
     );
 }
 
