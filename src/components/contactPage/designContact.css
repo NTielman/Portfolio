@@ -1,21 +1,13 @@
 .contact.des {
-  background-color: #fd5176;
+  background-color: var(--des-primary-color);
 }
 
-.des .social-links-container .social-item {
-  background: rgb(44, 27, 79);
-  background: linear-gradient(
-    307deg,
-    rgba(44, 27, 79, 0.8230088495575221) 0%,
-    rgba(253, 81, 118, 0.8185840707964602) 50%,
-    rgba(250, 150, 36, 0.8207964601769911) 75%,
-    rgba(255, 215, 75, 0.8163716814159292) 100%
-  );
-  background-size: 250%;
-  background-position: right;
+.des .social-item {
+  background: var(--mixed-primary-color); /* fallback for older browsers */
+  background: var(--des-gradient-background);
   transition: background-position 500ms linear;
 }
 
-.des .social-links-container .social-item:hover {
+.des .social-item:hover {
   background-position: left;
 }

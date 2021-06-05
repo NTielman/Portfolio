@@ -4,6 +4,8 @@
   --text-font: "Lexend", sans-serif;
   --text-color: white;
 
+  --section-padding: 5em 1.5em;
+
   --dev-primary-color: rgba(44, 22, 65, 1);
   --dev-primary-color-transparent: rgba(44, 22, 65, 0.635);
   --dev-secondary-color: rgba(74, 58, 158, 1);
@@ -15,8 +17,17 @@
   --des-secondary-color: rgba(134, 58, 168, 1);
   --des-accent-color: rgb(255, 215, 75);
   --des-accent-color2: rgba(250, 150, 36, 1);
+  --des-gradient-background: linear-gradient(
+      307deg,
+      rgb(44, 27, 79) 0%,
+      rgb(253, 81, 118) 50%,
+      rgb(250, 150, 36) 75%,
+      rgb(255, 216, 75) 100%
+    )
+    right/250%;
 
   --mixed-primary-color: rgb(44, 27, 79);
+  --shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 * {

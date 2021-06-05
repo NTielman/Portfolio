@@ -1,13 +1,13 @@
 .about-container.des {
-  background: rgb(250, 150, 36);
+  background: var(--des-accent-color2); /* fallback for older browsers */
   background: linear-gradient(
     180deg,
-    rgba(250, 150, 36, 1) 0%,
-    rgba(253, 81, 118, 1) 40%
+    var(--des-accent-color2) 0%,
+    var(--des-primary-color) 40%
   );
 }
 
 .avatar.des {
-  border: solid 10px #863aa8;
-  background: rgb(250, 150, 36);
+  border: solid 10px var(--des-secondary-color);
+  background: var(--des-accent-color);
 }

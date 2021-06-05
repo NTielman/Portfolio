@@ -1,13 +1,9 @@
 .about-container.dev {
-  background: rgb(74, 58, 158);
-  background: linear-gradient(
-    0deg,
-    rgba(74, 58, 158, 1) 5%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: var(--dev-secondary-color); /* fallback for older browsers */
+  background: linear-gradient(0deg, var(--dev-secondary-color) 5%, black 100%);
 }
 
 .avatar.dev {
-  border: solid 10px rgb(0, 0, 0);
-  background-color: rgb(171, 171, 241);
+  border: solid 10px var(--dev-accent-color2);
+  background-color: var(--dev-accent-color);
 }

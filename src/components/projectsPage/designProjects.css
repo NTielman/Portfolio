@@ -1,8 +1,9 @@
 .card-hover-area {
-  perspective: 1000px;
+  margin: 1em 0;
   width: 100%;
   height: 85vw;
-  margin: 1em 0%;
+
+  perspective: 1000px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -10,9 +11,10 @@
 }
 
 .project-card.des {
-  transform-style: preserve-3d;
   height: 75%;
   width: 100%;
+
+  transform-style: preserve-3d;
   position: relative;
   transition: transform 300ms linear;
 }
@@ -20,44 +22,47 @@
 .project-card.des img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
   border-radius: 20px;
+  object-fit: cover;
 }
 
 .des.card-content {
-  position: absolute;
   height: 100%;
   width: 100%;
-  top: 0%;
+  border-radius: 20px;
+  padding: 1em;
+  background: rgba(134, 58, 168, 0.8);
+
+  position: absolute;
+  top: 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   transition: 250ms linear;
-  background-color: #863aa8bd;
-  border-radius: 20px;
   opacity: 0;
-  padding: 1em;
 }
 
 .flickr-link {
-  background-color: darkorange;
-  justify-self: flex-end;
   height: 15%;
   border-radius: 20px;
+  background: var(--des-accent-color2);
+  justify-self: flex-end;
 }
 
 .flickr-link:hover {
-  background-color: #fd5176;
-  color: #ffd74b;
+  background: var(--des-primary-color);
+  color: var(--des-accent-color);
 }
 
 /* tablets */
 @media (min-width: 600px) {
   .card-hover-area {
+    margin: 2.5% 5%;
     width: 40%;
     height: 45vw;
-    margin: 2.5% 5%;
   }
 }
 

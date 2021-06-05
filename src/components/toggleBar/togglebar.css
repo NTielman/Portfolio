@@ -32,6 +32,7 @@
   transform: translateX(-50%) scale(2);
 
   transition: background-position 500ms linear;
+  box-shadow: var(--shadow);
   cursor: pointer;
 }
 

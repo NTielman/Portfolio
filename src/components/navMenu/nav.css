@@ -26,6 +26,7 @@
   overflow: hidden;
 
   cursor: pointer;
+  box-shadow: var(--shadow);
 }
 
 /* Button tooltip */
@@ -33,7 +34,7 @@
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  transform: scale(0);
+  opacity: 0;
 
   content: attr(data-tooltip);
   font-weight: 700;
@@ -44,16 +45,16 @@
 
   position: absolute;
   left: 0;
-  transition: transform 150ms;
+  transition: opacity 500ms linear;
 }
 
 .btn.resume::before {
   font-size: 0.75rem;
 }
 
-/* Grow tooltip on hover */
+/* Show tooltip on hover */
 .btn:hover::before {
-  transform: scale(1);
+  opacity: 1;
 }
 
 /* ------------ Positioning closed menu buttons ------------ */
