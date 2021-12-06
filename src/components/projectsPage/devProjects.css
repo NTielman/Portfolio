@@ -92,6 +92,7 @@
 .card-back {
   transform: rotateY(0.5turn);
   background: var(--dev-secondary-color);
+  overflow: hidden;
 }
 
 .card-description {
@@ -102,7 +103,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .card-tools {
