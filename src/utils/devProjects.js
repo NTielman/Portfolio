@@ -129,4 +129,5 @@ const tarot = {
     key: 7
 }
 
-export const featured_projects = [grocery_helper, lil_playlist, student_dashboard, superpy, betsy, wincHackathon, portfolio, tarot]
+// reverse array to ensure last projects added to array appear on top
+export const featured_projects = [grocery_helper, lil_playlist, student_dashboard, superpy, betsy, wincHackathon, portfolio, tarot].reverse()

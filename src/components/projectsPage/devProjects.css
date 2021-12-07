@@ -163,6 +163,17 @@
   box-shadow: 0 0 0 1px var(--dev-accent-color);
 }
 
+.load-more-btn.dev {
+  background: var(--dev-secondary-color);
+}
+
+.load-more-btn.dev:hover,
+.load-more-btn.dev:focus {
+  background: black;
+  color: var(--dev-accent-color);
+  box-shadow: 0 0 0 1px var(--dev-accent-color);
+}
+
 /* laptops */
 @media (min-width: 801px) {
   .project-card.dev {

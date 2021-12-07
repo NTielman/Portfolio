@@ -10,7 +10,7 @@ const FilterMenu = (props) => {
     const devCircleRef = useRef([]);
 
     return (
-        <ul className={devMode ? "filter-menu dev" : "filter-menu des"}>
+        <ul className={`filter-menu ${devMode ? "dev" : "des"}`}>
             {props.filters.map((filter, index) => {
                 return (
                     <li key={filter}

@@ -6,7 +6,7 @@ const Contact = () => {
     const devMode = useSelector(state => state.devMode);
 
     return (
-        <section className={devMode ? 'contact page dev' : 'contact page des'} id='contact'>
+        <section className={`contact page ${devMode ? 'dev' : 'des'}`} id='contact'>
             <div className='social-text-container'>
                 <h2>Contact Me</h2>
                 <h3>Don't be a stranger!</h3>

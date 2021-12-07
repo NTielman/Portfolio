@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import FilterMenu from '../filterMenu/FilterMenu';
@@ -7,74 +7,75 @@ import DesProject from './DesProject';
 
 import { featured_projects as devProjects } from '../../utils/devProjects';
 import { featured_projects as desProjects } from '../../utils/desProjects';
-import filterProjects from '../../utils/filterProjects';
+import filterProjects, { devFilters, designFilters } from '../../utils/filterProjects';
 
 const Projects = () => {
 
     const devMode = useSelector(state => state.devMode);
     const activeFilters = useSelector(state => state.activeFilters);
+    const [filters, setFilters] = useState([]);
 
-    const getDevProjects = () => {
-        let projects = devProjects.map(proj => proj);
+    const projectsPerPage = 5;
+    const [currentPage, setCurrentPage] = useState(0);
+    const [pageResults, setPageResults] = useState([]);
+    const [hasMoreResults, setHasMoreResults] = useState(false);
 
-        if (activeFilters.length > 0) {
-            projects = filterProjects(projects, activeFilters);
-        }
-
-        return projects.map(project => {
-            return (<DevProject project={project} key={project.key} />);
-        });
-    }
-
-    const getDevFilters = () => {
-        const filters = [];
-        devProjects.forEach(project => {
-            const tools = project.tools;
-            tools.forEach(tool => {
-                if (!filters.includes(tool)) {
-                    filters.push(tool);
-                }
-            })
-        })
-        return filters;
-    };
-
-    const getDesignProjects = () => {
-        let projects = desProjects.map(proj => proj);
+    const getProjects = () => {
+        let projects = devMode ? devProjects.map(proj => proj) : desProjects.map(proj => proj);
 
         if (activeFilters.length > 0) {
             projects = filterProjects(projects, activeFilters);
         }
 
-        return projects.map(project => {
-            return (<DesProject project={project} key={project.key} />);
-        });
-    }
-
-    const getDesignFilters = () => {
-        const filters = [];
-        desProjects.forEach(project => {
-            const typeOfWork = project.typeOfWork;
-            if (!filters.includes(typeOfWork)) {
-                filters.push(typeOfWork);
+        const totalResultCount = projects.length;
+        const paginatedResults = projects.filter((project, projectIndex) => projectIndex < currentPage + projectsPerPage).map(project => {
+            if (devMode) {
+                return (<DevProject project={project} key={project.key} />)
+            } else {
+                return (<DesProject project={project} key={project.key} />);
             }
-        })
-        return filters;
-    };
+        });
+        const pageResultCount = paginatedResults.length;
+
+        return {
+            totalResultCount,
+            paginatedResults,
+            pageResultCount
+        };
+    }
+
+    useEffect(() => {
+        setCurrentPage(0);
+    }, [devMode, activeFilters]);
+
+    useEffect(() => {
+        if (devMode) {
+            setFilters(devFilters(devProjects));
+        } else {
+            setFilters(designFilters(desProjects));
+        }
+    }, [devMode]);
+
+    useEffect(() => {
+        setPageResults(getProjects().paginatedResults);
+        setHasMoreResults(getProjects().totalResultCount > getProjects().pageResultCount);
+    }, [devMode, activeFilters, currentPage]);
 
     return (
         <section className='projects page' id='projects'>
 
             <h2>Projects</h2>
             <p>Filter by:</p>
-            <FilterMenu filters={devMode ? getDevFilters() : getDesignFilters()} />
+            <FilterMenu filters={filters} />
 
-            <div className={devMode ? 'projects-container' : 'hide'}>
-                {getDevProjects()}
+            <div className='projects-container'>
+                {pageResults}
             </div>
-            <div className={devMode ? 'hide' : 'projects-container'}>
-                {getDesignProjects()}
-            </div>
+
+            {hasMoreResults && <button
+                className={`load-more-btn ${devMode ? 'dev' : 'des'}`}
+                onClick={() => setCurrentPage(currentPage + projectsPerPage)}
+            >Load More</button>}
         </section>
     );
 }

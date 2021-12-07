@@ -19,6 +19,7 @@ A portfolio website showcasing personal projects I have been or am working on.
 1. Clone the repository to a local directory
 2. cd into the directory and run `npm start` to run the app in development mode
 3. run `npm run build` or `yarn build` to build the app for production
+4. run `npm run deploy` to publish the app to github pages
 
 
 ## Screenshots
