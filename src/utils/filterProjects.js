@@ -11,4 +11,32 @@ const filterProjects = (projects, filters) => {
 
 };
 
+export const devFilters = (devProjects) => {
+
+    const filters = [];
+    devProjects.forEach(project => {
+        const tools = project.tools;
+        tools.forEach(tool => {
+            if (!filters.includes(tool)) {
+                filters.push(tool);
+            }
+        })
+    })
+    return filters;
+
+};
+
+export const designFilters = (desProjects) => {
+
+    const filters = [];
+    desProjects.forEach(project => {
+        const typeOfWork = project.typeOfWork;
+        if (!filters.includes(typeOfWork)) {
+            filters.push(typeOfWork);
+        }
+    })
+    return filters;
+    
+};
+
 export default filterProjects;

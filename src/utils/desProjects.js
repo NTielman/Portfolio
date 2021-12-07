@@ -188,4 +188,5 @@ const yakuza = {
     key: 18
 }
 
-export const featured_projects = [urbanAmir, psike, gitemtaylor, iTwar, marchHare, miranda, caneCorso, chamili, cowlick, doge, gekeerah, stanLee, stephenHawking, turtleWarriors, yakuza, triads, emojis, unsuprvsd, bowsette]
+// reverse array to ensure last projects added to array appear on top
+export const featured_projects = [urbanAmir, psike, gitemtaylor, iTwar, marchHare, miranda, caneCorso, chamili, cowlick, doge, gekeerah, stanLee, stephenHawking, turtleWarriors, yakuza, triads, emojis, unsuprvsd, bowsette].reverse()
