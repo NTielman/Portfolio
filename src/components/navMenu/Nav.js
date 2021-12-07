@@ -7,7 +7,7 @@ const Nav = () => {
     return (
         <nav className='menu'>
             <input type='checkbox' id='menu-checkbox' className='hide' />
-            <label htmlFor='menu-checkbox' className={devMode ? 'toggle-menu dev' : 'toggle-menu des'}>
+            <label htmlFor='menu-checkbox' className={`toggle-menu ${devMode ? 'dev' : 'des'}`}>
                 <div className='btn' role="button" title="menu">
                     <i className="menu-icon fas fa-bars menuBtn"></i>
                     <i className="menu-icon fas fa-times closeBtn"></i>

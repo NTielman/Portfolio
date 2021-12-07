@@ -16,7 +16,7 @@ const About = () => {
         <section className='about page' id='about'>
 
             <div
-                className={devMode ? 'about-container dev' : 'about-container des'}>
+                className={`about-container ${devMode ? 'dev' : 'des'}`}>
 
                 <h2>About Me</h2>
                 <h3>Part {devMode ? 'Developer' : 'Designer'}</h3>
@@ -25,7 +25,7 @@ const About = () => {
                     <picture>
                         <source type="image/webp" srcSet={devMode ? devWebpImage : designWebpImage} />
                         <source type="image/png" srcSet={devMode ? devImage : designImage} />
-                        <img loading="lazy" className={devMode ? 'avatar dev' : 'avatar des'} src={devMode ? devImage : designImage} alt='Avatar of Nneka' />
+                        <img loading="lazy" className={`avatar ${devMode ? 'dev' : 'des'}`} src={devMode ? devImage : designImage} alt='Avatar of Nneka' />
                     </picture>
                     <figcaption className='about-caption'>{devMode ? devCaption : designCaption}</figcaption>
                 </figure>
