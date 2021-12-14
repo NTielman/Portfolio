@@ -1,5 +1,5 @@
 .toggle-menu.des .btn {
-  background-color: var(--des-primary-color-transparent);
+  background: var(--des-accent-color2);
 }
 
 .toggle-menu.des .btn:hover {

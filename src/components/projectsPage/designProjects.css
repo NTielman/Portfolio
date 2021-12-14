@@ -31,7 +31,7 @@
   width: 100%;
   border-radius: 20px;
   padding: 1em;
-  background: rgba(134, 58, 168, 0.8);
+  background: var(--des-secondary-color-transparent);
 
   position: absolute;
   top: 0;
@@ -52,19 +52,16 @@
   justify-self: flex-end;
 }
 
-.flickr-link:hover {
+.flickr-link:hover,
+.load-more-btn.des:hover,
+.load-more-btn.des:focus {
   background: var(--des-primary-color);
   color: var(--des-accent-color);
 }
 
 .load-more-btn.des {
-  background: var(--mixed-primary-color); /* fallback for older browsers */
-  background: var(--des-gradient-background);
-}
-
-.load-more-btn.des:hover,
-.load-more-btn.des:focus {
-  background-position: left;
+  border: none;
+  background: var(--des-accent-color2);
 }
 
 /* tablets */

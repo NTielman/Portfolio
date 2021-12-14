@@ -38,7 +38,7 @@
   color: currentColor;
 
   box-shadow: var(--shadow);
-  transition: background-color 500ms linear;
+  transition: 500ms linear;
 }
 
 .social-icon {

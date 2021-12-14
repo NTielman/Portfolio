@@ -13,19 +13,10 @@
   --dev-accent-color2: rgba(0, 128, 249, 1);
 
   --des-primary-color: rgba(253, 81, 118, 1);
-  --des-primary-color-transparent: rgba(253, 81, 118, 0.635);
+  --des-secondary-color-transparent: rgba(134, 58, 168, 0.8);
   --des-secondary-color: rgba(134, 58, 168, 1);
   --des-accent-color: rgb(255, 215, 75);
   --des-accent-color2: rgba(250, 150, 36, 1);
-  --des-gradient-background: linear-gradient(
-      307deg,
-      rgb(44, 27, 79) 0%,
-      rgb(253, 81, 118) 50%,
-      rgb(250, 150, 36) 75%,
-      rgb(255, 216, 75) 100%
-    )
-    right/250%;
-
   --mixed-primary-color: rgb(44, 27, 79);
   --shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }

@@ -1,20 +1,10 @@
-.filter-menu.des label::before {
-  border-radius: 20px;
-  content: "";
-  background: var(--mixed-primary-color); /* fallback for older browsers */
-  background: var(--des-gradient-background);
-
-  position: absolute;
-  top: -1%;
-  left: -1%;
-  right: -1%;
-  bottom: -1%;
-  z-index: -1;
-  transition: background-position 500ms linear;
+.filter-menu.des label {
+  background: var(--des-accent-color2);
 }
 
-.filter-menu.des input:checked ~ label::before,
-.filter-menu.des li:hover label::before,
-.filter-menu.des label:hover::before {
-  background-position: left;
+.filter-menu.des input:checked ~ label,
+.filter-menu.des li:hover label,
+.filter-menu.des label:hover {
+  background: var(--des-primary-color);
+  color: var(--des-accent-color);
 }

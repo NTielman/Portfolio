@@ -3,11 +3,10 @@
 }
 
 .des .social-item {
-  background: var(--mixed-primary-color); /* fallback for older browsers */
-  background: var(--des-gradient-background);
-  transition: background-position 500ms linear;
+  background: var(--des-accent-color2);
 }
 
 .des .social-item:hover {
-  background-position: left;
+  background: var(--des-primary-color);
+  color: var(--des-accent-color);
 }
