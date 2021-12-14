@@ -59,7 +59,8 @@ body {
   align-items: center;
 
   position: relative;
-  overflow: scroll;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
 }
 
 /* Dev background colors */
@@ -116,6 +117,7 @@ a {
 
 .page {
   width: 100%;
+  scroll-snap-align: end;
 }
 
 .hide {
