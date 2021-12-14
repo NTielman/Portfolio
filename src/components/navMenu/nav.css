@@ -1,22 +1,15 @@
 /* ------------ Menu styling ------------ */
 .menu {
-  width: 4.4rem;
-
   position: fixed;
-  left: 50%;
-  top: 2.5%;
-  transform: translateX(-50%);
+  top: 2rem;
+  left: 2rem;
   z-index: 100;
-}
-
-.menu-icon {
-  font-size: 2rem;
 }
 
 /* Individual button styling */
 .btn {
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
 
   position: absolute;
@@ -38,7 +31,7 @@
 
   content: attr(data-tooltip);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.5rem;
   text-align: center;
   display: grid;
   place-items: center;
@@ -48,8 +41,8 @@
   transition: opacity 500ms linear;
 }
 
-.btn.resume::before {
-  font-size: 0.75rem;
+.resume-btn::before {
+  font-size: 0.45rem;
 }
 
 /* Show tooltip on hover */
@@ -57,15 +50,18 @@
   opacity: 1;
 }
 
+.btn:not(:first-child):hover {
+  transform: scale(1.5);
+}
 /* ------------ Positioning closed menu buttons ------------ */
-.menuBtn,
-.closeBtn {
+.menu-btn,
+.close-btn {
   position: absolute;
   transition: 0.3s linear;
 }
 
 /* Hide close button when menu is closed */
-.closeBtn {
+.close-btn {
   transform: translateY(3rem);
   opacity: 0;
 }
@@ -75,61 +71,46 @@
   opacity: 0;
   transition: 0.3s cubic-bezier(0.87, -0.41, 0.19, 1.44);
   z-index: -2;
-}
-
-.btn:nth-child(2),
-.btn:nth-child(6) {
-  left: 0;
-  transition-delay: 0s;
-}
-
-.btn:nth-child(3),
-.btn:nth-child(5) {
   left: 0;
   top: 0;
-  transition-delay: 0.1s;
-}
-
-.btn:nth-child(4) {
-  top: 0;
-  transition-delay: 0.2s;
 }
 
 /* ------------ Positioning open menu buttons ------------ */
-#menu-checkbox:checked ~ .toggle-menu .menuBtn {
+#menu-checkbox:checked ~ .toggle-menu .menu-btn {
   transform: translateY(-3rem);
   opacity: 0;
 }
 
 /* Show close button when menu is open */
-#menu-checkbox:checked ~ .toggle-menu .closeBtn {
+#menu-checkbox:checked ~ .toggle-menu .close-btn {
   transform: translateY(0);
   opacity: 1;
 }
 
-#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(2) {
-  left: -6.25rem;
+#menu-checkbox:checked ~ .toggle-menu .home-btn {
+  left: 4.125rem;
+  top: 1.25rem;
   opacity: 1;
 }
 
-#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(3) {
-  left: -4.5rem;
-  top: 4.5rem;
+#menu-checkbox:checked ~ .toggle-menu .about-btn {
+  left: 1.25rem;
+  top: 4.125rem;
   opacity: 1;
 }
 
-#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(4) {
-  top: 6.25rem;
+#menu-checkbox:checked ~ .toggle-menu .projects-btn {
+  top: 8.25rem;
   opacity: 1;
 }
 
-#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(5) {
-  left: 4.5rem;
-  top: 4.5rem;
+#menu-checkbox:checked ~ .toggle-menu .resume-btn {
+  left: 6.5rem;
+  top: 6.5rem;
   opacity: 1;
 }
 
-#menu-checkbox:checked ~ .toggle-menu .btn:nth-child(6) {
-  left: 6.25rem;
+#menu-checkbox:checked ~ .toggle-menu .contact-btn {
+  left: 8.25rem;
   opacity: 1;
 }

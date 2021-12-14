@@ -19,8 +19,8 @@ const ToggleBar = () => {
                     dispatch(toggleMode())
                 }} />
             <label htmlFor='toggle-checkbox' className='toggle-bar'>
-                <i className="fas fa-pencil-alt"></i>
                 <i className="fas fa-code"></i>
+                <i className="fas fa-pencil-alt"></i>
                 <div className='ball'></div>
             </label>
         </div>
