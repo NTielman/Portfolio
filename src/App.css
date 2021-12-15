@@ -4,7 +4,7 @@
   --text-font: "Lexend", sans-serif;
   --text-color: white;
 
-  --section-padding: 5em 1.5em;
+  --section-padding: 4em 1.5em;
 
   --dev-primary-color: rgba(44, 22, 65, 1);
   --dev-primary-color-transparent: rgba(44, 22, 65, 0.635);
@@ -29,7 +29,6 @@
 
 html {
   height: 100vh;
-  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -86,19 +85,10 @@ h6 {
   font-family: var(--heading-font);
 }
 
-h1 {
-  font-size: 15vw;
-}
-
 h2 {
   margin: 1em;
-  font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
-}
-
-h4 {
-  font-size: 1.2rem;
 }
 
 a {
@@ -148,10 +138,3 @@ a {
 @import "components/contactPage/contact.css";
 @import "components/contactPage/devContact.css";
 @import "components/contactPage/designContact.css";
-
-/* desktop */
-@media (min-width: 1025px) {
-  html {
-    font-size: 18px;
-  }
-}
