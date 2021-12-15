@@ -1,5 +1,5 @@
 .contact {
-  min-height: 100vh;
+  flex: 1 0 100%; /* use instead of min height to avvoid overflow issues*/
   padding: var(--section-padding);
 
   display: flex;
@@ -24,13 +24,13 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  gap: 1rem;
 }
 
 .social-item {
-  margin: 2%;
   flex-basis: 15%;
   border-radius: 20px;
-  padding: 2%;
+  padding: 1rem;
 
   display: grid;
   place-items: center;
@@ -41,6 +41,9 @@
   transition: 500ms linear;
 }
 
-.social-icon {
-  font-size: 1.5rem;
+/* laptops */
+@media (min-width: 600px) {
+  .social-icon {
+    font-size: 1.5rem;
+  }
 }
