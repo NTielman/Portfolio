@@ -23,6 +23,6 @@
   display: inline-block;
   text-align: center;
   overflow: hidden;
-  transition: background-color 500ms linear;
+  transition: 500ms linear;
   cursor: pointer;
 }

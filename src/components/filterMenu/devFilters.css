@@ -1,10 +1,10 @@
 .filter-menu.dev label {
-  background: var(--dev-secondary-color);
+  background-color: var(--dev-accent-color2);
 }
 
 .filter-menu.dev label:hover,
 .filter-menu.dev input:checked ~ label {
-  box-shadow: 0 0 0 1px var(--dev-accent-color);
+  box-shadow: 0 0 0 2px var(--dev-accent-color);
   color: var(--dev-accent-color);
 }
 

@@ -152,26 +152,22 @@
   border-radius: 0 0 20px 0;
 }
 
-.demo-link:active,
-.github-link:active,
-.demo-link:focus,
-.github-link:focus,
-.demo-link:hover,
-.github-link:hover {
-  background: black;
-  color: var(--dev-accent-color);
-  box-shadow: 0 0 0 1px var(--dev-accent-color);
+.load-more-btn.dev,
+.dev .social-btn {
+  border: solid 2px transparent;
 }
 
 .load-more-btn.dev {
-  background: var(--dev-secondary-color);
+  background: var(--dev-accent-color2);
 }
 
+.dev .social-btn:focus,
+.dev .social-btn:hover,
 .load-more-btn.dev:hover,
 .load-more-btn.dev:focus {
   background: black;
   color: var(--dev-accent-color);
-  box-shadow: 0 0 0 1px var(--dev-accent-color);
+  border-color: var(--dev-accent-color);
 }
 
 /* laptops */
