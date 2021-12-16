@@ -1,0 +1,15 @@
+.contact.dev {
+  background-color: $dev-secondary-color;
+}
+
+.dev .social-item {
+  background-color: $dev-accent-color2;
+  position: relative;
+  border: solid 2px transparent;
+}
+
+.dev .social-item:hover {
+  background: black;
+  color: $dev-accent-color;
+  border-color: $dev-accent-color;
+}

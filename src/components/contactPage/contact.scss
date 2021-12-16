@@ -1,6 +1,6 @@
 .contact {
   flex: 1 0 100%;
-  padding: var(--section-padding);
+  padding: $section-padding;
 
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
   text-decoration: none;
   color: currentColor;
 
-  box-shadow: var(--shadow);
+  box-shadow: $shadow;
   transition: 500ms linear;
 }
 

@@ -50,7 +50,7 @@
 }
 
 .card-front::before {
-  border: 2px solid var(--dev-accent-color);
+  border: 2px solid $dev-accent-color;
   border-radius: 20px;
   content: "";
 
@@ -67,7 +67,7 @@
   height: 100%;
   border-radius: 20px;
   padding: 10%;
-  background: var(--dev-primary-color-transparent);
+  background: $dev-primary-color-transparent;
 
   position: absolute;
   top: 0;
@@ -90,7 +90,7 @@
 
 .card-back {
   transform: rotateY(0.5turn);
-  background: var(--dev-secondary-color);
+  background: $dev-secondary-color;
   overflow: hidden;
 }
 
@@ -148,7 +148,7 @@
 .github-link {
   height: 100%;
   border-radius: 0 0 20px 20px;
-  background-color: var(--dev-accent-color2);
+  background-color: $dev-accent-color2;
 }
 
 .demo-link ~ .github-link {
@@ -161,7 +161,7 @@
 }
 
 .load-more-btn.dev {
-  background: var(--dev-accent-color2);
+  background: $dev-accent-color2;
 }
 
 .dev .social-btn:focus,
@@ -169,8 +169,8 @@
 .load-more-btn.dev:hover,
 .load-more-btn.dev:focus {
   background: black;
-  color: var(--dev-accent-color);
-  border-color: var(--dev-accent-color);
+  color: $dev-accent-color;
+  border-color: $dev-accent-color;
 }
 
 @media (min-width: 600px) {

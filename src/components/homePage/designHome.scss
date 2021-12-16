@@ -17,11 +17,7 @@
 /* Fade effect */
 .parallax-container::after {
   height: 8%;
-  background: linear-gradient(
-    0deg,
-    var(--des-accent-color2) 0%,
-    transparent 100%
-  );
+  background: linear-gradient(0deg, $des-accent-color2 0%, transparent 100%);
 }
 
 #scene img {

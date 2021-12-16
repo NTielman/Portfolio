@@ -1,10 +1,10 @@
 .filter-menu.des label {
-  background: var(--des-accent-color2);
+  background: $des-accent-color2;
 }
 
 .filter-menu.des input:checked ~ label,
 .filter-menu.des li:hover label,
 .filter-menu.des label:hover {
-  background: var(--des-primary-color);
-  color: var(--des-accent-color);
+  background: $des-primary-color;
+  color: $des-accent-color;
 }

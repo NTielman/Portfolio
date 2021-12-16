@@ -1,5 +1,9 @@
+.about {
+  flex: 1 0 100%;
+}
+
 .about-container {
-  padding: var(--section-padding);
+  padding: $section-padding;
 
   display: flex;
   flex-direction: column;
@@ -30,7 +34,7 @@
   margin-bottom: 1em;
   width: 100%;
   border-radius: 20px;
-  box-shadow: var(--shadow);
+  box-shadow: $shadow;
 }
 
 .about-caption {

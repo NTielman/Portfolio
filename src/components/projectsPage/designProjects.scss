@@ -2,7 +2,7 @@
   flex: 0 1 100%;
   perspective: 1000px;
   display: flex;
-justify-content: space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   gap: 0.75rem;
@@ -28,7 +28,7 @@ justify-content: space-evenly;
   width: 100%;
   border-radius: 20px;
   padding: 1em;
-  background: var(--des-secondary-color-transparent);
+  background: $des-secondary-color-transparent;
 
   position: absolute;
   top: 0;
@@ -44,20 +44,20 @@ justify-content: space-evenly;
 
 .flickr-link {
   border-radius: 20px;
-  background: var(--des-accent-color2);
+  background: $des-accent-color2;
   justify-self: flex-end;
 }
 
 .flickr-link:hover,
 .load-more-btn.des:hover,
 .load-more-btn.des:focus {
-  background: var(--des-primary-color);
-  color: var(--des-accent-color);
+  background: $des-primary-color;
+  color: $des-accent-color;
 }
 
 .load-more-btn.des {
   border: none;
-  background: var(--des-accent-color2);
+  background: $des-accent-color2;
 }
 
 @media (min-width: 600px) {
