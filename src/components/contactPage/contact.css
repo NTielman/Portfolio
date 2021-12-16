@@ -1,11 +1,12 @@
 .contact {
-  flex: 1 0 100%; /* use instead of min height to avvoid overflow issues*/
+  flex: 1 0 100%;
   padding: var(--section-padding);
 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 4rem;
   text-align: center;
 }
 
