@@ -1,7 +1,6 @@
 .project-card.dev {
-  width: 100%;
   height: 45vw;
-  margin: 1em 0;
+  flex: 0 1 100%;
 }
 
 .card-content.dev {
@@ -34,7 +33,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   backface-visibility: hidden;
   transform-style: preserve-3d;
 }
@@ -100,15 +99,15 @@
   padding: 2em;
 
   text-align: center;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: flex-start;
   overflow: auto;
 }
 
 .card-tools {
-  width: 100%;
-  padding: 1.5em;
+  width: 90%;
+  flex: 1 1 80%;
 
   display: inline-flex;
   flex-wrap: wrap;
@@ -126,13 +125,17 @@
 
 .card-links {
   width: 100%;
-  height: 20%;
+  flex: 1 1 20%;
   border-radius: 0 0 20px 20px;
 
   display: flex;
   justify-content: center;
   align-items: center;
   justify-self: flex-end;
+}
+
+.dev .btn-text {
+  display: none;
 }
 
 .demo-link {
@@ -170,18 +173,48 @@
   border-color: var(--dev-accent-color);
 }
 
-/* laptops */
-@media (min-width: 801px) {
+@media (min-width: 600px) {
   .project-card.dev {
-    margin: 1em;
-    width: 45%;
-    height: 35vw;
+    flex-basis: 35%;
+    height: 25vw;
   }
 }
 
-/* desktop */
-@media (min-width: 1025px) {
+@media (min-width: 801px) and (orientation: portrait) {
+  .dev .btn-text,
+  .card-description {
+    display: flex;
+  }
+}
+
+@media (min-width: 801px) and (orientation: landscape) {
+  .dev.card-subtitle {
+    display: none;
+  }
+
   .project-card.dev {
-    height: 25vw;
+    flex-basis: 30%;
+    height: 12vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  .dev.card-subtitle,
+  .dev .btn-text,
+  .card-description {
+    display: flex;
+  }
+}
+
+@media (min-width: 1440px) {
+  .project-card.dev {
+    height: 10vw;
+  }
+}
+
+@media (min-width: 1600px) {
+  .project-card.dev {
+    flex-basis: 0 1 25%;
+    height: 15vw;
   }
 }

@@ -1,20 +1,23 @@
+.filter-text {
+  display: none;
+}
+
 .filter-menu {
-  margin: 1em;
-  display: flex;
-  justify-content: space-evenly;
+  display: none;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .filter-menu li {
-  margin: 0.25em;
   list-style: none;
   cursor: pointer;
 }
 
 .filter-menu label {
   border-radius: 20px;
-  padding: 1em;
+  padding: 0.5rem;
 
   /* For black circle effect */
   position: relative;
@@ -25,4 +28,12 @@
   overflow: hidden;
   transition: 500ms linear;
   cursor: pointer;
+}
+
+/* tablets */
+@media (min-width: 600px) {
+  .filter-text,
+  .filter-menu {
+    display: flex;
+  }
 }

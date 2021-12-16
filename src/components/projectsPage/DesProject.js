@@ -40,7 +40,7 @@ const DesProject = (props) => {
             </div>
             <a className='flickr-link social-btn' href={hasGallery ? props.project.galleryUrl : props.project.galleryImgUrl} target='_blank' rel="noreferrer noopener">
                 <i className="fab fa-flickr"></i>
-                <p className='btn-text'>{hasGallery ? 'View Gallery' : 'View Image'}</p>
+                <span className='btn-text'>View {hasGallery ? 'Gallery' : 'Image'}</span>
             </a>
         </div>
     );

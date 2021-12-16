@@ -65,7 +65,7 @@ const Projects = () => {
         <section className='projects page' id='projects'>
 
             <h2>Projects</h2>
-            <p>Filter by:</p>
+            <p className='filter-text'>Filter by:</p>
             <FilterMenu filters={filters} />
 
             <div className='projects-container'>
