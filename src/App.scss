@@ -20,6 +20,11 @@ $mixed-primary-color: rgb(44, 27, 79);
 $shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 $transition-ease: 0.25s ease-in-out;
 
+@mixin center-content {
+  display: grid;
+  place-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
