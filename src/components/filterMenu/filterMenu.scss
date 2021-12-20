@@ -26,7 +26,7 @@
   display: inline-block;
   text-align: center;
   overflow: hidden;
-  transition: 500ms linear;
+  transition: $transition-ease;
   cursor: pointer;
 }
 

@@ -39,7 +39,7 @@
   color: currentColor;
 
   box-shadow: $shadow;
-  transition: 500ms linear;
+  transition: $transition-ease;
 }
 
 /* laptops */

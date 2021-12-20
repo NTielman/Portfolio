@@ -38,7 +38,7 @@
   align-items: center;
   justify-content: center;
 
-  transition: 250ms linear;
+  transition: $transition-ease;
   opacity: 0;
 }
 

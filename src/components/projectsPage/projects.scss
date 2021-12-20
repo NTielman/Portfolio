@@ -43,7 +43,7 @@
   gap: 0.5rem;
   text-decoration: none;
   color: currentColor;
-  transition: 500ms linear;
+  transition: $transition-ease;
 }
 
 .load-more-btn {
@@ -52,7 +52,7 @@
   font-size: 1rem;
   cursor: pointer;
   color: currentColor;
-  transition: 500ms linear;
+  transition: $transition-ease;
 }
 
 @media (min-width: 801px) {
