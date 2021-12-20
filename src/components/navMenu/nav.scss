@@ -30,22 +30,17 @@
   pointer-events: none;
 }
 
-/* Button tooltip and icon */
-.btn:not(:first-child)::before,
-.btn i {
-  height: inherit;
-  border-radius: inherit;
-  background: inherit;
-
-  @include center-content;
-}
-
+/* Button tooltip */
 .btn:not(:first-child)::before {
+  height: inherit;
   min-width: 2.5rem;
   max-width: 2.5rem;
   width: auto;
+  border-radius: inherit;
+  background: inherit;
 
   content: attr(data-tooltip);
+  color: transparent;
   white-space: nowrap;
   overflow: hidden;
   @include center-content;
@@ -56,10 +51,6 @@
   z-index: -1;
 
   transition: $transition-ease;
-}
-
-.btn i {
-  width: inherit;
 }
 
 /* Button hover styling */

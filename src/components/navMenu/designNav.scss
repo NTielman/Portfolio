@@ -1,0 +1,9 @@
+.toggle-menu.des .btn {
+  background: $des-accent-color2;
+}
+
+.toggle-menu.des .btn:hover::before,
+.toggle-menu.des .btn:hover {
+  background-color: $des-primary-color;
+  color: $des-accent-color;
+}

@@ -1,0 +1,14 @@
+.toggle-menu.dev .btn {
+  background-color: $dev-accent-color2;
+}
+
+.toggle-menu.dev .btn:hover::before,
+.toggle-menu.dev .btn:hover {
+  background: black;
+  color: $dev-accent-color;
+}
+
+.toggle-menu.dev .btn:hover::before,
+.toggle-menu.dev .btn:first-child:hover {
+  border: solid 2px $dev-accent-color;
+}
