@@ -1,12 +1,7 @@
 .contact.des {
-  background-color: $des-primary-color;
+  background: $des-primary-color;
 }
 
 .des .social-item {
-  background: $des-accent-color2;
-}
-
-.des .social-item:hover {
-  background: $des-primary-color;
-  color: $des-accent-color;
+  @extend .des-button;
 }

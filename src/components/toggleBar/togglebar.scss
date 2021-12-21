@@ -12,7 +12,7 @@ $toggle-ball-width: 1.25rem;
 
 .toggle-bar {
   width: $toggle-bar-width;
-  border-radius: 20px;
+  border-radius: $rounded-border;
   padding: $toggle-bar-padding;
 
   background: $mixed-primary-color; /* fallback for older browsers */
@@ -39,7 +39,7 @@ $toggle-ball-width: 1.25rem;
 .ball {
   width: $toggle-ball-width;
   height: $toggle-ball-width;
-  border-radius: 50%;
+  border-radius: $circle-border;
   background-color: white;
 
   position: absolute;

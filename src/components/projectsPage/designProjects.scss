@@ -19,14 +19,14 @@
 .project-card.des img {
   height: 100%;
   width: 100%;
-  border-radius: 20px;
+  border-radius: $rounded-border;
   object-fit: cover;
 }
 
 .des.card-content {
   height: 100%;
   width: 100%;
-  border-radius: 20px;
+  border-radius: $rounded-border;
   padding: 1em;
   background: $des-secondary-color-transparent;
 
@@ -43,21 +43,15 @@
 }
 
 .flickr-link {
-  border-radius: 20px;
-  background: $des-accent-color2;
-  justify-self: flex-end;
-}
+  border-radius: $rounded-border;
+  @extend .des-button;
 
-.flickr-link:hover,
-.load-more-btn.des:hover,
-.load-more-btn.des:focus {
-  background: $des-primary-color;
-  color: $des-accent-color;
+  justify-self: flex-end;
 }
 
 .load-more-btn.des {
   border: none;
-  background: $des-accent-color2;
+  @extend .des-button;
 }
 
 @media (min-width: 600px) {

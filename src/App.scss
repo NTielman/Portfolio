@@ -19,6 +19,8 @@ $des-accent-color2: rgba(250, 150, 36, 1);
 $mixed-primary-color: rgb(44, 27, 79);
 $shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 $transition-ease: 0.25s ease-in-out;
+$rounded-border: 25px;
+$circle-border: 50%;
 
 @mixin center-content {
   display: grid;
@@ -106,6 +108,19 @@ a {
 
 .hide {
   display: none;
+}
+
+.des-button {
+  background: $des-accent-color2;
+
+  cursor: pointer;
+  transition: $transition-ease;
+
+  &:hover,
+  &:focus {
+    background: $des-primary-color;
+    color: $des-accent-color;
+  }
 }
 
 /* tablets */
