@@ -1,31 +1,15 @@
-.filter-menu.dev label {
-  background-color: $dev-accent-color2;
-}
-
-.filter-menu.dev label:hover,
-.filter-menu.dev input:checked ~ label {
-  box-shadow: 0 0 0 2px $dev-accent-color;
+.filter-menu.dev input:checked ~ .label {
+  background: black;
   color: $dev-accent-color;
-}
 
-.filter-menu.dev input:checked ~ label {
-  background: black;
-}
-
-.circle {
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: black;
-
-  position: absolute;
-  display: block;
-  transform: translate(-50%, -50%);
-  transition: width 500ms linear, height 500ms linear;
-  z-index: -1;
-}
-
-.filter-menu.dev label:hover .circle {
-  width: 250px;
-  height: 250px;
+  &::after {
+    border: 2px solid $dev-accent-color;
+    border-radius: inherit;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }

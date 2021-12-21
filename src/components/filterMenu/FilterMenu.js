@@ -1,20 +1,19 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleProjectFilter } from '../../actions';
+import DevButton from '../button/DevButton';
 
 const FilterMenu = (props) => {
 
     const dispatch = useDispatch();
     const activeFilters = useSelector(state => state.activeFilters);
     const devMode = useSelector(state => state.devMode);
-    const devCircleRef = useRef([]);
 
     return (
         <ul className={`filter-menu ${devMode ? "dev" : "des"}`}>
-            {props.filters.map((filter, index) => {
+            {props.filters.map(filter => {
                 return (
-                    <li key={filter}
-                        id={index}>
+                    <li key={filter}>
                         <input
                             type="checkbox"
                             name="filter"
@@ -23,33 +22,22 @@ const FilterMenu = (props) => {
                             checked={activeFilters.includes(filter)}
                             onChange={(event) => dispatch(toggleProjectFilter(event.target))}
                             id={filter}
-                            value={filter}></input>
-                        <label htmlFor={filter} id={index}
-                            onMouseEnter={(event) => {
-                                if (devMode) {
-                                    const labelRect = event.target.getBoundingClientRect();
-                                    const x = event.pageX - labelRect.x;
-                                    const y = event.pageY - labelRect.y;
-                                    const indexNum = event.target.id;
-                                    devCircleRef.current[indexNum].style.left = x + 'px';
-                                    devCircleRef.current[indexNum].style.top = y + 'px';
-                                }
-                            }}
-                            onMouseLeave={(event) => {
-                                if (devMode) {
-                                    const labelRect = event.target.getBoundingClientRect();
-                                    const x = event.pageX - labelRect.x;
-                                    const y = event.pageY - labelRect.y;
-                                    const indexNum = event.target.id;
-                                    devCircleRef.current[indexNum].style.left = x + 'px';
-                                    devCircleRef.current[indexNum].style.top = y + 'px';
-                                }
-                            }}>
-
-                            {devMode && (<span className='circle' id={index} ref={el => devCircleRef.current[index] = el}></span>)}
-
-                            {filter}
-                        </label>
+                            value={filter}>
+                        </input>
+                        {devMode ? (
+                            <DevButton className="label">
+                                <label
+                                    htmlFor={filter}>
+                                    {filter}
+                                </label>
+                            </DevButton>
+                        ) : (
+                            <label
+                                className="label"
+                                htmlFor={filter}>
+                                {filter}
+                            </label>
+                        )}
                     </li>);
             })}
         </ul>

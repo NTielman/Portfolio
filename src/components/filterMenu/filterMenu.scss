@@ -15,19 +15,13 @@
   cursor: pointer;
 }
 
-.filter-menu label {
-  border-radius: 20px;
+.filter-menu .label {
+  border-radius: $rounded-border;
   padding: 0.5rem;
-
-  /* For black circle effect */
-  position: relative;
-  z-index: 1;
 
   display: inline-block;
   text-align: center;
   overflow: hidden;
-  transition: $transition-ease;
-  cursor: pointer;
 }
 
 /* tablets */

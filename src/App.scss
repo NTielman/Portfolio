@@ -101,6 +101,12 @@ a {
   color: inherit;
 }
 
+a,
+button,
+label {
+  cursor: pointer;
+}
+
 .page {
   width: 100%;
   scroll-snap-align: end;

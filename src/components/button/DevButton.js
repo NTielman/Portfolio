@@ -20,7 +20,7 @@ const DevButton = (props) => {
 
     return (
         <div
-            className={`dev-button ${props.className}`}
+            className={`dev-button ${props.className ? props.className : ''}`}
             onClick={props.onClick}
             title={props.title}
             onMouseEnter={handleMouseEnter}
