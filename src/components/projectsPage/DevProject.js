@@ -1,4 +1,5 @@
 import React from 'react';
+import DevButton from '../button/DevButton';
 
 const DevProject = (props) => {
 
@@ -28,13 +29,29 @@ const DevProject = (props) => {
                     </ul>
 
                     <div className='card-links'>
-                        {props.project.demoUrl ? <a className='demo-link social-btn' href={props.project.demoUrl} target='_blank' rel="noreferrer noopener"><i className="fas fa-play"></i><span className='btn-text'>View live demo</span></a> : null}
+                        {(props.project.demoUrl || props.project.videoDemoUrl) && (
+                            <DevButton className='demo-link social-btn-container'>
+                                <a
+                                    className='social-btn'
+                                    href={props.project.demoUrl || props.project.videoDemoUrl}
+                                    target='_blank'
+                                    rel="noreferrer noopener">
+                                    <i className="fas fa-play"></i>
+                                    <span className='btn-text'>{props.project.demoUrl ? 'live' : 'video'} demo</span>
+                                </a>
+                            </DevButton>
+                        )}
 
-                        {props.project.videoDemoUrl ? <a className='demo-link social-btn' href={props.project.videoDemoUrl} target='_blank' rel="noreferrer noopener"><i className="fas fa-play"></i><span className='btn-text'>View video demo</span></a> : null}
-
-                        <a className='github-link social-btn' href={props.project.githubUrl} target='_blank' rel="noreferrer noopener">
-                            <i className="fab fa-github"></i>
-                            <span className='btn-text'>View on Github</span></a>
+                        <DevButton className='github-link social-btn-container'>
+                            <a
+                                className='social-btn'
+                                href={props.project.githubUrl}
+                                target='_blank'
+                                rel="noreferrer noopener">
+                                <i className="fab fa-github"></i>
+                                <span className='btn-text'>Source code</span>
+                            </a>
+                        </DevButton>
                     </div>
                 </div>
             </div>

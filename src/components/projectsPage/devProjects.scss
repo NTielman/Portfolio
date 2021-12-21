@@ -155,18 +155,9 @@
   border-radius: 0 0 $rounded-border 0;
 }
 
-.dev .social-btn {
-  border: solid 2px transparent;
+.dev .social-btn-container {
+  width: 100%;
 }
-
-
-.dev .social-btn:focus,
-.dev .social-btn:hover {
-  background: black;
-  color: $dev-accent-color;
-  border-color: $dev-accent-color;
-}
-
 @media (min-width: 600px) {
   .project-card.dev {
     flex-basis: 35%;
