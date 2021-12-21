@@ -43,17 +43,12 @@ const DesignHomePage = () => {
                         <img loading="lazy" src={process.env.PUBLIC_URL + '/assets/images/home/design/4mysteryShack.png'} alt='mystery shack' />
                     </picture>
                 </li>
-                <li className='layer header' data-depth='0.5'>
-                    <div className="home-title">
-                        <h1>Designer</h1>
-                    </div>
-                </li>
                 <li className='layer floating-characters' data-depth='1'>
-                <picture>
-                    <source type="image/webp" srcSet={process.env.PUBLIC_URL + '/assets/images/home/design/5floatingCharacters.webp'} />
-                    <source type="image/png" srcSet={process.env.PUBLIC_URL + '/assets/images/home/design/5floatingCharacters.png'} />
-                    <img loading="lazy" src={process.env.PUBLIC_URL + '/assets/images/home/design/5floatingCharacters.png'} alt='floating characters' />
-                </picture>
+                    <picture>
+                        <source type="image/webp" srcSet={process.env.PUBLIC_URL + '/assets/images/home/design/5floatingCharacters.webp'} />
+                        <source type="image/png" srcSet={process.env.PUBLIC_URL + '/assets/images/home/design/5floatingCharacters.png'} />
+                        <img loading="lazy" src={process.env.PUBLIC_URL + '/assets/images/home/design/5floatingCharacters.png'} alt='floating characters' />
+                    </picture>
                 </li>
                 <li className='layer ground-characters' data-depth='0.5'>
                     <picture>
@@ -63,11 +58,11 @@ const DesignHomePage = () => {
                     </picture>
                 </li>
                 <li className='layer foreground-trees' data-depth='0'>
-                <picture>
-                    <source type="image/webp" srcSet={process.env.PUBLIC_URL + '/assets/images/home/design/7treesForeground.webp'} />
-                    <source type="image/png" srcSet={process.env.PUBLIC_URL + '/assets/images/home/design/7treesForeground.png'} />
-                    <img loading="lazy" src={process.env.PUBLIC_URL + '/assets/images/home/design/7treesForeground.png'} alt='foreground trees' />
-                </picture>
+                    <picture>
+                        <source type="image/webp" srcSet={process.env.PUBLIC_URL + '/assets/images/home/design/7treesForeground.webp'} />
+                        <source type="image/png" srcSet={process.env.PUBLIC_URL + '/assets/images/home/design/7treesForeground.png'} />
+                        <img loading="lazy" src={process.env.PUBLIC_URL + '/assets/images/home/design/7treesForeground.png'} alt='foreground trees' />
+                    </picture>
                 </li>
             </ul>
         </div>
