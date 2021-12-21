@@ -1,5 +1,6 @@
 .toggle-menu.dev .btn {
   background-color: $dev-accent-color2;
+  transition: $transition-ease;
 }
 
 .toggle-menu.dev .btn:hover::before,
