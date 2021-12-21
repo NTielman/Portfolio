@@ -110,19 +110,6 @@ a {
   display: none;
 }
 
-.des-button {
-  background: $des-accent-color2;
-
-  cursor: pointer;
-  transition: $transition-ease;
-
-  &:hover,
-  &:focus {
-    background: $des-primary-color;
-    color: $des-accent-color;
-  }
-}
-
 /* tablets */
 @media (min-width: 600px) {
   .App {
@@ -131,6 +118,10 @@ a {
 }
 
 /* Component Stylesheets */
+/* Buttons */
+@import "components/button/desButton.scss";
+@import "components/button/devButton.scss";
+
 /* Nav Menu */
 @import "components/navMenu/nav";
 @import "components/navMenu/designNav";

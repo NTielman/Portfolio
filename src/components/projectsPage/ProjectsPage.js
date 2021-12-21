@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import FilterMenu from '../filterMenu/FilterMenu';
 import DevProject from './DevProject';
 import DesProject from './DesProject';
+import DevButton from '../button/DevButton';
 
 import { featured_projects as devProjects } from '../../utils/devProjects';
 import { featured_projects as desProjects } from '../../utils/desProjects';
@@ -72,10 +73,13 @@ const Projects = () => {
                 {pageResults}
             </div>
 
-            {hasMoreResults && <button
-                className={`load-more-btn ${devMode ? 'dev' : 'des'}`}
+            {hasMoreResults && (devMode ? (<DevButton
+                className="load-more-btn dev"
                 onClick={() => setCurrentPage(currentPage + projectsPerPage)}
-            >Load More</button>}
+            >Load More</DevButton>) : (<button
+                className="load-more-btn des"
+                onClick={() => setCurrentPage(currentPage + projectsPerPage)}
+            >Load More</button>))}
         </section>
     );
 }

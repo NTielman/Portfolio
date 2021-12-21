@@ -43,16 +43,13 @@
   gap: 0.5rem;
   text-decoration: none;
   color: currentColor;
-  transition: $transition-ease;
 }
 
 .load-more-btn {
-  border-radius: 20px;
+  border-radius: $rounded-border;
   padding: 1rem;
   font-size: 1rem;
-  cursor: pointer;
   color: currentColor;
-  transition: $transition-ease;
 }
 
 @media (min-width: 801px) {

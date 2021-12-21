@@ -30,15 +30,13 @@
 
 .social-item {
   flex-basis: 15%;
-  border-radius: 20px;
-  padding: 1rem;
+  border-radius: $rounded-border;
 
   @include center-content;
   text-decoration: none;
   color: currentColor;
 
   box-shadow: $shadow;
-  transition: $transition-ease;
 }
 
 /* laptops */

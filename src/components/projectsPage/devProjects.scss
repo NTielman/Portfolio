@@ -6,7 +6,7 @@
 .card-content.dev {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: $rounded-border;
 
   text-align: center;
   position: relative;
@@ -22,7 +22,7 @@
 .card-back {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: $rounded-border;
 
   position: absolute;
   top: 0;
@@ -45,13 +45,13 @@
 .card-front img {
   height: 100%;
   width: 100%;
-  border-radius: 20px;
+  border-radius: $rounded-border;
   object-fit: cover;
 }
 
 .card-front::before {
   border: 2px solid $dev-accent-color;
-  border-radius: 20px;
+  border-radius: $rounded-border;
   content: "";
 
   position: absolute;
@@ -65,7 +65,7 @@
 .front-titles {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: $rounded-border;
   padding: 10%;
   background: $dev-primary-color-transparent;
 
@@ -126,7 +126,7 @@
 .card-links {
   width: 100%;
   flex: 1 1 20%;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 $rounded-border $rounded-border;
 
   display: flex;
   justify-content: center;
@@ -140,34 +140,28 @@
 
 .demo-link {
   height: 100%;
-  border-radius: 0 0 0 20px;
+  border-radius: 0 0 0 $rounded-border;
 
   background-color: rgba(79, 224, 217, 0.827);
 }
 
 .github-link {
   height: 100%;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 $rounded-border $rounded-border;
   background-color: $dev-accent-color2;
 }
 
 .demo-link ~ .github-link {
-  border-radius: 0 0 20px 0;
+  border-radius: 0 0 $rounded-border 0;
 }
 
-.load-more-btn.dev,
 .dev .social-btn {
   border: solid 2px transparent;
 }
 
-.load-more-btn.dev {
-  background: $dev-accent-color2;
-}
 
 .dev .social-btn:focus,
-.dev .social-btn:hover,
-.load-more-btn.dev:hover,
-.load-more-btn.dev:focus {
+.dev .social-btn:hover {
   background: black;
   color: $dev-accent-color;
   border-color: $dev-accent-color;
