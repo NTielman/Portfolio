@@ -50,10 +50,16 @@ const Contact = () => {
                     if (devMode & contactOption.showOnDev) {
                         return (
                             <DevButton
+                                key={contactOption.contactMethod}
                                 className={`social-item ${contactOption.contactMethod}`}
                                 title={contactOption.contactMethod}
                             >
-                                <a className="social-item-link" href={contactOption.url} target='_blank' rel="noreferrer noopener" title={contactOption.contactMethod}>
+                                <a
+                                    className="social-item-link"
+                                    href={contactOption.url}
+                                    target='_blank'
+                                    rel="noreferrer noopener"
+                                    title={contactOption.contactMethod}>
                                     <i className={`${contactOption.class} social-icon`}></i>
                                 </a>
                             </DevButton>)
@@ -61,7 +67,13 @@ const Contact = () => {
 
                     if (!devMode & contactOption.showOnDes) {
                         return (
-                            <a className={`social-item ${contactOption.contactMethod}`} href={contactOption.url} target='_blank' rel="noreferrer noopener" title={contactOption.contactMethod}>
+                            <a
+                                className={`social-item ${contactOption.contactMethod}`}
+                                href={contactOption.url}
+                                target='_blank'
+                                rel="noreferrer noopener"
+                                title={contactOption.contactMethod}
+                                key={contactOption.contactMethod}>
                                 <i className={`${contactOption.class} social-icon`}></i>
                             </a>
                         )
