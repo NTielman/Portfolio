@@ -7,7 +7,6 @@
   /* For black circle effect */
   position: relative;
   z-index: 1;
-  overflow: hidden;
 
   & .circle {
     width: 0;
@@ -16,7 +15,7 @@
     background: black;
 
     position: absolute;
-    display: block;
+    display: none;
     transform: translate(-50%, -50%);
     transition: width 500ms linear, height 500ms linear;
     z-index: -1;
@@ -49,6 +48,21 @@
     & .circle {
       width: 250px;
       height: 250px;
+    }
+  }
+
+  @media (min-width: 600px) {
+    overflow: hidden;
+
+    & .circle {
+      display: block;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &:hover,
+    &:focus {
+      background: black;
     }
   }
 }
