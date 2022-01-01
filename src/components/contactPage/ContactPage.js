@@ -78,6 +78,7 @@ const Contact = () => {
                             </a>
                         )
                     }
+                    return null;
                 })}
             </div>
         </section >
