@@ -1,6 +1,11 @@
 import React, { useRef } from 'react';
 
-const DevButton = (props) => {
+const DevButton = ({
+    className: propClass,
+    onClick: propClickHandler,
+    title: propTitle,
+    children
+}) => {
     const devCircleRef = useRef();
     const handleMouseEnter = (event) => {
         const containerRect = event.target.getBoundingClientRect();
@@ -20,13 +25,13 @@ const DevButton = (props) => {
 
     return (
         <div
-            className={`dev-button ${props.className ? props.className : ''}`}
-            onClick={props.onClick}
-            title={props.title}
+            className={`dev-button ${propClass ? propClass : ''}`}
+            onClick={propClickHandler}
+            title={propTitle}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
             <span className='circle' ref={devCircleRef}></span>
-            {props.children}
+            {children}
         </div>
 
     );

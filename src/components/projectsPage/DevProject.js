@@ -2,11 +2,23 @@ import React, { useEffect, useState, useRef } from 'react';
 import DevButton from '../button/DevButton';
 import lodash from "lodash";
 
-const DevProject = (props) => {
+const DevProject = ({
+    project: {
+        title,
+        githubUrl,
+        videoDemoUrl,
+        demoUrl,
+        shortDescription,
+        longDescription,
+        tools,
+        image,
+        webpImage,
+    }
+}) => {
     const textContainerRef = useRef();
     const [clamped, setClamped] = useState(true);
     const [showMoreButton, setShowMoreButton] = useState(true);
-    const projectId = `${props.project.title.charAt(0).toLowerCase()}${props.project.title.slice(1).replace(/\s/g, '')}`
+    const projectId = `${title.charAt(0).toLowerCase()}${title.slice(1).replace(/\s/g, '')}`
 
     // TODO insert animation here or call parent animation
     const handleClick = (event) => {
@@ -60,14 +72,14 @@ const DevProject = (props) => {
             <div className='card-content dev'>
                 <div className='card-front'>
                     <picture>
-                        <source type="image/webp" srcSet={process.env.PUBLIC_URL + props.project.webpImage} />
-                        <source type="image/jpeg" srcSet={process.env.PUBLIC_URL + props.project.image} />
-                        <img loading="lazy" src={process.env.PUBLIC_URL + props.project.image} alt='project preview' />
+                        <source type="image/webp" srcSet={process.env.PUBLIC_URL + webpImage} />
+                        <source type="image/jpeg" srcSet={process.env.PUBLIC_URL + image} />
+                        <img loading="lazy" src={process.env.PUBLIC_URL + image} alt='project preview' />
                     </picture>
 
                     <div className='front-titles'>
-                        <h3 className='card-title dev'>{props.project.title}</h3>
-                        <p className='card-subtitle dev'>{props.project.shortDescription}</p>
+                        <h3 className='card-title dev'>{title}</h3>
+                        <p className='card-subtitle dev'>{shortDescription}</p>
                     </div>
                 </div>
 
@@ -76,7 +88,7 @@ const DevProject = (props) => {
                         <p
                             className={`card-description ${clamped && 'clamp'}`}
                             ref={textContainerRef}>
-                            {props.project.longDescription}
+                            {longDescription}
                         </p>
                         {showMoreButton && (
                             <>
@@ -101,21 +113,21 @@ const DevProject = (props) => {
                     </div>
 
                     <ul className='card-tools'>
-                        {props.project.tools.map(tool => {
+                        {tools.map(tool => {
                             return (<li className='card-tool' key={tool}>{tool}</li>);
                         })}
                     </ul>
 
                     <div className='card-links'>
-                        {(props.project.demoUrl || props.project.videoDemoUrl) && (
+                        {(demoUrl || videoDemoUrl) && (
                             <DevButton className='demo-link social-btn-container'>
                                 <a
                                     className='social-btn'
-                                    href={props.project.demoUrl || props.project.videoDemoUrl}
+                                    href={demoUrl || videoDemoUrl}
                                     target='_blank'
                                     rel="noreferrer noopener">
                                     <i className="fas fa-play"></i>
-                                    <span className='btn-text'>{props.project.demoUrl ? 'live' : 'video'} demo</span>
+                                    <span className='btn-text'>{demoUrl ? 'live' : 'video'} demo</span>
                                 </a>
                             </DevButton>
                         )}
@@ -123,7 +135,7 @@ const DevProject = (props) => {
                         <DevButton className='github-link social-btn-container'>
                             <a
                                 className='social-btn'
-                                href={props.project.githubUrl}
+                                href={githubUrl}
                                 target='_blank'
                                 rel="noreferrer noopener">
                                 <i className="fab fa-github"></i>

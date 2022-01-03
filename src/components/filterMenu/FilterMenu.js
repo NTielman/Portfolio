@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { toggleProjectFilter } from '../../actions';
 import DevButton from '../button/DevButton';
 
-const FilterMenu = (props) => {
+const FilterMenu = ({ filters }) => {
 
     const dispatch = useDispatch();
     const activeFilters = useSelector(state => state.activeFilters);
@@ -11,7 +11,7 @@ const FilterMenu = (props) => {
 
     return (
         <ul className={`filter-menu ${devMode ? "dev" : "des"}`}>
-            {props.filters.map(filter => {
+            {filters.map(filter => {
                 return (
                     <li key={filter}>
                         <input
