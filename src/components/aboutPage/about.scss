@@ -1,30 +1,45 @@
 .about {
   flex: 1 0 100%;
-}
-
-.about-container {
   padding: $section-padding;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-text-container {
+  max-width: 700px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
 }
 
 .about-text {
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
+  white-space: pre-line;
 }
 
-.about-text ul {
-  list-style: none;
+.about-tools {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 0.75rem;
 }
 
 /* ------------ Avatar ------------ */
 .about-image-container {
   width: 55%;
-  padding: 1em;
 
   display: flex;
   flex-direction: column;
@@ -40,6 +55,17 @@
 .about-caption {
   text-align: center;
   opacity: 0.8;
+}
+
+@media (orientation: landscape) {
+  .about-text-container {
+    text-align: left;
+    align-items: start;
+  }
+
+  .about-tools {
+    justify-content: start;
+  }
 }
 
 /* laptops */
