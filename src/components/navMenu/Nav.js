@@ -5,12 +5,12 @@ import { Timeline } from 'gsap/gsap-core';
 
 const Nav = () => {
     const navRef = useRef();
-    const q = gsap.utils.selector(navRef);
     const tl = useRef();
     const devMode = useSelector(state => state.devMode);
 
     // open nav animation
     useEffect(() => {
+        const q = gsap.utils.selector(navRef);
         tl.current = new Timeline({ paused: true })
             .to(q(".btn:not(:first-child)"), { opacity: 1, duration: 0 })
             .to(q(".btn:not(:first-child)"), { y: (index) => `${(index + 1) * 4.5}rem`, stagger: { amount: 0.5 }, ease: "elastic.easeOut", duration: 0 });
