@@ -1,7 +1,7 @@
 .contact.dev {
   background-color: $dev-secondary-color;
-}
 
-.dev .social-item-link {
-  display: block;
+  & .social-item-link {
+    display: block;
+  }
 }
