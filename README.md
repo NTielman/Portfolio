@@ -10,9 +10,10 @@ A portfolio website showcasing personal projects I have been or am working on.
 * React
 * Redux
 * JavaScript
-* CSS
+* SASS
 * HTML 
 * parallax-js
+* GSAP
 
 
 ## Setup 
