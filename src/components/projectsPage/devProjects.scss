@@ -8,12 +8,9 @@ $project-grid-gap: 1.5rem;
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(calc($card-width - $project-grid-gap), 1fr)
+    calc($card-width - $project-grid-gap)
   );
-  grid-template-rows: repeat(
-    auto-fit,
-    minmax(calc($card-height - $project-grid-gap), 1fr)
-  );
+  grid-template-rows: repeat(auto-fit, calc($card-height - $project-grid-gap));
   grid-auto-columns: calc($card-width - $project-grid-gap);
   grid-auto-rows: calc($card-height - $project-grid-gap);
   grid-auto-flow: dense;
