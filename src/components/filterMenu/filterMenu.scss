@@ -1,0 +1,33 @@
+.filter-text {
+  display: none;
+}
+
+.filter-menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filter-menu li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.label {
+  border-radius: $rounded-border;
+  padding: 0.5rem;
+
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* tablets */
+@media (min-width: 600px) {
+  .filter-text,
+  .filter-menu {
+    display: flex;
+  }
+}

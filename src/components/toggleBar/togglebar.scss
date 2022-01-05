@@ -1,0 +1,72 @@
+$toggle-bar-padding: 0.35rem;
+$toggle-bar-width: 4rem;
+$toggle-ball-width: 1.25rem;
+
+.toggle-bar-container {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 100;
+  height: 2.5rem;
+}
+
+.toggle-bar {
+  width: $toggle-bar-width;
+  border-radius: $rounded-border;
+  padding: $toggle-bar-padding;
+
+  background: $mixed-primary-color; /* fallback for older browsers */
+  background: linear-gradient(
+      90deg,
+      $dev-accent-color2 25%,
+      $des-primary-color 75%
+    )
+    center/200%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  transition: background-position $transition-ease;
+  box-shadow: $shadow;
+  cursor: pointer;
+}
+
+.ball {
+  width: $toggle-ball-width;
+  height: $toggle-ball-width;
+  border-radius: $circle-border;
+  background-color: white;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate($toggle-bar-padding, -50%);
+
+  transition: $transition-ease;
+  cursor: pointer;
+}
+
+.fa-pencil-alt {
+  transform: scale(0.95);
+}
+
+/* Togglebar hovered */
+.toggle-bar:hover {
+  background-position: right;
+}
+
+#toggle-checkbox:checked + .toggle-bar:hover {
+  background-position: left;
+}
+
+#toggle-checkbox:checked + .toggle-bar .ball {
+  transform: translate(
+    calc($toggle-bar-width - ($toggle-bar-padding + $toggle-ball-width)),
+    -50%
+  );
+}

@@ -7,7 +7,7 @@ const ToggleBar = () => {
     const isChecked = useSelector(state => state.devMode);
 
     return (
-        <div role="button" title="toggle between developer and designer mode" className='toggle-bar-container'>
+        <div role="button" title="toggle between developer and designer portfolio's" className='toggle-bar-container'>
             <input
                 type='checkbox'
                 id='toggle-checkbox'
@@ -19,8 +19,8 @@ const ToggleBar = () => {
                     dispatch(toggleMode())
                 }} />
             <label htmlFor='toggle-checkbox' className='toggle-bar'>
-                <i className="fas fa-pencil-alt"></i>
                 <i className="fas fa-code"></i>
+                <i className="fas fa-pencil-alt"></i>
                 <div className='ball'></div>
             </label>
         </div>

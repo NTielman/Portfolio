@@ -1,0 +1,15 @@
+.filter-menu.dev input:checked ~ .label {
+  background: black;
+  color: $dev-accent-color;
+
+  &::after {
+    border: 2px solid $dev-accent-color;
+    border-radius: inherit;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

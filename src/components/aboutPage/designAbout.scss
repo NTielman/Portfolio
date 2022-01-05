@@ -1,0 +1,23 @@
+.about.des {
+  background: $des-accent-color2; /* fallback for older browsers */
+  background: linear-gradient(
+    180deg,
+    $des-accent-color2 0%,
+    $des-primary-color 40%
+  );
+
+  & .avatar {
+    border: solid 10px $des-secondary-color;
+    background: $des-accent-color;
+  }
+
+  & .label {
+    background: $des-accent-color2;
+  }
+
+  @media (orientation: landscape) {
+    .about-content {
+      flex-direction: row;
+    }
+  }
+}

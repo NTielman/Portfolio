@@ -1,11 +1,12 @@
 .contact {
-  min-height: 100vh;
-  padding: var(--section-padding);
+  flex: 1 0 100%;
+  padding: $section-padding;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 4rem;
   text-align: center;
 }
 
@@ -24,23 +25,21 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  gap: 1rem;
 }
 
 .social-item {
-  margin: 2%;
   flex-basis: 15%;
-  border-radius: 20px;
-  padding: 2%;
+  border-radius: $rounded-border;
 
-  display: grid;
-  place-items: center;
-  text-decoration: none;
-  color: currentColor;
+  @include center-content;
 
-  box-shadow: var(--shadow);
-  transition: background-color 500ms linear;
+  box-shadow: $shadow;
 }
 
-.social-icon {
-  font-size: 1.5rem;
+/* laptops */
+@media (min-width: 600px) {
+  .social-icon {
+    font-size: 1.5rem;
+  }
 }

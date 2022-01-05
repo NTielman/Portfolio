@@ -1,9 +1,0 @@
-.about-container.dev {
-  background: var(--dev-secondary-color); /* fallback for older browsers */
-  background: linear-gradient(0deg, var(--dev-secondary-color) 5%, black 100%);
-}
-
-.avatar.dev {
-  border: solid 10px var(--dev-accent-color2);
-  background-color: var(--dev-accent-color);
-}

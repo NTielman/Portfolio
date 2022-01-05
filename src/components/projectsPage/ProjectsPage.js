@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import FilterMenu from '../filterMenu/FilterMenu';
 import DevProject from './DevProject';
 import DesProject from './DesProject';
+import DevButton from '../button/DevButton';
 
 import { featured_projects as devProjects } from '../../utils/devProjects';
 import { featured_projects as desProjects } from '../../utils/desProjects';
@@ -20,30 +21,6 @@ const Projects = () => {
     const [pageResults, setPageResults] = useState([]);
     const [hasMoreResults, setHasMoreResults] = useState(false);
 
-    const getProjects = () => {
-        let projects = devMode ? devProjects.map(proj => proj) : desProjects.map(proj => proj);
-
-        if (activeFilters.length > 0) {
-            projects = filterProjects(projects, activeFilters);
-        }
-
-        const totalResultCount = projects.length;
-        const paginatedResults = projects.filter((project, projectIndex) => projectIndex < currentPage + projectsPerPage).map(project => {
-            if (devMode) {
-                return (<DevProject project={project} key={project.key} />)
-            } else {
-                return (<DesProject project={project} key={project.key} />);
-            }
-        });
-        const pageResultCount = paginatedResults.length;
-
-        return {
-            totalResultCount,
-            paginatedResults,
-            pageResultCount
-        };
-    }
-
     useEffect(() => {
         setCurrentPage(0);
     }, [devMode, activeFilters]);
@@ -57,25 +34,52 @@ const Projects = () => {
     }, [devMode]);
 
     useEffect(() => {
+        const getProjects = () => {
+            let projects = devMode ? devProjects.map(proj => proj) : desProjects.map(proj => proj);
+
+            if (activeFilters.length > 0) {
+                projects = filterProjects(projects, activeFilters);
+            }
+
+            const totalResultCount = projects.length;
+            const paginatedResults = projects.filter((project, projectIndex) => projectIndex < currentPage + projectsPerPage).map(project => {
+                if (devMode) {
+                    return (<DevProject project={project} key={project.key} />)
+                } else {
+                    return (<DesProject project={project} key={project.key} />);
+                }
+            });
+            const pageResultCount = paginatedResults.length;
+
+            return {
+                totalResultCount,
+                paginatedResults,
+                pageResultCount
+            };
+        }
+
         setPageResults(getProjects().paginatedResults);
         setHasMoreResults(getProjects().totalResultCount > getProjects().pageResultCount);
     }, [devMode, activeFilters, currentPage]);
 
     return (
-        <section className='projects page' id='projects'>
+        <section className={`projects page ${devMode ? 'dev' : 'des'}`} id='projects'>
 
             <h2>Projects</h2>
-            <p>Filter by:</p>
+            <p className='filter-text'>Filter by:</p>
             <FilterMenu filters={filters} />
 
             <div className='projects-container'>
                 {pageResults}
             </div>
 
-            {hasMoreResults && <button
-                className={`load-more-btn ${devMode ? 'dev' : 'des'}`}
+            {hasMoreResults && (devMode ? (<DevButton
+                className="load-more-btn dev"
                 onClick={() => setCurrentPage(currentPage + projectsPerPage)}
-            >Load More</button>}
+            >Load More</DevButton>) : (<button
+                className="load-more-btn des"
+                onClick={() => setCurrentPage(currentPage + projectsPerPage)}
+            >Load More</button>))}
         </section>
     );
 }

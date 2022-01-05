@@ -1,10 +1,18 @@
 import React, { useRef } from 'react';
 
-const DesProject = (props) => {
+const DesProject = ({
+    project: {
+        title,
+        description,
+        galleryUrl,
+        galleryImgUrl,
+        image,
+        webpImage,
+    }
+}) => {
     const hoverAreaRef = useRef();
     const cardRef = useRef();
     const titleBoxRef = useRef();
-    const hasGallery = props.project.galleryUrl;
 
     return (
         <div className='card-hover-area'
@@ -27,20 +35,20 @@ const DesProject = (props) => {
                 titleBoxRef.current.style.opacity = '0';
             }}>
 
-            <div ref={cardRef} className='project-card des'>
+            <div ref={cardRef} className='project-card'>
                 <picture>
-                    <source type="image/webp" srcSet={process.env.PUBLIC_URL + props.project.webpImage} />
-                    <source type="image/jpeg" srcSet={process.env.PUBLIC_URL + props.project.image} />
-                    <img loading="lazy" src={process.env.PUBLIC_URL + props.project.image} alt='project preview' />
+                    <source type="image/webp" srcSet={process.env.PUBLIC_URL + webpImage} />
+                    <source type="image/jpeg" srcSet={process.env.PUBLIC_URL + image} />
+                    <img loading="lazy" src={process.env.PUBLIC_URL + image} alt='project preview' />
                 </picture>
-                <div ref={titleBoxRef} className='card-content des'>
-                    <h3 className='card-title des'>{props.project.title}</h3>
-                    <p className='card-subtitle des'>{props.project.description}</p>
+                <div ref={titleBoxRef} className='card-content'>
+                    <h3 className='card-title'>{title}</h3>
+                    <p className='card-subtitle'>{description}</p>
                 </div>
             </div>
-            <a className='flickr-link social-btn' href={hasGallery ? props.project.galleryUrl : props.project.galleryImgUrl} target='_blank' rel="noreferrer noopener">
+            <a className='flickr-link social-btn' href={galleryUrl ? galleryUrl : galleryImgUrl} target='_blank' rel="noreferrer noopener">
                 <i className="fab fa-flickr"></i>
-                <p className='btn-text'>{hasGallery ? 'View Gallery' : 'View Image'}</p>
+                <span className='btn-text'>View {galleryUrl ? 'Gallery' : 'Image'}</span>
             </a>
         </div>
     );

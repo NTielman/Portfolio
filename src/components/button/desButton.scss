@@ -1,0 +1,12 @@
+.des-button {
+  background: $des-accent-color2;
+
+  cursor: pointer;
+  transition: $transition-ease;
+
+  &:hover,
+  &:focus {
+    background: $des-primary-color;
+    color: $des-accent-color;
+  }
+}

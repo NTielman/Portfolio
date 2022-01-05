@@ -1,0 +1,68 @@
+.dev-button {
+  background: $dev-accent-color2;
+
+  cursor: pointer;
+  transition: $transition-ease;
+
+  /* For black circle effect */
+  position: relative;
+  z-index: 1;
+
+  & .circle {
+    width: 0;
+    height: 0;
+    border-radius: $circle-border;
+    background: black;
+
+    position: absolute;
+    display: none;
+    transform: translate(-50%, -50%);
+    transition: width 500ms linear, height 500ms linear;
+    z-index: -1;
+  }
+
+  /* If button contains a link */
+  & a {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  &:hover,
+  &:focus {
+    color: $dev-accent-color;
+
+    /* Border */
+    &::after {
+      border: 2px solid $dev-accent-color;
+      border-radius: inherit;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+    }
+
+    & .circle {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  @media (min-width: 600px) {
+    overflow: hidden;
+
+    & .circle {
+      display: block;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &:hover,
+    &:focus {
+      background: black;
+    }
+  }
+}

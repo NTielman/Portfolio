@@ -1,0 +1,95 @@
+/* ------------ Menu styling ------------ */
+.menu {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 100;
+}
+
+/* Individual button styling */
+.btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 25px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include center-content;
+
+  box-shadow: $shadow;
+}
+
+/* Place buttons behind burger button */
+.btn:not(:first-child) {
+  z-index: -2;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Button tooltip */
+.btn:not(:first-child)::before {
+  height: inherit;
+  min-width: 2.5rem;
+  max-width: 2.5rem;
+  width: auto;
+  border-radius: inherit;
+  background: inherit;
+
+  content: attr(data-tooltip);
+  color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  @include center-content;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  transition: $transition-ease;
+}
+
+/* Button hover styling */
+.btn:not(:first-child):hover {
+  box-shadow: 0 0 0 transparent;
+}
+
+.btn:not(:first-child):hover::before {
+  box-shadow: $shadow;
+  max-width: 258px;
+  padding: 0 1rem 0 2.5rem;
+}
+
+/* ------------ Positioning closed menu icons ------------ */
+.menu-icon,
+.close-icon {
+  position: absolute;
+  transition: $transition-ease;
+}
+
+/* Hide close icons when menu is closed */
+.close-icon {
+  transform: translateY(3rem);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ------------ Positioning open menu icons ------------ */
+#menu-checkbox:checked ~ .toggle-menu .menu-icon {
+  transform: translateY(-3rem);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Show close icon when menu is open */
+#menu-checkbox:checked ~ .toggle-menu .close-icon {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+#menu-checkbox:checked ~ .toggle-menu .btn:not(:first-child) {
+  pointer-events: all;
+}

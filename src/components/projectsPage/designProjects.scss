@@ -1,0 +1,84 @@
+.projects.des {
+  & .projects-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-end;
+    gap: 1.5rem;
+  }
+
+  & .card-hover-area {
+    flex: 0 1 100%;
+    perspective: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  & .project-card {
+    flex: 1 0 50%;
+
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 300ms linear;
+
+    & img {
+      height: 100%;
+      width: 100%;
+      border-radius: $rounded-border;
+      object-fit: cover;
+    }
+  }
+
+  & .card-content {
+    height: 100%;
+    width: 100%;
+    border-radius: $rounded-border;
+    padding: 1em;
+    background: $des-secondary-color-transparent;
+
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: $transition-ease;
+    opacity: 0;
+  }
+
+  & .flickr-link {
+    border-radius: $rounded-border;
+    @extend .des-button;
+
+    justify-self: flex-end;
+  }
+
+  & .load-more-btn {
+    border: none;
+    @extend .des-button;
+  }
+
+  @media (min-width: 600px) {
+    & .card-hover-area {
+      flex-basis: 25%;
+    }
+  }
+
+  @media (min-width: 801px) and (orientation: landscape) {
+    & .card-hover-area {
+      flex-basis: 18%;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    & .card-content {
+      padding: 2em;
+    }
+  }
+}

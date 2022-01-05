@@ -1,0 +1,19 @@
+.about.dev {
+  background: $dev-secondary-color; /* fallback for older browsers */
+  background: linear-gradient(0deg, $dev-secondary-color 5%, black 100%);
+
+  & .avatar {
+    border: solid 10px $dev-accent-color2;
+    background: $dev-accent-color;
+  }
+
+  & .label {
+    background: $dev-accent-color2;
+  }
+
+  @media (orientation: landscape) {
+    .about-content {
+      flex-direction: row-reverse;
+    }
+  }
+}

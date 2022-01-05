@@ -1,0 +1,10 @@
+.filter-menu.des {
+  & label {
+    @extend .des-button;
+  }
+
+  & input:checked ~ label {
+    background: $des-primary-color;
+    color: $des-accent-color;
+  }
+}

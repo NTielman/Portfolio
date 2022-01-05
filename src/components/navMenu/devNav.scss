@@ -1,0 +1,15 @@
+.toggle-menu.dev .btn {
+  background-color: $dev-accent-color2;
+  transition: $transition-ease;
+
+  &:hover::before,
+  &:hover {
+    background: black;
+    color: $dev-accent-color;
+  }
+
+  &:hover::before,
+  &:first-child:hover {
+    border: solid 2px $dev-accent-color;
+  }
+}
