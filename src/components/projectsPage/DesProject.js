@@ -35,15 +35,15 @@ const DesProject = ({
                 titleBoxRef.current.style.opacity = '0';
             }}>
 
-            <div ref={cardRef} className='project-card des'>
+            <div ref={cardRef} className='project-card'>
                 <picture>
                     <source type="image/webp" srcSet={process.env.PUBLIC_URL + webpImage} />
                     <source type="image/jpeg" srcSet={process.env.PUBLIC_URL + image} />
                     <img loading="lazy" src={process.env.PUBLIC_URL + image} alt='project preview' />
                 </picture>
-                <div ref={titleBoxRef} className='card-content des'>
-                    <h3 className='card-title des'>{title}</h3>
-                    <p className='card-subtitle des'>{description}</p>
+                <div ref={titleBoxRef} className='card-content'>
+                    <h3 className='card-title'>{title}</h3>
+                    <p className='card-subtitle'>{description}</p>
                 </div>
             </div>
             <a className='flickr-link social-btn' href={galleryUrl ? galleryUrl : galleryImgUrl} target='_blank' rel="noreferrer noopener">

@@ -63,7 +63,7 @@ const Projects = () => {
     }, [devMode, activeFilters, currentPage]);
 
     return (
-        <section className='projects page' id='projects'>
+        <section className={`projects page ${devMode ? 'dev' : 'des'}`} id='projects'>
 
             <h2>Projects</h2>
             <p className='filter-text'>Filter by:</p>

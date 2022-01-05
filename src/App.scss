@@ -38,6 +38,7 @@ $circle-border: 50%;
 html {
   height: 100vh;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 ::selection {
