@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import DevButton from '../button/DevButton';
-import lodash from "lodash";
+import { debounce } from "lodash";
 
 import { gsap } from 'gsap';
 import { Timeline } from 'gsap/gsap-core';
@@ -36,9 +36,8 @@ const DevProject = ({
         const cardGrid = gsap.utils.toArray(".projects.dev .projects-container, .projects.dev .project-card, .projects.dev .load-more-btn, .filter-menu.dev, .projects.dev .filter-text, .projects.dev h2");
 
         const flip = (elements, changeFunc, vars) => {
-            elements = gsap.utils.toArray(elements);
             vars = vars || {};
-            let tl = gsap.timeline({ onComplete: vars.onComplete, delay: vars.delay || 0 }),
+            let tl = new Timeline({ onComplete: vars.onComplete, delay: vars.delay || 0 }),
                 bounds = elements.map(el => el.getBoundingClientRect()),
                 copy = {},
                 p;
@@ -103,7 +102,7 @@ const DevProject = ({
         };
 
         readMoreButtonIsVisible();
-        const debouncedCheck = lodash.debounce(readMoreButtonIsVisible, 50);
+        const debouncedCheck = debounce(readMoreButtonIsVisible, 50);
 
         window.addEventListener("resize", debouncedCheck);
 
