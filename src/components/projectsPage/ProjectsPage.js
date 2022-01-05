@@ -75,6 +75,7 @@ const Projects = () => {
 
             {hasMoreResults && (devMode ? (<DevButton
                 className="load-more-btn dev"
+                title="Load more projects"
                 onClick={() => setCurrentPage(currentPage + projectsPerPage)}
             >Load More</DevButton>) : (<button
                 className="load-more-btn des"

@@ -46,7 +46,13 @@ const DesProject = ({
                     <p className='card-subtitle'>{description}</p>
                 </div>
             </div>
-            <a className='flickr-link social-btn' href={galleryUrl ? galleryUrl : galleryImgUrl} target='_blank' rel="noreferrer noopener">
+            <a
+                className='flickr-link social-btn'
+                href={galleryUrl ? galleryUrl : galleryImgUrl}
+                target='_blank'
+                rel="noreferrer noopener"
+                aria-label={`View ${title} ${galleryUrl ? 'Gallery' : 'Image'}`}
+                title={`View ${title} ${galleryUrl ? 'Gallery' : 'Image'}`}>
                 <i className="fab fa-flickr"></i>
                 <span className='btn-text'>View {galleryUrl ? 'Gallery' : 'Image'}</span>
             </a>

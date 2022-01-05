@@ -165,11 +165,14 @@ const DevProject = ({
 
                     <div className='card-links'>
                         {(demoUrl || videoDemoUrl) && (
-                            <DevButton className='demo-link social-btn-container'>
+                            <DevButton
+                                className='demo-link social-btn-container'
+                                title={`view ${demoUrl ? 'live' : 'video'} demo of ${title}`}>
                                 <a
                                     className='social-btn'
                                     href={demoUrl || videoDemoUrl}
                                     target='_blank'
+                                    title={`view ${demoUrl ? 'live' : 'video'} demo of ${title}`}
                                     rel="noreferrer noopener">
                                     <i className="fas fa-play"></i>
                                     <span className='btn-text'>{demoUrl ? 'live' : 'video'} demo</span>
@@ -177,11 +180,14 @@ const DevProject = ({
                             </DevButton>
                         )}
 
-                        <DevButton className='github-link social-btn-container'>
+                        <DevButton
+                            className='github-link social-btn-container'
+                            title={`view ${title}'s code on Github`}>
                             <a
                                 className='social-btn'
                                 href={githubUrl}
                                 target='_blank'
+                                title={`view ${title}'s code on Github`}
                                 rel="noreferrer noopener">
                                 <i className="fab fa-github"></i>
                                 <span className='btn-text'>Source code</span>

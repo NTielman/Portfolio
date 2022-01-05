@@ -59,6 +59,7 @@ const Contact = () => {
                                     href={contactOption.url}
                                     target='_blank'
                                     rel="noreferrer noopener"
+                                    aria-label={contactOption.contactMethod}
                                     title={contactOption.contactMethod}>
                                     <i className={`${contactOption.class} social-icon`}></i>
                                 </a>
@@ -72,6 +73,7 @@ const Contact = () => {
                                 href={contactOption.url}
                                 target='_blank'
                                 rel="noreferrer noopener"
+                                aria-label={contactOption.contactMethod}
                                 title={contactOption.contactMethod}
                                 key={contactOption.contactMethod}>
                                 <i className={`${contactOption.class} social-icon`}></i>

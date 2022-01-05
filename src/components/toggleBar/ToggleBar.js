@@ -7,7 +7,10 @@ const ToggleBar = () => {
     const isChecked = useSelector(state => state.devMode);
 
     return (
-        <div role="button" title="toggle between developer and designer portfolio's" className='toggle-bar-container'>
+        <div
+            role="button" title="toggle between developer and designer portfolio's"
+            aria-label="toggle between developer and designer portfolio's"
+            className='toggle-bar-container'>
             <input
                 type='checkbox'
                 id='toggle-checkbox'

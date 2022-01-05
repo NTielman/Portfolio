@@ -28,6 +28,8 @@ const DevButton = ({
             className={`dev-button ${propClass ? propClass : ''}`}
             onClick={propClickHandler}
             title={propTitle}
+            aria-label={propTitle}
+            role="button"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
             <span className='circle' ref={devCircleRef}></span>
