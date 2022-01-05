@@ -2,6 +2,9 @@ import React, { useEffect, useState, useRef } from 'react';
 import DevButton from '../button/DevButton';
 import lodash from "lodash";
 
+import { gsap } from 'gsap';
+import { Timeline } from 'gsap/gsap-core';
+
 const DevProject = ({
     project: {
         title,
@@ -16,16 +19,58 @@ const DevProject = ({
     }
 }) => {
     const textContainerRef = useRef();
+    const cardRef = useRef();
+    const tl = useRef();
+
     const [clamped, setClamped] = useState(true);
     const [showMoreButton, setShowMoreButton] = useState(true);
     const projectId = `${title.charAt(0).toLowerCase()}${title.slice(1).replace(/\s/g, '')}`
 
-    // TODO insert animation here or call parent animation
-    const handleClick = (event) => {
+    useEffect(() => {
+        tl.current = new Timeline({ paused: true, defaults: { duration: 0.5, ease: "power1.inOut" } })
+    }, [])
+
+    const toggleTextClamp = (event) => {
         setClamped(!clamped);
-        console.log(event.target.id);
+        const isModalOpen = event.target.checked;
+        const cardGrid = gsap.utils.toArray(".projects.dev .projects-container, .projects.dev .project-card, .projects.dev .load-more-btn, .filter-menu.dev, .projects.dev .filter-text, .projects.dev h2");
+
+        const flip = (elements, changeFunc, vars) => {
+            elements = gsap.utils.toArray(elements);
+            vars = vars || {};
+            let tl = gsap.timeline({ onComplete: vars.onComplete, delay: vars.delay || 0 }),
+                bounds = elements.map(el => el.getBoundingClientRect()),
+                copy = {},
+                p;
+            elements.forEach(el => {
+                el._flip && el._flip.progress(1);
+                el._flip = tl;
+            })
+            changeFunc();
+            for (p in vars) {
+                p !== "onComplete" && p !== "delay" && (copy[p] = vars[p]);
+            }
+            copy.x = (i, element) => "+=" + (bounds[i].left - element.getBoundingClientRect().left);
+            copy.y = (i, element) => "+=" + (bounds[i].top - element.getBoundingClientRect().top);
+            return tl.from(elements, copy);
+        }
+
+        const swapSizes = () => {
+            if (isModalOpen) {
+                cardRef.current.classList.add("open");
+            } else {
+                cardRef.current.classList.remove("open");
+            }
+        }
+
+        tl.current.add(flip(cardGrid, swapSizes, {
+            duration: 1, ease: "power1.inOut"
+        }))
+
+        tl.current.play();
     }
 
+    // set text clamping
     useEffect(() => {
         const elOverflowsContainer = (el) => {
             const { clientHeight, scrollHeight } = el;
@@ -68,7 +113,7 @@ const DevProject = ({
     }, [textContainerRef])
 
     return (
-        <div className='project-card dev'>
+        <div className='project-card dev' ref={cardRef}>
             <div className='card-content dev'>
                 <div className='card-front'>
                     <picture>
@@ -86,7 +131,7 @@ const DevProject = ({
                 <div className='card-back'>
                     <div className='card-description-container'>
                         <p
-                            className={`card-description ${clamped && 'clamp'}`}
+                            className={`card-description ${clamped ? 'clamp' : ''}`}
                             ref={textContainerRef}>
                             {longDescription}
                         </p>
@@ -97,8 +142,8 @@ const DevProject = ({
                                     name="readMore"
                                     className="hide"
                                     title="read more"
-                                    checked={true}
-                                    onChange={(event) => handleClick(event)}
+                                    checked={!clamped}
+                                    onChange={toggleTextClamp}
                                     id={projectId}
                                     value={projectId}>
                                 </input>
