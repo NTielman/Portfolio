@@ -126,6 +126,12 @@ label {
   }
 }
 
+@media screen and (min--moz-device-pixel-ratio: 0) {
+  .App {
+    scroll-snap-type: none;
+  }
+}
+
 /* Component Stylesheets */
 /* Buttons */
 @import "components/button/desButton.scss";
