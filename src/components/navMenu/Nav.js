@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { gsap } from 'gsap';
 import { Timeline } from 'gsap/gsap-core';
@@ -7,6 +7,7 @@ const Nav = () => {
     const navRef = useRef();
     const tl = useRef();
     const devMode = useSelector(state => state.devMode);
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
 
     // open nav animation
     useEffect(() => {
@@ -16,14 +17,17 @@ const Nav = () => {
             .to(q(".btn:not(:first-child)"), { y: (index) => `${(index + 1) * 4.5}rem`, stagger: { amount: 0.5 }, ease: "elastic.easeOut", duration: 0 });
     }, [])
 
-    const handleNavClick = (event) => {
-        const menuIsOpen = event.currentTarget.checked;
-        menuIsOpen ? tl.current.play() : tl.current.reverse()
+    const toggleNav = (event) => {
+        const navIsOpen = event.currentTarget.checked;
+        navIsOpen ? tl.current.play() : tl.current.reverse();
+        !navIsOpen ? setMenuIsOpen(navIsOpen) : (setTimeout(() => {
+            setMenuIsOpen(navIsOpen);
+        }, 1000));
     }
 
     return (
-        <nav className='menu' ref={navRef}>
-            <input type='checkbox' id='menu-checkbox' className='hide' onChange={handleNavClick} />
+        <nav className={`menu ${menuIsOpen ? 'open' : ''}`} ref={navRef}>
+            <input type='checkbox' id='menu-checkbox' className='hide' onChange={toggleNav} />
             <label htmlFor='menu-checkbox' className={`toggle-menu ${devMode ? 'dev' : 'des'}`}>
                 <div className='btn' role="button" aria-label="menu" title="menu">
                     <i className="fas fa-bars menu-icon"></i>
