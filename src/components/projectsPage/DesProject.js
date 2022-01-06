@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFlickr } from '@fortawesome/free-brands-svg-icons';
 
 const DesProject = ({
     project: {
@@ -53,7 +55,7 @@ const DesProject = ({
                 rel="noreferrer noopener"
                 aria-label={`View ${title} ${galleryUrl ? 'Gallery' : 'Image'}`}
                 title={`View ${title} ${galleryUrl ? 'Gallery' : 'Image'}`}>
-                <i className="fab fa-flickr"></i>
+                <FontAwesomeIcon icon={faFlickr} />
                 <span className='btn-text'>View {galleryUrl ? 'Gallery' : 'Image'}</span>
             </a>
         </div>

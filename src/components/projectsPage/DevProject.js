@@ -4,6 +4,9 @@ import { debounce } from "lodash";
 
 import { gsap } from 'gsap';
 import { Timeline } from 'gsap/gsap-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
 const DevProject = ({
     project: {
@@ -173,7 +176,7 @@ const DevProject = ({
                                     target='_blank'
                                     title={`view ${demoUrl ? 'live' : 'video'} demo of ${title}`}
                                     rel="noreferrer noopener">
-                                    <i className="fas fa-play"></i>
+                                    <FontAwesomeIcon icon={faPlay} />
                                     <span className='btn-text'>{demoUrl ? 'live' : 'video'} demo</span>
                                 </a>
                             </DevButton>
@@ -188,7 +191,7 @@ const DevProject = ({
                                 target='_blank'
                                 title={`view ${title}'s code on Github`}
                                 rel="noreferrer noopener">
-                                <i className="fab fa-github"></i>
+                                <FontAwesomeIcon icon={faGithub} />
                                 <span className='btn-text'>Source code</span>
                             </a>
                         </DevButton>

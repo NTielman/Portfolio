@@ -3,6 +3,9 @@ import { useSelector } from 'react-redux';
 import { gsap } from 'gsap';
 import { Timeline } from 'gsap/gsap-core';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes, faHome, faUser, faPen, faFile, faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
+
 const Nav = () => {
     const navRef = useRef();
     const tl = useRef();
@@ -30,24 +33,24 @@ const Nav = () => {
             <input type='checkbox' id='menu-checkbox' className='hide' onChange={toggleNav} />
             <label htmlFor='menu-checkbox' className={`toggle-menu ${devMode ? 'dev' : 'des'}`}>
                 <div className='btn' role="button" aria-label="menu" title="menu">
-                    <i className="fas fa-bars menu-icon"></i>
-                    <i className="fas fa-times close-icon"></i>
+                    <FontAwesomeIcon icon={faBars} className="menu-icon" />
+                    <FontAwesomeIcon icon={faTimes} className="close-icon" />
                 </div>
 
                 <div className='btn home-btn' role="button" aria-label="home" title="home"
                     onClick={() => { window.location.href = '#home' }}
                     data-tooltip='Home'>
-                    <i className="fas fa-home"></i>
+                    <FontAwesomeIcon icon={faHome} />
                 </div>
                 <div className='btn about-btn' role="button" aria-label="about" title="about"
                     onClick={() => { window.location.href = '#about' }}
                     data-tooltip='About'>
-                    <i className="fas fa-user"></i>
+                    <FontAwesomeIcon icon={faUser} />
                 </div>
                 <div className='btn projects-btn' role="button" aria-label="projects" title="projects"
                     onClick={() => { window.location.href = '#projects' }}
                     data-tooltip='Projects'>
-                    <i className="fas fa-pen"></i>
+                    <FontAwesomeIcon icon={faPen} />
                 </div>
                 <div className='btn resume-btn' aria-label="download resume" title="download resume"
                     onClick={() => {
@@ -57,12 +60,12 @@ const Nav = () => {
                         tempLink.click()
                     }}
                     data-tooltip='Download Resume'>
-                    <i className="fas fa-file"></i>
+                    <FontAwesomeIcon icon={faFile} />
                 </div>
                 <div className='btn contact-btn' role="button" aria-label="contact" title="contact"
                     onClick={() => { window.location.href = '#contact' }}
                     data-tooltip='Contact'>
-                    <i className="fas fa-envelope-open-text"></i>
+                    <FontAwesomeIcon icon={faEnvelopeOpenText} />
                 </div>
             </label>
         </nav>
