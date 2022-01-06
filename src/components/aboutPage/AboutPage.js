@@ -35,7 +35,7 @@ const About = () => {
                     <picture>
                         <source type="image/webp" srcSet={process.env.PUBLIC_URL + webpImage} />
                         <source type="image/png" srcSet={process.env.PUBLIC_URL + image} />
-                        <img loading="lazy" className='avatar' src={process.env.PUBLIC_URL + image} alt='Avatar of Nneka' />
+                        <img loading="lazy" className='avatar' src={process.env.PUBLIC_URL + image} alt='Avatar of Nneka' width="300" height="300" />
                     </picture>
                     <figcaption className='about-caption'>{caption}</figcaption>
                 </figure>

@@ -39,7 +39,7 @@ const DesProject = ({
                 <picture>
                     <source type="image/webp" srcSet={process.env.PUBLIC_URL + webpImage} />
                     <source type="image/jpeg" srcSet={process.env.PUBLIC_URL + image} />
-                    <img loading="lazy" src={process.env.PUBLIC_URL + image} alt='project preview' />
+                    <img width="100" height="100" loading="lazy" src={process.env.PUBLIC_URL + image} alt='project preview' />
                 </picture>
                 <div ref={titleBoxRef} className='card-content'>
                     <h3 className='card-title'>{title}</h3>
