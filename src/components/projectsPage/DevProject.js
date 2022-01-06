@@ -118,7 +118,7 @@ const DevProject = ({
                     <picture>
                         <source type="image/webp" srcSet={process.env.PUBLIC_URL + webpImage} />
                         <source type="image/jpeg" srcSet={process.env.PUBLIC_URL + image} />
-                        <img loading="lazy" src={process.env.PUBLIC_URL + image} alt='project preview' />
+                        <img width="1600" height="900" loading="lazy" src={process.env.PUBLIC_URL + image} alt='project preview' />
                     </picture>
 
                     <div className='front-titles'>
