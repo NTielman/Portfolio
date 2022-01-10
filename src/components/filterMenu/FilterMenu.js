@@ -25,7 +25,7 @@ const FilterMenu = ({ filters }) => {
                             value={filter}>
                         </input>
                         {devMode ? (
-                            <DevButton className="label">
+                            <DevButton className="label" title={filter}>
                                 <label
                                     htmlFor={filter}>
                                     {filter}

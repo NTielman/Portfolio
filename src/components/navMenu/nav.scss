@@ -93,3 +93,18 @@
 #menu-checkbox:checked ~ .toggle-menu .btn:not(:first-child) {
   pointer-events: all;
 }
+
+@media (max-width: 1024px) {
+  .menu.open {
+    & .btn:not(:first-child) {
+      box-shadow: 0 0 0 transparent;
+    }
+
+    & .btn:not(:first-child)::before {
+      max-width: 258px;
+      padding: 0 1rem 0 2.5rem;
+      color: inherit;
+      box-shadow: $shadow;
+    }
+  }
+}

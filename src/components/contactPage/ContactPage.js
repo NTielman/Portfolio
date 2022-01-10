@@ -2,36 +2,36 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import DevButton from '../button/DevButton';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithubSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
+
 const Contact = () => {
 
     const contactOptions = [
         {
             contactMethod: "linkedin",
             url: "https://www.linkedin.com/in/nneka-tielman/",
-            class: "fab fa-linkedin",
-            showOnDes: true,
-            showOnDev: true
+            iconName: faLinkedin,
+            showOn: "both"
         },
         {
             contactMethod: "github",
             url: "https://github.com/NTielman",
-            class: "fab fa-github-square",
-            showOnDes: false,
-            showOnDev: true
+            iconName: faGithubSquare,
+            showOn: "dev"
         },
         {
             contactMethod: "instagram",
             url: "https://www.instagram.com/unsuprvsd/?hl=en",
-            class: "fab fa-instagram",
-            showOnDes: true,
-            showOnDev: false
+            iconName: faInstagram,
+            showOn: "des"
         },
         {
             contactMethod: "gmail",
             url: "mailto:khalienne@gmail.com",
-            class: "fas fa-envelope-square",
-            showOnDes: true,
-            showOnDev: true
+            iconName: faEnvelopeSquare,
+            showOn: "both"
         },
     ];
     const devMode = useSelector(state => state.devMode);
@@ -47,7 +47,7 @@ const Contact = () => {
 
             <div className='social-links-container'>
                 {contactOptions.map(contactOption => {
-                    if (devMode & contactOption.showOnDev) {
+                    if (devMode & (contactOption.showOn === 'both' || contactOption.showOn === 'dev')) {
                         return (
                             <DevButton
                                 key={contactOption.contactMethod}
@@ -59,22 +59,24 @@ const Contact = () => {
                                     href={contactOption.url}
                                     target='_blank'
                                     rel="noreferrer noopener"
+                                    aria-label={contactOption.contactMethod}
                                     title={contactOption.contactMethod}>
-                                    <i className={`${contactOption.class} social-icon`}></i>
+                                    <FontAwesomeIcon icon={contactOption.iconName} className="social-icon" />
                                 </a>
                             </DevButton>)
                     }
 
-                    if (!devMode & contactOption.showOnDes) {
+                    if (!devMode & (contactOption.showOn === 'both' || contactOption.showOn === 'des')) {
                         return (
                             <a
                                 className={`social-item ${contactOption.contactMethod}`}
                                 href={contactOption.url}
                                 target='_blank'
                                 rel="noreferrer noopener"
+                                aria-label={contactOption.contactMethod}
                                 title={contactOption.contactMethod}
                                 key={contactOption.contactMethod}>
-                                <i className={`${contactOption.class} social-icon`}></i>
+                                <FontAwesomeIcon icon={contactOption.iconName} className="social-icon" />
                             </a>
                         )
                     }
