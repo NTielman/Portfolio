@@ -32,27 +32,27 @@ const Nav = () => {
         <nav className={`menu ${menuIsOpen ? 'open' : ''}`} ref={navRef}>
             <input type='checkbox' id='menu-checkbox' className='hide' onChange={toggleNav} />
             <label htmlFor='menu-checkbox' className={`toggle-menu ${devMode ? 'dev' : 'des'}`}>
-                <div className='btn' role="button" aria-label="menu" title="menu">
+                <div className='btn' role="button" title="menu">
                     <FontAwesomeIcon icon={faBars} className="menu-icon" />
                     <FontAwesomeIcon icon={faTimes} className="close-icon" />
                 </div>
 
-                <div className='btn home-btn' role="button" aria-label="home" title="home"
+                <div className='btn home-btn' role="button" title="home"
                     onClick={() => { window.location.href = '#home' }}
                     data-tooltip='Home'>
                     <FontAwesomeIcon icon={faHome} />
                 </div>
-                <div className='btn about-btn' role="button" aria-label="about" title="about"
+                <div className='btn about-btn' role="button" title="about"
                     onClick={() => { window.location.href = '#about' }}
                     data-tooltip='About'>
                     <FontAwesomeIcon icon={faUser} />
                 </div>
-                <div className='btn projects-btn' role="button" aria-label="projects" title="projects"
+                <div className='btn projects-btn' role="button" title="projects"
                     onClick={() => { window.location.href = '#projects' }}
                     data-tooltip='Projects'>
                     <FontAwesomeIcon icon={faPen} />
                 </div>
-                <div className='btn resume-btn' aria-label="download resume" title="download resume"
+                <div className='btn resume-btn' title="download resume"
                     onClick={() => {
                         const tempLink = document.createElement('a');
                         tempLink.setAttribute('href', process.env.PUBLIC_URL + '/assets/resume/NTielman.pdf');
@@ -62,7 +62,7 @@ const Nav = () => {
                     data-tooltip='Download Resume'>
                     <FontAwesomeIcon icon={faFile} />
                 </div>
-                <div className='btn contact-btn' role="button" aria-label="contact" title="contact"
+                <div className='btn contact-btn' role="button" title="contact"
                     onClick={() => { window.location.href = '#contact' }}
                     data-tooltip='Contact'>
                     <FontAwesomeIcon icon={faEnvelopeOpenText} />

@@ -11,7 +11,6 @@ const ToggleBar = () => {
     return (
         <div
             role="button" title="toggle between developer and designer portfolio's"
-            aria-label="toggle between developer and designer portfolio's"
             className='toggle-bar-container'>
             <input
                 type='checkbox'

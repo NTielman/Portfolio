@@ -57,7 +57,6 @@ const DesProject = ({
                 href={galleryUrl ? galleryUrl : galleryImgUrl}
                 target='_blank'
                 rel="noreferrer noopener"
-                aria-label={`View ${title} ${galleryUrl ? 'Gallery' : 'Image'}`}
                 title={`View ${title} ${galleryUrl ? 'Gallery' : 'Image'}`}>
                 <FontAwesomeIcon icon={faFlickr} />
                 <span className='btn-text'>View {galleryUrl ? 'Gallery' : 'Image'}</span>
