@@ -11,56 +11,53 @@ import { featured_projects as desProjects } from '../../utils/desProjects';
 import filterProjects, { devFilters, designFilters } from '../../utils/filterProjects';
 
 const Projects = () => {
-
     const devMode = useSelector(state => state.devMode);
     const activeFilters = useSelector(state => state.activeFilters);
     const [filters, setFilters] = useState([]);
 
     const projectsPerPage = 5;
     const [currentPage, setCurrentPage] = useState(0);
-    const [pageResults, setPageResults] = useState([]);
+    const [projects, setProjects] = useState([]);
+    const [visibleProjects, setVisibleProjects] = useState([]);
     const [hasMoreResults, setHasMoreResults] = useState(false);
 
+    // (Re)Set current page
     useEffect(() => {
         setCurrentPage(0);
     }, [devMode, activeFilters]);
 
+    // Set filters
     useEffect(() => {
-        if (devMode) {
-            setFilters(devFilters(devProjects));
-        } else {
-            setFilters(designFilters(desProjects));
-        }
+        devMode ? setFilters(devFilters(devProjects)) : setFilters(designFilters(desProjects));
     }, [devMode]);
 
+    // Set Total (filtered) Projects
     useEffect(() => {
-        const getProjects = () => {
-            let projects = devMode ? devProjects.map(proj => proj) : desProjects.map(proj => proj);
+        const featuredProjects = devMode ? devProjects.map(proj => proj) : desProjects.map(proj => proj);
+        const hasActiveFilters = activeFilters.length > 0;
+        hasActiveFilters ? setProjects(filterProjects(featuredProjects, activeFilters)) : setProjects(featuredProjects);
+    }, [activeFilters, devMode]);
 
-            if (activeFilters.length > 0) {
-                projects = filterProjects(projects, activeFilters);
-            }
-
-            const totalResultCount = projects.length;
-            const paginatedResults = projects.filter((project, projectIndex) => projectIndex < currentPage + projectsPerPage).map(project => {
-                if (devMode) {
-                    return (<DevProject project={project} key={project.key} />)
-                } else {
-                    return (<DesProject project={project} key={project.key} />);
-                }
-            });
-            const pageResultCount = paginatedResults.length;
-
-            return {
-                totalResultCount,
-                paginatedResults,
-                pageResultCount
-            };
+    // Set Visible Projects
+    useEffect(() => {
+        const pageResults = projects.slice(currentPage, currentPage + projectsPerPage);
+        if (currentPage === 0) {
+            setVisibleProjects(pageResults)
+        } else {
+            setVisibleProjects((prevResults) => [...prevResults, ...pageResults])
         }
+    }, [currentPage, projects]);
 
-        setPageResults(getProjects().paginatedResults);
-        setHasMoreResults(getProjects().totalResultCount > getProjects().pageResultCount);
-    }, [devMode, activeFilters, currentPage]);
+    // Show/Hide Load More Button 
+    useEffect(() => {
+        const totalProjects = projects.length;
+        const totalVisibleProjects = visibleProjects.length;
+        setHasMoreResults(totalProjects > totalVisibleProjects);
+    }, [projects, visibleProjects]);
+
+    const loadMoreProjects = () => {
+        setCurrentPage((prevPage) => prevPage + projectsPerPage);
+    }
 
     return (
         <section className={`projects page ${devMode ? 'dev' : 'des'}`} id='projects'>
@@ -70,16 +67,22 @@ const Projects = () => {
             <FilterMenu filters={filters} />
 
             <div className='projects-container'>
-                {pageResults}
+                {visibleProjects.map(proj => {
+                    if (devMode) {
+                        return (<DevProject project={proj} key={proj.key} />)
+                    } else {
+                        return (<DesProject project={proj} key={proj.key} />);
+                    }
+                })}
             </div>
 
             {hasMoreResults && (devMode ? (<DevButton
                 className="load-more-btn dev"
                 title="Load more projects"
-                onClick={() => setCurrentPage(currentPage + projectsPerPage)}
+                onClick={loadMoreProjects}
             >Load More</DevButton>) : (<button
                 className="load-more-btn des"
-                onClick={() => setCurrentPage(currentPage + projectsPerPage)}
+                onClick={loadMoreProjects}
             >Load More</button>))}
         </section>
     );
