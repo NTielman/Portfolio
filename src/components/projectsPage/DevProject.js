@@ -86,7 +86,7 @@ const DevProject = ({
     }, [textContainerRef])
 
     return (
-        <div className='project-card dev' ref={cardRef}>
+        <article className='project-card dev' ref={cardRef}>
             <div className='card-content dev'>
                 <div className='card-front'>
                     <picture>
@@ -170,7 +170,7 @@ const DevProject = ({
                 </div>
             </div>
 
-        </div>
+        </article>
     );
 }
 
