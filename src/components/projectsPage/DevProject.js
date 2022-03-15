@@ -131,7 +131,7 @@ const DevProject = ({
                     </div>
 
                     <ul className='card-tools'>
-                        {tools.map(tool => {
+                        {tools && tools.map(tool => {
                             return (<li className='card-tool' key={tool}>{tool}</li>);
                         })}
                     </ul>
