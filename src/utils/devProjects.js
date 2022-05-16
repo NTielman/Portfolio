@@ -83,7 +83,7 @@ const betsy = {
 
 const wincHackathon = {
     title: 'Boss Button',
-    githubUrl: 'https://github.com/WincAcademy/hackathon-0-hongerige-huismuizen',
+    githubUrl: 'https://github.com/NTielman/Boss-button',
     demoUrl: 'https://unruffled-lichterman-d3e059.netlify.app/',
     shortDescription: 'Hackathon project - creating a button with surprising effects',
     longDescription: "Participated in Winc Academy's 'best button' hackathon. Collaborated with team members by making use of VsCode's Live Share extension, which allowed us to share a live server and code simultaneously in the same files. Our team came up with the combined idea of making a button that multiplies on click, and whose 'child buttons' all have differing effects. My tasks: Wrote the user story as a guideline for how the final site experience should look and feel. Developed the 'water' and 'cat' buttons. Responsible for the site's design and fixing animations.",
