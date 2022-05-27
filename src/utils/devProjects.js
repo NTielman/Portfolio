@@ -129,5 +129,22 @@ const tarot = {
     key: 7
 }
 
+const hamiltonApi = {
+    title: 'Hamilton Api',
+    githubUrl: 'https://github.com/NTielman/hamilton-api',
+    videoDemoUrl: 'https://www.youtube.com/watch?v=pqT8HnUO_Q8',
+    shortDescription: 'A RESTful API containing information on the Hamilton musical',
+    longDescription: "Using FastAPI and Peewee designed a relational database of the Hamilton musical and created a REST API for querying the database. API contains information on the cast, musical tracks, and roles found in the Hamilton musical",
+    tools: [
+        'Python',
+        'FastAPI',
+        'Peewee',
+        'SQLite',
+        'Uvicorn'],
+    image: '/assets/images/projects/devProjects/hamilton.jpeg',
+    webpImage: '/assets/images/projects/devProjects/hamilton.webp',
+    key: 8
+}
+
 // reverse array to ensure last projects added to array appear on top
-export const featured_projects = [grocery_helper, lil_playlist, student_dashboard, superpy, betsy, wincHackathon, portfolio, tarot].reverse()
+export const featured_projects = [grocery_helper, lil_playlist, student_dashboard, superpy, betsy, wincHackathon, portfolio, tarot, hamiltonApi].reverse()
