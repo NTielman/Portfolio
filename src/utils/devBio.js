@@ -1,14 +1,13 @@
 const devBio = {
-    description: `Hello! I'm Nneka, a full-stack developer based in The Hague who enjoys building engaging things with code. I develop exceptional websites and web apps that provide awe-inducing, pixel-perfect user experiences with clean, efficient, and scalable code.
+    description: `Hello! I'm Nneka, a full-stack developer currently chilling on the corner of logic and creativity. I'm based in The Hague and enjoy building engaging things with code. I develop websites, web apps, and mobile apps with clean, efficient, and scalable code. I'm especially passionate about effects & animations, intuitive UI, and creating dynamic user experiences. 
 
-    Shortly after completing a 9-month full-stack course from Winc Academy, I joined the development team at Bravoure as a front-end intern where I work on a wide variety of interesting and meaningful projects on a daily basis.
+    When I'm not coding, you can find me: reading books on psychology and human behavior, showing love to my plants, drawing cartoons, watching film theories on YouTube, or plotting to take over the world with an army of robots.
     
     Here are a few technologies I've been working with recently:`,
     tools: [
-        'JavaScript (ES6+)',
+        'Flutter (Dart)',
         'React',
         'Node.js',
-        'HTML & (S)CSS',
         'Vue',
         'Python',
         'GSAP'],
