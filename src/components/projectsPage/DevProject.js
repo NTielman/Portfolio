@@ -153,19 +153,21 @@ const DevProject = ({
                             </DevButton>
                         )}
 
-                        <DevButton
-                            className='github-link social-btn-container'
-                            title={`view ${title}'s code on Github`}>
-                            <a
-                                className='social-btn'
-                                href={githubUrl}
-                                target='_blank'
-                                title={`view ${title}'s code on Github`}
-                                rel="noreferrer noopener">
-                                <FontAwesomeIcon icon={faGithub} />
-                                <span className='btn-text'>Source code</span>
-                            </a>
-                        </DevButton>
+                        {githubUrl && (
+                            <DevButton
+                                className='github-link social-btn-container'
+                                title={`view ${title}'s code on Github`}>
+                                <a
+                                    className='social-btn'
+                                    href={githubUrl}
+                                    target='_blank'
+                                    title={`view ${title}'s code on Github`}
+                                    rel="noreferrer noopener">
+                                    <FontAwesomeIcon icon={faGithub} />
+                                    <span className='btn-text'>Source code</span>
+                                </a>
+                            </DevButton>
+                        )}
                     </div>
                 </div>
             </div>
